@@ -1,6 +1,6 @@
 # nume = "Paul"
 # nume = "Aura"
-# print(nume) la
+# print(nume)
 
 # mai sus am printat Aura deoarece a suprascris peste Paul
 
