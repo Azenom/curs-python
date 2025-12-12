@@ -27,18 +27,15 @@
 # print(autor)
 # print(strofa1)
 
-
 # numar_intreg = 5
 # print(numar_intreg)
 # numar_zecimal = 5.5
 # print(numar_zecimal)
 
-
 # print('Care este numele tau ?')
 # nume = input("care este numele tau : ")
 # print('Numele tau este :')
 # print(nume)
-
 
 # text1 = 'Paul merge'
 # text2= 'la piata'
@@ -65,7 +62,7 @@
 # print(5 /2 )
 
 # #Impartire prin lipsa, nu exista prin adaos
-# print(5 // 2)
+# print(5 / 2)
 # ----------------------------------------
 
 #Afisare tip de date
