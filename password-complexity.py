@@ -9,11 +9,12 @@ print('The password must contain at least one letter, special character, numer a
 password = input('Type your password : ')
 
 # the key varriable turns true if the password meets the minimium requirements
-# start the loop as if the password meets the requirments
-key = True
-while key == True :
+# start the loop as if the password doesn't meet the requirments
+
+key = False
+while key == False :
     if len(password) <= 9 :
-        print('Password too short !!! ')
+        print('Password too short')
         password = input('Type your password : ')
         key = False
     else :
@@ -24,13 +25,15 @@ while key == True :
                     password = input('Type your password : ')
                     key = False
                 else :
-                    for x in pool_letters:
+                    for x in pool_letters :
                         if x != c & x != c.upper() :
                             print ("There's no letter")
                             password = input('Type your password : ')
                             key = False
                         else :
-                            print('Your password is : ' + password)
                             key = True
-
+if key == True :
+    print('Your password is : ' + password)
+else :
+    print()
 
