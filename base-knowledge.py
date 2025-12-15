@@ -1,8 +1,6 @@
 # nume = "Paul"
 # nume = "Aura"
-# print(nume)
-
-# mai sus am printat Aura deoarece a suprascris peste Paul
+# print(nume) # Aura deoarece a suprascris peste Paul
 
 # text = 'aici putem scrie un "text" simplu'
 # text2 = "Paul's bike is blue."
@@ -13,8 +11,12 @@
 # pe'
 # "mai"
 # multe linii."""
+# text4 = input("Introdu text aici : ") # se introduce de la tastatura
 
+# print(text)
+# print(text2)
 # print(text3)
+# print(text4)
 
 # titlu = '   Luceafarul'
 # autor = '         de Mihai Eminescu'
@@ -61,9 +63,6 @@
 # Impartire
 # print(5 /2 )
 
-# Impartire prin lipsa, nu exista prin adaos
-# print(5 / 2)
-
 # Impartire intreaga
 # print(5//2)
 
@@ -72,6 +71,27 @@
 
 # Ridicare la putere
 # print(5**2)
+
+# Logici (True si False): 
+# and - ambele adevarate
+# or - cel putin una adevarata
+# not - negarea valorii
+# a = 1
+# b = 2
+# c = 3
+# print (a>b and b<c) # False
+
+# Apartenenta in & not in
+# print('a' in 'Ana') # True
+# print('10' in '10222') # True
+# print(10 in [2,56,5,'10']) # False
+# print(10 not in [2,56,5,'10']) # True
+
+# Identtitate is & is not (catre ce locatie de memorie arata variabelele)
+# a = None
+# b = None
+# print(a is b) # True
+# print(a is not b) # False
 # ----------------------------------------
 
 #Afisare tip de date
