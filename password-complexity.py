@@ -16,22 +16,32 @@ while key == False :
     if len(password) <= 9 :
         print('Password too short')
         password = input('Type your password : ')
-        key = False
     else :
+        flag_letter = False 
+        flag_special = False
         for c in password :
             for i in pool_special :
-                if i != c :
-                    print ("There's no special characters")
-                    password = input('Type your password : ')
-                    key = False
-                else :
-                    for x in pool_letters :
-                        if x != c & x != c.upper() :
-                            print ("There's no letter")
-                            password = input('Type your password : ')
-                            key = False
-                        else :
-                            key = True
+                if i == c :
+                    flag_special = True
+                    break
+            if flag_special :
+                break
+        if flag_special != True :
+            print ("There's no special characters")
+            password = input('Type your password : ')
+        for c in password :
+            for x in pool_letters :
+                if x != c and x != c.upper() :
+                    flag_letter = True
+                    break
+            if flag_letter :
+                break
+        if flag_letter != True :
+            print ("There's no letter")
+            password = input('Type your password : ')
+        else :
+            key = True
+                    
 if key == True :
     print('Your password is : ' + password)
 else :
