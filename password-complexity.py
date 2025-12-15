@@ -36,4 +36,3 @@ if key == True :
     print('Your password is : ' + password)
 else :
     print()
-
