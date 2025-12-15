@@ -49,20 +49,29 @@
 
 #Operatii
 # ----------------------------------------
-# #Adunarea
+# Adunarea
 # print(5 + 2)
 
-# #Scadere
+# Scadere
 # print(7 - 4)
 
-# #Inmultire
+# Inmultire
 # print(5 * 2)
 
-# #Impartire
+# Impartire
 # print(5 /2 )
 
-# #Impartire prin lipsa, nu exista prin adaos
+# Impartire prin lipsa, nu exista prin adaos
 # print(5 / 2)
+
+# Impartire intreaga
+# print(5//2)
+
+# Impartire cu rest
+# print(5%2)
+
+# Ridicare la putere
+# print(5**2)
 # ----------------------------------------
 
 #Afisare tip de date
@@ -71,7 +80,7 @@
 # numar_intreg = 10
 # numar_zecimal = 14.7
 
-# #type afiseaza tipul de clasa al variabilei introduse
+# type afiseaza tipul de clasa al variabilei introduse
 # print(type(text))
 # print(type(numar_intreg))
 # print(type(numar_zecimal))
@@ -80,11 +89,30 @@
 #Conversii
 # ----------------------------------------
 #conversie int la str si concatenare
-# print(text + ' vechime : ' + str(numar_intreg) + ' ani')
+# text = input("Introdu numele")
+# numar_intreg = input("Introdu varsta")
+# print(text + ' are : ' + str(numar_intreg) + ' ani') # Ana are : 15 ani
+
+#rotunjire numar decimail la 4 zecimale
+# print(round(3.151592,2)) # 3.15
 
 #conversie de la str la int si adunare
 # text = "30"
-# print(int(text) + 10)
+# text2 = input("Introdu un numar")
+# print(int(text) + 10 + int(text)) # 30 + 10 + ....
+
+#conversie la bool()
+# x = 1
+# x = bool(x)
+# print(x) #true
+# x = 0
+# x = bool(x)
+# print(x) #false
+
+#conversie la float()
+# x = 1
+# x = float(x)
+# print(x) # 1.0
 # ----------------------------------------
 
 #Quiz1 
