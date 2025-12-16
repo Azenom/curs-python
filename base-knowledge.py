@@ -264,7 +264,7 @@
 # import random
 # lista = [1,2,3,4,5,6,7]
 # print(lista)
-# random.shuffle(lista) -------> 5627341
+# random.shuffle(lista) # -------> 5627341
 # print(lista)
 # ------------------------------------------------
 

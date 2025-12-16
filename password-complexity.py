@@ -7,8 +7,8 @@ pool_letters = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 # create list for digits
 pool_digits = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ]
 
-# ask the user to enter the password following the mentioned rules
-print('The password must contain at least one letter, special character, number and the lenght grater than 10 characters ')
+# ask user to enter the password following the mentioned rules
+print("The password's lenght must be grater than 10 and contain at least one letter, one special character and one digit")
 password = input('Type your password : ')
 
 # the key varriable turns true if the password meet the requirements
