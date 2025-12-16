@@ -1,48 +1,56 @@
 # create list for special characters
 pool_special = [ '!' , '#' , '$' , '%' , '&' , '(' , ')' , '*' , '+' , ',' , '-' , '.' , '/' , ':' , ';' , '<' , '=' , '>' , '?' , '@' , '^' , '_' , '' , '|' , '~' ]
 
-# create list for alfa numeric charcters
+# create list for letters
 pool_letters = [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' ]
 
+# create list for digits
+pool_digits = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ]
+
 # ask the user to enter the password following the mentioned rules
-print('The password must contain at least one letter, special character, numer and the lenght grater than 10 characters in total ')
+print('The password must contain at least one letter, special character, number and the lenght grater than 10 characters ')
 password = input('Type your password : ')
 
-# the key varriable turns true if the password meets the minimium requirements
-# start the loop as if the password doesn't meet the requirments
-
+# the key varriable turns true if the password meet the requirements
+# start the loop as if the password doesn't meet the requirements
 key = False
-while key == False :
-    if len(password) <= 9 :
-        print('Password too short')
-        password = input('Type your password : ')
+flag_special = False
+flag_letters = False
+flag_digits = False
+flag_len = False
+
+while key == False :    
+    for p in password :
+        for s in pool_special :
+            if s == p :
+                flag_special = True
+                break
+        for l in pool_letters :
+            if l == p or l.upper() == p :
+                flag_letters = True
+                break
+        for d in pool_digits :
+            if d == p :
+                flag_digits = True
+                break
+    if len(password) > 9 :
+        flag_len = True
+    if flag_special and flag_letters and flag_digits and flag_len :        
+        key = True
     else :
-        flag_letter = False 
+        # print status to check and reset all flags in order to avoid partial checks
+        print ('Special :', flag_special, 
+               '---- Letter :',flag_letters, 
+               '---- Digits :', flag_digits, 
+               '---- Length :', flag_len)
         flag_special = False
-        for c in password :
-            for i in pool_special :
-                if i == c :
-                    flag_special = True
-                    break
-            if flag_special :
-                break
-        if flag_special != True :
-            print ("There's no special characters")
-            password = input('Type your password : ')
-        for c in password :
-            for x in pool_letters :
-                if x != c and x != c.upper() :
-                    flag_letter = True
-                    break
-            if flag_letter :
-                break
-        if flag_letter != True :
-            print ("There's no letter")
-            password = input('Type your password : ')
-        else :
-            key = True
-                    
+        flag_letters = False
+        flag_digits = False
+        flag_len = False
+        print('Requirements not met ')
+        password = input('Re-Type your password : ')
+
 if key == True :
     print('Your password is : ' + password)
 else :
-    print()
+    print('Errrrr.....')
