@@ -244,19 +244,19 @@
 #         print("produsul " + i[0] + " are pretul " + str(i[1]) + " RON.")
 # ------------------------------------------------
 
-# Methods : upper, lower, append
+# Methods : upper, lower, camel, pascal, append
 # ------------------------------------------------
 # nume = "paul"
-# print(nume.upper())
+# print(nume.upper()) # -----> PAUL
 
 # nume = "PAUL"
-# print(nume.lower())
+# print(nume.lower()) # -----> paul
 
 # lista_fructe = ["banane", "capsuni"]
 # print(lista_fructe)
 # lista_fructe.append("kiwi")
 # print(lista_fructe)
-# print(lista_fructe[2])
+# print(lista_fructe[1])
 # ------------------------------------------------
 
 # Modules : import
