@@ -1,3 +1,5 @@
+# # long analitical version
+# ---------------------------------------- 
 # # create list for special characters
 # pool_special = [ '!' , '#' , '$' , '%' , '&' , '(' , ')' , '*' , '+' , ',' , '-' , '.' , '/' , ':' , ';' , '<' , '=' , '>' , '?' , '@' , '^' , '_' , '' , '|' , '~' ]
 
@@ -54,22 +56,26 @@
 #     print('Your password is : ' + password)
 # else :
 #     print('Errrrr.....')
+# ----------------------------------------
 
+# # optimised version
+# ---------------------------------------- 
+# def password_check(password) :
+#     if len(password) < 9 :
+#         print ('Not long enough')
+#         return False
+    
+#     big = any(c.isupper() for c in password)
+#     small = any(c.islower() for c in password)
+#     digit = any(c.isdigit() for c in password)
+#     alfanum = any(not c.isalnum() for c in password)
 
+#     return all([big, small, digit, alfanum])
 
-def password_check (password) :
-    if len(password) < 9 :
-        return False
-    big = any(c.isupper() for c in password)
-    small = any(c.islower() for c in password)
-    digit = any(c.isdigit() for c in password)
-    alfanum = any(not c.isalnum() for c in password)
+# password = input ("Enter password : ")
 
-    return all([big, small, digit, alfanum])
-
-password = input("Etner password : ")
-
-if password_check (password) :
-    print ("All good ✅ : ", password)
-else:
-    print("Not good enough ❌")
+# if password_check(password) :
+#     print("All good ✅ : ", password)
+# else:
+#     print("Not good enough ❌")
+# ----------------------------------------
