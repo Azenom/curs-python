@@ -18,13 +18,6 @@
 # print(text3)
 # print(text4)
 
-# titlu = '   Luceafarul'
-# autor = '         de Mihai Eminescu'
-# strofa1 = """A fost odată ca ’n poveşti,
-# A fost ca niciodată,
-# Din rude mari împărăteşti,
-# O prea frumoasă fată."""
-
 # # Operatii
 # ----------------------------------------
 # Adunarea -------------------------------
