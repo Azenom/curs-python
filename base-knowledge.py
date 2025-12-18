@@ -87,7 +87,7 @@
 
 #Conversii (casting)
 # ----------------------------------------
-#conversie int la str si concatenare
+# conversie int la str si concatenare
 # text = input("Introdu numele")
 # numar_intreg = input("Introdu varsta")
 # print(text + ' are : ' + str(numar_intreg) + ' ani') # Ana are : 15 ani
@@ -101,15 +101,15 @@
 # var2 = f'Salut, {nume}! {nume} are {varsta} ani.'
 # print(var1) # -------> Salut, Paul! Paul are 30 ani.
 
-#rotunjire numar decimail la 4 zecimale
+# # rotunjire numar decimail la 4 zecimale
 # print(round(3.151592,4)) # 3.1515
 
-#conversie de la str la int si adunare
+# # conversie de la str la int si adunare
 # text = "30"
 # text2 = input("Introdu un numar")
 # print(int(text) + 10 + int(text)) # 30 + 10 + ....
 
-#conversie la bool()
+# # conversie la bool()
 # x = 1
 # x = bool(x)
 # print(x) #true
@@ -117,13 +117,13 @@
 # x = bool(x)
 # print(x) #false
 
-# conversie la float()
+# # conversie la float()
 # x = 1
 # x = float(x)
 # print(x) # 1.0
 # ----------------------------------------
 
-# string - len(), slicesing
+# # string - len(), slicesing
 # ------------------------------------------------
 # nume = "Paul"
 #         01234
