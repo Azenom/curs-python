@@ -106,7 +106,7 @@
 # print(type(numar_zecimal))
 # ----------------------------------------
 
-#Conversii
+#Conversii (casting)
 # ----------------------------------------
 #conversie int la str si concatenare
 # text = input("Introdu numele")
