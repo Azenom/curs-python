@@ -305,7 +305,7 @@
 # -------------
 
 # varianta 2 ---------------
-# lista = [] # ------> aici este initializata o lista goala la care se adauga cu .append elemente in aceasta
+# lista = [] # ------> aici este initializata o lista goala la care se adauga cu .append() elemente in aceasta
 # lista.append(["Suntem pe Terra?","t"])
 # lista.append(["suntem in Italia", "f"])
 # lista.append(["Stai la curte", "f"])
