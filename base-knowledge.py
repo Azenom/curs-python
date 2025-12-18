@@ -25,54 +25,37 @@
 # Din rude mari împărăteşti,
 # O prea frumoasă fată."""
 
-# print(titlu)
-# print(autor)
-# print(strofa1)
-
-# numar_intreg = 5
-# print(numar_intreg)
-# numar_zecimal = 5.5
-# print(numar_zecimal)
-
-# print('Care este numele tau ?')
-# nume = input("care este numele tau : ")
-# print('Numele tau este :')
-# print(nume)
-
-# text1 = 'Paul merge'
-# text2= 'la piata'
-# # print(text1 + ' ' + text2)
-# text3 = text1 + ' ' + text2
-# print(text3)
-
-# Printare de 100 ori sau oricat
-# text = 'IT School'
-# text2 = '2025
-# text1 = text + ' ' + text2
-# print(text * 100)
-# print (text1) # ------> IT School 2025
-
 # # Operatii
 # ----------------------------------------
-# Adunarea
+# Adunarea -------------------------------
 # print(5 + 2)
 
-# Scadere
+# text = 'IT School'
+# text1 = '2025'
+# text2 = text + ' ' + text1
+# print (text2) # ------> IT School 2025
+# # sau
+# print (text + ' ' + text1) # ------> IT School 2025
+
+# Scadere -------------------------------
 # print(7 - 4)
 
-# Inmultire
+# Inmultire ---------------------------
 # print(5 * 2)
 
-# Impartire
+# text = '2025
+# print (text * 100) # ------> printeaza 2025 de 100 ori
+
+# Impartire ---------------------------
 # print(5 /2 )
 
-# Impartire intreaga
+# Impartire intreaga ---------------------------
 # print(5//2)
 
-# Impartire cu rest
+# Impartire cu rest ---------------------------
 # print(5%2)
 
-# Ridicare la putere
+# Ridicare la putere ---------------------------
 # print(5**2)
 
 # Logici (True si False): 
@@ -90,7 +73,7 @@
 # print(10 in [2,56,5,'10']) # False
 # print(10 not in [2,56,5,'10']) # True
 
-# Identtitate is & is not (catre ce locatie de memorie arata variabelele)
+# Identitate is & is not (catre ce locatie de memorie arata variabelele)
 # a = None
 # b = None
 # print(a is b) # True
@@ -126,7 +109,7 @@
 # print(var1) # -------> Salut, Paul! Paul are 30 ani.
 
 #rotunjire numar decimail la 4 zecimale
-# print(round(3.151592,2)) # 3.15
+# print(round(3.151592,4)) # 3.1515
 
 #conversie de la str la int si adunare
 # text = "30"
@@ -141,22 +124,13 @@
 # x = bool(x)
 # print(x) #false
 
-#conversie la float()
+# conversie la float()
 # x = 1
 # x = float(x)
 # print(x) # 1.0
 # ----------------------------------------
 
-#Quiz1 
-# ---------------------------------------
-#cerem utiliz numele si varsta
-#calculam si anuntam utilz cati ani mai are de trait pana la 100 de ani
-# nume = input("Numele tau este : ")
-# varsta = input("Varsta ta este  : ")
-# print(nume + " ,pana la 100 de ani mai ai : " + str(100 - int(varsta)) + " ani.")
-# ---------------------------------
-
-# string[], len(), slicesing
+# string - len(), slicesing
 # ------------------------------------------------
 # nume = "Paul"
 #         01234
@@ -221,10 +195,10 @@
 # adevarat = True
 # fals = False
 
-# print(adevarat)
+# print(adevarat) # -------> True
 # print(type(adevarat)) # -------> <class 'bool'>
-# print(fals)
-# print(type(fals))
+# print(fals) # -------> False
+# print(type(fals)) # -------> <class 'bool'>
 
 # numar_1 = 5
 # numar_2 = 10
