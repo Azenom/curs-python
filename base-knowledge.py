@@ -47,9 +47,12 @@
 
 # Printare de 100 ori sau oricat
 # text = 'IT School'
+# text2 = '2025
+# text1 = text + ' ' + text2
 # print(text * 100)
+# print (text1) # ------> IT School 2025
 
-#Operatii
+# # Operatii
 # ----------------------------------------
 # Adunarea
 # print(5 + 2)
@@ -113,6 +116,15 @@
 # numar_intreg = input("Introdu varsta")
 # print(text + ' are : ' + str(numar_intreg) + ' ani') # Ana are : 15 ani
 
+# # sau
+
+# nume = input('Inroduce numele: ')
+# varsta = input('Introdu varsta: ')
+# var1 = 'Salut, {}! {} are {} ani.'.format(nume, nume, varsta)
+# # var 1 si var 2 sunt echivalente doar ca e mai simplu de scris si citit cu f string
+# var2 = f'Salut, {nume}! {nume} are {varsta} ani.'
+# print(var1) # -------> Salut, Paul! Paul are 30 ani.
+
 #rotunjire numar decimail la 4 zecimale
 # print(round(3.151592,2)) # 3.15
 
@@ -144,7 +156,7 @@
 # print(nume + " ,pana la 100 de ani mai ai : " + str(100 - int(varsta)) + " ani.")
 # ---------------------------------
 
-# string[] si len()
+# string[], len(), slicesing
 # ------------------------------------------------
 # nume = "Paul"
 #         01234
@@ -153,6 +165,8 @@
 # print(len(nume)) # --------> 11 caractere
 
 # var = 'Marius are pere'
+# #      012345 678 9.10.11.12
+# #                 -4-3-2-1   
 # print(var[0]) # ------> M
 # print(var[1]) # ------> a
 # print(var[-1]) # ------> e
@@ -160,6 +174,7 @@
 # print(var[-3]) # ------> e
 # print(var[-4]) # ------> p
 
+# # prints slices from var string 
 # print (var[-4::1]) # -------> pere
 # print (var[0:5:1]) # -------> Marius
 
@@ -258,7 +273,7 @@
 #         print("produsul " + i[0] + " are pretul " + str(i[1]) + " RON.")
 # ------------------------------------------------
 
-# Methods : upper, lower, camel, pascal, append
+# Methods : upper, lower, camel, pascal, append, replace, count, find, strip, lstrip, rstrip
 # ------------------------------------------------
 # nume = "paul"
 # print(nume.upper()) # -----> PAUL
@@ -271,6 +286,16 @@
 # lista_fructe.append("kiwi")
 # print(lista_fructe)
 # print(lista_fructe[1])
+
+# var = 'mama tata fratele sora sotia sotul copilul mama'
+# print(var.replace('sotia', 'nevasta')) # -------> mama tata fratele sora nevasta sotul copilul mama
+# print(var.count('mama')) # -------> 2 ori gasit
+# print(var.find('fratele')) # -------> la indexul 10 din string
+
+# nume = '      Abesei Paul      '
+# print(nume.strip()) # -------> Abesei Paul (elimina spatiile de la inceput si sfarsit)
+# print(nume.lstrip()) # -------> Abesei Paul      (elimina spatiile de la inceput)
+# print(nume.rstrip()) # ------->      Abesei Paul (elimina spatiile de la sfarsit)
 # ------------------------------------------------
 
 # Modules : import
