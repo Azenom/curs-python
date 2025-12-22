@@ -51,7 +51,7 @@
 # Ridicare la putere ---------------------------
 # print(5**2)
 
-# Logici (True si False): 
+# Logici (True si False): ---------------------------
 # and - ambele adevarate
 # or - cel putin una adevarata
 # not - negarea valorii
@@ -60,20 +60,20 @@
 # c = 3
 # print (a>b and b<c) # False
 
-# Apartenenta in & not in
+# Apartenenta in & not in ---------------------------
 # print('a' in 'Ana') # True
 # print('10' in '10222') # True
 # print(10 in [2,56,5,'10']) # False
 # print(10 not in [2,56,5,'10']) # True
 
-# Identitate is & is not (catre ce locatie de memorie arata variabelele)
+# Identitate is & is not (catre ce locatie de memorie arata variabelele) ---------------------------
 # a = None
 # b = None
 # print(a is b) # True
 # print(a is not b) # False
 # ----------------------------------------
 
-#Afisare tip de date
+# Afisare tip de date
 # ----------------------------------------
 # text = 'Python'
 # numar_intreg = 10
@@ -85,14 +85,14 @@
 # print(type(numar_zecimal))
 # ----------------------------------------
 
-#Conversii (casting)
+# Conversii (casting)
 # ----------------------------------------
 # conversie int la str si concatenare
 # text = input("Introdu numele")
 # numar_intreg = input("Introdu varsta")
 # print(text + ' are : ' + str(numar_intreg) + ' ani') # Ana are : 15 ani
 
-# # sau
+# sau
 
 # nume = input('Inroduce numele: ')
 # varsta = input('Introdu varsta: ')
@@ -101,7 +101,7 @@
 # var2 = f'Salut, {nume}! {nume} are {varsta} ani.'
 # print(var1) # -------> Salut, Paul! Paul are 30 ani.
 
-# # rotunjire numar decimail la 4 zecimale
+# rotunjire numar decimail la 4 zecimale
 # print(round(3.151592,4)) # 3.1515
 
 # # conversie de la str la int si adunare
@@ -109,7 +109,7 @@
 # text2 = input("Introdu un numar")
 # print(int(text) + 10 + int(text)) # 30 + 10 + ....
 
-# # conversie la bool()
+# conversie la bool()
 # x = 1
 # x = bool(x)
 # print(x) #true
@@ -117,13 +117,13 @@
 # x = bool(x)
 # print(x) #false
 
-# # conversie la float()
+# conversie la float()
 # x = 1
 # x = float(x)
 # print(x) # 1.0
 # ----------------------------------------
 
-# # string - len(), slicesing
+# String - len(), slicesing
 # ------------------------------------------------
 # nume = "Paul"
 #         01234
@@ -141,15 +141,43 @@
 # print(var[-3]) # ------> e
 # print(var[-4]) # ------> p
 
-# # prints slices from var string 
+# prints slices from var string 
 # print (var[-4::1]) # -------> pere
 # print (var[0:5:1]) # -------> Marius
 
 # var1 = var[7:10] # or var1 = var[7:10:1]
 # print(var1) # -------> are
+
+# Impartirea si unirea string-urilor
+# ------------------------------------------------
+# var = "tata mama fratele sora"
+# print(var.split()) # -------> ['tata', 'mama', 'fratele', 'sora'] taie spatiile
+# print(var.split('f')) # -------> ['tata mama ', 'ratele sora'] taie litera f si imparte in 2
+# var_old = var.split()   # -------> ['tata', 'mama', 'fratele', 'sora']
+# new_var = '#'.join(var_old)
+# print(new_var) # -------> tata#mama#fratele#sora
+
+# Verificari pe string-uri : startswith, endswith, isalpha, isdigit, isalnum
+# ------------------------------------------------
+# text = "Abesei Paul"
+# print(text.startswith('A')) # -------> True
+# # sau
+# print('Abesei Paul'.startswith('A')) # -------> True
+# print(text.endswith('l'))   # -------> True
+# print(text.isalpha())      # -------> False (are spatiu intre cuvinte)
+# print(text.isdigit())  # -------> False (nu toate caracterele sunt cifre)
+# print(text.isalnum())  # -------> False (nu toate caracterele sunt alfanumerice, are spatiu)
+
+# Caractere speciale in string-uri : \n \t \\ \' \"
+# ------------------------------------------------
+# print("Acesta este un text cu un caracter special: \n new line")
+# print("Acesta este un text cu un caracter special: \t tab")
+# print('Acesta este un text cu un caracter special: \\ backslash')
+# print("Acesta este un text cu un caracter special: \' apostrof")
+# print('Acesta este un text cu un caracter special: \" ghilimele')
 # ------------------------------------------------
 
-# liste
+# Liste, subliste, index, bucla for
 # ------------------------------------------------
 # lista_cumparaturi = ["mere","oua","lapte"]
 #       sau
@@ -181,6 +209,17 @@
 # print("pretul pentru " + lista_liste[0][0] + " este " + str(lista_liste[0][1]) + " RON.")
 # print("pretul pentru " + lista_liste[1][0] + " este " + str(lista_liste[1][1]) + " RON.")
 # print("pretul pentru " + lista_liste[2][0] + " este " + str(lista_liste[2][1]) + " RON.")
+
+# lista_cumparaturi = ["oua", "paine", "lapte", "kiwi"]
+# for i in lista_cumparaturi :
+#     print(i)
+
+# lista_cumparaturi = [ ["oua",1], ["paine",3], ["lapte",8], ["kiwi", 5] ]
+# for i in lista_cumparaturi :
+#     if i[0] == "paine":
+#         print("am gasit")
+#     else : 
+#         print("produsul " + i[0] + " are pretul " + str(i[1]) + " RON.")
 # ------------------------------------------------
 
 # operatorul de comparatie ==
@@ -206,6 +245,46 @@
 # print(numar_1 == numar_2) # -------> False
 # ------------------------------------------------
 
+# Control flux
+# Structura if ... elif ... else
+# ------------------------------------------------
+# a = 10
+# b = 12
+# if a<b :
+#     print("a este mai mic decat b")
+# elif a==b :
+#     print("a este egal cu b")
+# else :
+#     print("a este mai mare decat b")
+
+# Structura for ... in ...
+# ------------------------------------------------
+# my_str = 'mama are 10 pere'
+# for char in my_str : 
+#     print(char)
+# for cuvant in my_str.split() :
+#     print(cuvant)
+# ------------------------------------------------
+# my_str = 'mama are 10 pere'
+# text = ''
+# for i in my_str : 
+#     if i.isdigit() :
+#         text = text + i # text += i <-- concatenare
+# print("Cifrele din string sunt: " + text)
+
+# for numar in range(2, 5, 2) :
+#     print (numar) # -------> 2, 4
+# -----------------------------------------------
+
+# Structura while ...
+# -----------------------------------------------
+# numar = 1
+# limita = 5
+# while numar <= limita :
+#     print("Numarul curent este: " + str(numar))
+#     numar = numar + 1
+# -----------------------------------------------
+
 # conditional statements
 # ------------------------------------------------
 # numar_1 = 5
@@ -224,20 +303,6 @@
 #      print("ai voie in parc")
 # else :
 #      print("nu ai voie in parc")
-# ------------------------------------------------
-
-# Loops
-# ------------------------------------------------
-# lista_cumparaturi = ["oua", "paine", "lapte", "kiwi"]
-# for i in lista_cumparaturi :
-#     print(i)
-
-# lista_cumparaturi = [ ["oua",1], ["paine",3], ["lapte",8], ["kiwi", 5] ]
-# for i in lista_cumparaturi :
-#     if i[0] == "paine":
-#         print("am gasit")
-#     else : 
-#         print("produsul " + i[0] + " are pretul " + str(i[1]) + " RON.")
 # ------------------------------------------------
 
 # Methods : upper, lower, camel, pascal, append, replace, count, find, strip, lstrip, rstrip
