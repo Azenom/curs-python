@@ -68,10 +68,17 @@
 # elif numar2 > numar1:
 #     print("Al doilea numar este mai mare.")
 # else:
-#     print("Numerele sunt egale.")
+#     print("Numerele sunt egale."
 
 # Exerciții pentru oameni incalziti (11-30):
 # 11. Primește trei numere și afișează cel mai mic dintre ele.
+
+numar1 = float(input("Introdu primul numar: "))
+numar2 = float(input("Introdu al doilea numar: "))
+numar3 = float(input("Introdu al treilea numar: "))
+
+
+
 # 12. Primește un text și verifică dacă este palindrom.
 # 13. Primește o parolă și verifică dacă are cel puțin 8 caractere și conține o cifră.
 # 14. Primește un text și construiește un nou string numai cu vocalele din el.
