@@ -339,7 +339,7 @@
 # print(lista)
 # ------------------------------------------------
 
-#Quiz2 : len - lungime
+##Quiz2 : len - lungime
 # ------------------------------------------------
 # import random
 # name = input("Care este numele tau ? ")
