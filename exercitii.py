@@ -70,14 +70,18 @@
 # else:
 #     print("Numerele sunt egale."
 
-# Exerciții pentru oameni incalziti (11-30):
 # 11. Primește trei numere și afișează cel mai mic dintre ele.
 
-numar1 = float(input("Introdu primul numar: "))
-numar2 = float(input("Introdu al doilea numar: "))
-numar3 = float(input("Introdu al treilea numar: "))
+# numar1 = float(input("Introdu primul numar: "))
+# numar2 = float(input("Introdu al doilea numar: "))
+# numar3 = float(input("Introdu al treilea numar: "))
 
-
+# if numar1 <= numar2 and numar1 <= numar3:
+#     print("Primul numar este cel mai mic.")
+# elif numar2 <= numar1 and numar2 <= numar3:
+#     print("Al doilea numar este cel mai mic.")
+# else:
+#     print("Al treilea numar este cel mai mic.")
 
 # 12. Primește un text și verifică dacă este palindrom.
 # 13. Primește o parolă și verifică dacă are cel puțin 8 caractere și conține o cifră.
