@@ -350,12 +350,50 @@
 # Fara a folosi set().
 # # Exemplu: [1,2,2,3,4,4,5] -> [1,3,5]
 
-# 14) Primește o listă de numere și grupează elementele în două liste: una cu numere negative, alta cu numere pozitive și zero.
+# lista = [1,2,2,3,4,4,5]
+# lista_unica = []
+# for item in lista:
+#     if lista.count(item) == 1:
+#         lista_unica.append(item)
+# print(lista_unica)
+
+# 47. Primește o listă de numere și grupează elementele în două liste: una cu numere negative, alta cu numere pozitive și zero.
 # # Exemplu: [10,-1,2,-3,0,4,-5] -> negative: [-1,-3,-5], pozitive_si_zero: [10,2,0,4]
 
-# 15) Primește o listă de stringuri și sorteaz-o crescător după numărul de vocale din fiecare string.
+# lista = [10,-1,2,-3,0,4,-5]
+# negative = []
+# restul = []
+# for i in lista :
+#     if i < 0 :
+#         negative.append(i)
+#     else :
+#         restul.append(i)
+# print("Numerele negative : ",negative)
+# print("Pozitive si zero : ",restul)
+
+# 48. Primește o listă de stringuri și sorteaz-o crescător după numărul de vocale din fiecare string.
 # Fara a folosi functia sort() sau sorted().
 # # Exemplu: ['ana', 'mere', 'casa', 'masina'] -> ['ana', 'casa', 'mere', 'masina']
+
+lista  = ['ana', 'mere', 'masina', 'casa']
+vocale = 'aeiou'
+count_i = 0
+count_j = 0
+for i in range(len(lista)):
+    for j in range(i + 1, len(lista)):
+        for char in lista[i] :
+            if char in vocale:
+                count_i += 1
+        for char in lista[j]:
+            if char in vocale:
+                count_j += 1
+        if count_i > count_j:
+            #lista[i], lista[j] = lista[j], lista[i]
+            # or
+            flag = lista[i]
+            lista[i] = lista[j]
+            lista[j] = flag
+print(lista)
 
 # 16) Primește o listă de liste (matrice) și calculează suma elementelor de pe diagonala principală (doar dacă matricea este pătratică).
 # # Exemplu: [[1,2,3],[4,5,6],[7,8,9]] -> 15 (1+5+9)
