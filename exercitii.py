@@ -340,13 +340,13 @@
 # 45. Creează o listă de liste [index, valoare] pentru fiecare element dintr-o listă dată.
 # # Exemplu: [10,20,30] -> [[0,10],[1,20],[2,30]]
 
-lista = [10,20,30]
-lista2 = []
-for i in range(len(lista)) :
-    lista2.append([i, lista[i]])
-print(lista2)
+# lista = [10,20,30]
+# lista2 = []
+# for i in range(len(lista)) :
+#     lista2.append([i, lista[i]])
+# print(lista2)
 
-# 13) Primește o listă de numere și elimină toate elementele care apar de mai mult de o dată (păstrează doar elementele unice).
+# 46. Primește o listă de numere și elimină toate elementele care apar de mai mult de o dată (păstrează doar elementele unice).
 # Fara a folosi set().
 # # Exemplu: [1,2,2,3,4,4,5] -> [1,3,5]
 
