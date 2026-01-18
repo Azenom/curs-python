@@ -409,9 +409,31 @@
 # else :
 #     print ("nu e matrice patratica")
 
-# 17) Se da lista: [[10, 5, 29], ["Marian", "Ionut", "Marcel], [10.2, 7.5, 3.4]]. Sa se extraga numele "Ionut" si sa se afiseze.
+# 50. Se da lista: [ [10, 5, 29] , ["Marian", "Ionut", "Marcel"] , [10.2, 7.5, 3.4] ]. Sa se extraga numele "Ionut" si sa se afiseze.
 
-# 18) Se da lista: [[10, 5, 29], ["Marian", "Ionut", "Marcel], [10.2, 7.5, 3.4]]. Sa se extraga litera "r" din numele "Marcel" si sa se afiseze.
+# lista = [ [10, 5, 29] , ["Marian", "Ionut", "Marcel"] , [10.2, 7.5, 3.4] ]
+# for i in lista :
+#     for j in i :
+#         if j == "Ionut" : 
+#             print(j)
+
+# for sublista in lista:
+#     for element in sublista:
+#         if element == "Ionut":
+#             print(element)
+
+# 51. Se da lista: [[10, 5, 29], ["Marian", "Ionut", "Marcel"], [10.2, 7.5, 3.4]]. Sa se extraga litera "r" din numele "Marcel" si sa se afiseze.
+
+# lista = [ [10, 5, 29], ["Marian", "Ionut", "Marcel"] , [10.2, 7.5, 3.4] ]
+# for sublista in lista :
+#     #print("Sublista",type(sublista),sublista)
+#     for element in sublista[-1::] :
+#         #print("Element",type(element),element)
+#         if type(element) == str :
+#             for caracter in element :
+#                 #print("Caracter",type(caracter),caracter)
+#                 if caracter == "r":
+#                     print(caracter," din ",element)
 
 # 19) Sa se numere de cate ori apare un element intr-o lista incluzand si listele imbricate.
 # # Exemplu: [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]] si elementul 1 -> apare de 4 ori
@@ -423,6 +445,7 @@
 # Pentru generarea numarului aleator:
 # import random
 # numar_aleator = random.randint(1, 100)
+# print(numar_aleator)
 
 # 21) Sa se scrie un program primeste date in urmatorul format: "Nume: Ionescu Prenume: Ion" pana cand se introduce
 # caracterul #. Programul trebuie sa stocheze toate datele citite, iar la final sa le afiseze in ordine alfabetica

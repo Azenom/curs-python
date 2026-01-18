@@ -337,6 +337,9 @@
 # print(lista)
 # random.shuffle(lista) # -------> 5627341
 # print(lista)
+
+# numar_aleator = random.randint(1, 100)
+# print(numar_aleator)
 # ------------------------------------------------
 
 ##Quiz2 : len - lungime
