@@ -292,7 +292,7 @@
 # print("Maximul este: ", maxim)
 # print("Minimul este: ", minim)
 
-# 8) Elimină toate elementele pare dintr-o listă de numere.
+# 41. Elimină toate elementele pare dintr-o listă de numere.
 # Exemplu: [1,2,3,4,5,6] -> [1,3,5]
 
 # lista = [1,2,3,4,5,6]
@@ -301,17 +301,50 @@
 #         lista.remove(i)
 # print(lista)
 
-# 9) Primește o listă de stringuri și construiește o nouă listă cu stringurile care conțin litera 'a'.
+# 42. Primește o listă de stringuri și construiește o nouă listă cu stringurile care conțin litera 'a'.
 # Exemplu: ['ana', 'mere', 'casa', 'masina'] -> ['ana', 'casa', 'masina']
 
-# 10) Verifică dacă o listă este palindrom (se citește la fel de la stânga la dreapta și invers).
+# lista = ['ana', 'mere', 'casa', 'masina']
+# lista_noua = []
+# for i in lista :
+#     for x in i :
+#         if x == 'a' :
+#             lista_noua.append(i)
+#             break
+# print("Lista ce contine cuvinte cu litera 'a' este: ",lista_noua)
+
+# 43. Verifică dacă o listă este palindrom (se citește la fel de la stânga la dreapta și invers).
 # # Exemplu: [1,2,3,2,1] -> True, [1,2,3,4] -> False
 
-# 11) Interclasează două liste de aceeași lungime într-o singură listă.
+# lista = [1,2,3,2,1]
+# flag = True
+# for i in range(len(lista) // 2):
+#     if lista[i] != lista[-(i + 1)]:
+#         flag = False
+#         break
+# if flag:
+#     print("Lista este palindrom.")
+# else:
+#     print("Lista nu este palindrom.")
+
+# 44. Interclasează două liste de aceeași lungime într-o singură listă.
 # # Exemplu: [1,2], [3,4] => [1,3,2,4]
 
-# 12) Creează o listă de liste [index, valoare] pentru fiecare element dintr-o listă dată.
+# lista1 = [1,2]
+# print(lista1)
+# lista2 = [3,4]
+# print(lista2)
+# lista1.extend(lista2)
+# print(lista1)
+
+# 45. Creează o listă de liste [index, valoare] pentru fiecare element dintr-o listă dată.
 # # Exemplu: [10,20,30] -> [[0,10],[1,20],[2,30]]
+
+lista = [10,20,30]
+lista2 = []
+for i in range(len(lista)) :
+    lista2.append([i, lista[i]])
+print(lista2)
 
 # 13) Primește o listă de numere și elimină toate elementele care apar de mai mult de o dată (păstrează doar elementele unice).
 # Fara a folosi set().
