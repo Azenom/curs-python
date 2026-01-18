@@ -227,3 +227,122 @@
 #     else :
 #         print("Optiune nepermisa. Alege o optiune valida!")
 #         numar = int(input("Optiunea ta este: "))
+
+# 35. Sa se afiseze toate puterile lui 2 aflate intre un interval dat de utilizator.
+# Exemplu: 10, 50 -> 16, 32
+
+# lim_min = int(input("Introdu limita inferioara: "))
+# lim_max = int(input("Introdu limita superioara: "))
+# val = 2
+# for i in range(1, int(lim_max/2) + 1):
+#     val = 2 ** i
+#     if lim_min < val & val <lim_max :
+#         print(val)
+
+# 36. Creează o listă cu 7 numere întregi, apoi afișează suma și media elementelor fara a utiliza functiile sum() si avg().
+# Exemplu: [1,2,3,4,5,6,7] -> suma=28, media=4.0
+
+# lista = [1,2,3,4,5,6,7]
+# sum = 0
+# for i in lista:
+#     sum += i
+# print("Suma elementelor este: ", sum)
+# print("Media elementelor este: ", sum/len(lista))
+
+# 37. Primește o listă de la tastatură (elemente separate prin spațiu) și afișează lista inversată.
+# Exemplu: input: 1 2 3 4 5 -> output: [5,4,3,2,1]
+
+# lista = input("Introdu o lista de elemente separate prin spatiu: ").split()
+# lista_inversata = lista[::-1]
+# print("Lista inversată este:", lista_inversata)
+
+# sau
+
+# lista = input("Introdu o lista de elemente separate prin spatiu: ").split()
+# lista_inversata = list(reversed(lista))
+# print("Lista inversată este:", lista_inversata)
+
+# 38. Afișează toate elementele de pe poziții impare dintr-o listă dată.
+# Exemplu: [10,20,30,40,50,60] -> 20,40,60
+
+# lista = [10,20,30,40,50,60]
+# for i in range(1, len(lista), 2):
+#     print(lista[i])
+
+# 39. Înlocuiește toate aparițiile unui element dat cu altă valoare într-o listă.
+# Exemplu: [1,2,3,2,4], inlocuieste 2 cu 5 -> [1,5,3,5,4]
+
+# lista = [1,2,3,2,4]
+# for i in range(len(lista)):
+#     if lista[i] == 2:
+#         lista[i] = 5
+# print(lista)
+
+# 40. Afișează elementul maxim și minim dintr-o listă fără a folosi funcțiile max/min.
+# Exemplu: [3,1,4,1,5,9,2] -> max=9, min=1
+
+# lista = [3,1,4,1,5,9,2]
+# maxim = lista[0]
+# minim = lista[0]
+# for i in lista:
+#     if i > maxim:
+#         maxim = i
+#     if i < minim:
+#         minim = i
+# print("Maximul este: ", maxim)
+# print("Minimul este: ", minim)
+
+# 8) Elimină toate elementele pare dintr-o listă de numere.
+# Exemplu: [1,2,3,4,5,6] -> [1,3,5]
+
+# lista = [1,2,3,4,5,6]
+# for i in lista :
+#     if i % 2 == 0 :
+#         lista.remove(i)
+# print(lista)
+
+# 9) Primește o listă de stringuri și construiește o nouă listă cu stringurile care conțin litera 'a'.
+# Exemplu: ['ana', 'mere', 'casa', 'masina'] -> ['ana', 'casa', 'masina']
+
+# 10) Verifică dacă o listă este palindrom (se citește la fel de la stânga la dreapta și invers).
+# # Exemplu: [1,2,3,2,1] -> True, [1,2,3,4] -> False
+
+# 11) Interclasează două liste de aceeași lungime într-o singură listă.
+# # Exemplu: [1,2], [3,4] => [1,3,2,4]
+
+# 12) Creează o listă de liste [index, valoare] pentru fiecare element dintr-o listă dată.
+# # Exemplu: [10,20,30] -> [[0,10],[1,20],[2,30]]
+
+# 13) Primește o listă de numere și elimină toate elementele care apar de mai mult de o dată (păstrează doar elementele unice).
+# Fara a folosi set().
+# # Exemplu: [1,2,2,3,4,4,5] -> [1,3,5]
+
+# 14) Primește o listă de numere și grupează elementele în două liste: una cu numere negative, alta cu numere pozitive și zero.
+# # Exemplu: [10,-1,2,-3,0,4,-5] -> negative: [-1,-3,-5], pozitive_si_zero: [10,2,0,4]
+
+# 15) Primește o listă de stringuri și sorteaz-o crescător după numărul de vocale din fiecare string.
+# Fara a folosi functia sort() sau sorted().
+# # Exemplu: ['ana', 'mere', 'casa', 'masina'] -> ['ana', 'casa', 'mere', 'masina']
+
+# 16) Primește o listă de liste (matrice) și calculează suma elementelor de pe diagonala principală (doar dacă matricea este pătratică).
+# # Exemplu: [[1,2,3],[4,5,6],[7,8,9]] -> 15 (1+5+9)
+
+# 17) Se da lista: [[10, 5, 29], ["Marian", "Ionut", "Marcel], [10.2, 7.5, 3.4]]. Sa se extraga numele "Ionut" si sa se afiseze.
+
+# 18) Se da lista: [[10, 5, 29], ["Marian", "Ionut", "Marcel], [10.2, 7.5, 3.4]]. Sa se extraga litera "r" din numele "Marcel" si sa se afiseze.
+
+# 19) Sa se numere de cate ori apare un element intr-o lista incluzand si listele imbricate.
+# # Exemplu: [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]] si elementul 1 -> apare de 4 ori
+
+# 20) Scrieti un program care sa genereze un numar aleator intre 1 si 100. Utilizatorul trebuie sa
+# ghiceasca numarul, iar programul sa ii ofere indicatii daca numarul introdus este mai mare sau mai mic decat cel generat.
+# Programul se termina cand utilizatorul ghiceste numarul corect sau daca introduce cuvantul exit. La final se afiseaza numarul de incercari facute.
+
+# Pentru generarea numarului aleator:
+# import random
+# numar_aleator = random.randint(1, 100)
+
+# 21) Sa se scrie un program primeste date in urmatorul format: "Nume: Ionescu Prenume: Ion" pana cand se introduce
+# caracterul #. Programul trebuie sa stocheze toate datele citite, iar la final sa le afiseze in ordine alfabetica
+# in functie de numele de familie.
+#
