@@ -375,28 +375,39 @@
 # Fara a folosi functia sort() sau sorted().
 # # Exemplu: ['ana', 'mere', 'casa', 'masina'] -> ['ana', 'casa', 'mere', 'masina']
 
-lista  = ['ana', 'mere', 'masina', 'casa']
-vocale = 'aeiou'
-count_i = 0
-count_j = 0
-for i in range(len(lista)):
-    for j in range(i + 1, len(lista)):
-        for char in lista[i] :
-            if char in vocale:
-                count_i += 1
-        for char in lista[j]:
-            if char in vocale:
-                count_j += 1
-        if count_i > count_j:
-            #lista[i], lista[j] = lista[j], lista[i]
-            # or
-            flag = lista[i]
-            lista[i] = lista[j]
-            lista[j] = flag
-print(lista)
+# lista  = ['ana', 'masina', 'casa', 'mere']
+# vocale = 'aeiou'
+# for i in range(len(lista)):
+#     for j in range(i + 1, len(lista)):
+#         count_i = 0
+#         for char in lista[i]:
+#             if char in vocale:
+#                 count_i += 1
+#         count_j = 0
+#         for char in lista[j]:
+#             if char in vocale:
+#                 count_j += 1
+#         if count_i > count_j:
+#             lista[i], lista[j] = lista[j], lista[i]
+# print(lista)   
 
-# 16) Primește o listă de liste (matrice) și calculează suma elementelor de pe diagonala principală (doar dacă matricea este pătratică).
+# 49. Primește o listă de liste (matrice) și calculează suma elementelor de pe diagonala principală (doar dacă matricea este pătratică).
 # # Exemplu: [[1,2,3],[4,5,6],[7,8,9]] -> 15 (1+5+9)
+
+# lista = [[1,2,3],[4,5,6],[7,8,9]]
+# lista = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+# lista = [ [1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20],[21,22,23,24,25] ]
+# count_i = 0
+# sum_diag = 0
+# for i in lista :
+#     if len(i) == len(lista) :
+#         count_i = count_i + 1
+# if count_i == len(lista) :
+#     for j in range(len(lista)) :
+#         sum_diag = sum_diag + lista[j][j]
+#     print("suma este : ",sum_diag)
+# else :
+#     print ("nu e matrice patratica")
 
 # 17) Se da lista: [[10, 5, 29], ["Marian", "Ionut", "Marcel], [10.2, 7.5, 3.4]]. Sa se extraga numele "Ionut" si sa se afiseze.
 
