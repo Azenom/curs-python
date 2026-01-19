@@ -537,19 +537,19 @@
 #     for element in sublista:
 #         if element == "xxxxx":
 #             print(element)
-
-# lista[0]= lista[0][1] 
-# lista[1]= lista[0][1] 
+#                                0.      1 
+# lista[0]= sublista[0][1] // Paul    Abesei
+# lista[1]= sublista[0][1] // Andrei   Popescu
 lista=[]
-while True :
-    for sublista in lista :
-        for nume,prenume in sublista :
-            lista[nume] = input("Introdu numele")
-            lista[prenume] = input("Introdu prenumele")
-            if lista[nume] or lista[prenume] != '#' :
-                lista[nume].append()
-                lista[prenume].append()
-            else :
-                break
-
+flag = True
+while flag :
+    for sublista in lista : 
+        nume = input("nume")
+        prenume = input("prenume")
+        if lista[nume] or lista[prenume] != '#' :
+            for element in sublista :
+                sublista.append(nume)
+                sublista.append[prenume]
+        else :
+            flag = False
 print(lista)
