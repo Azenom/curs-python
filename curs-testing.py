@@ -26,12 +26,11 @@
 
 # sau
 
-lista_pare = []
-for x in range(1,11) :
-    if x % 2 == 0 :
-        lista_pare.append(x)
-print(lista_pare)
+# lista_pare = []
+# for x in range(1,11) :
+#     if x % 2 == 0 :
+#         lista_pare.append(x)
+# print(lista_pare)
 
 # lista_mea = [x**2 for x in range (1,11) if x % 2 == 0]
 # print(lista_mea) # ------> 4,16,36,64,100
-

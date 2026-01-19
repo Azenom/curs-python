@@ -463,10 +463,10 @@
 #                 if caracter == "r":
 #                     print(caracter," din ",element)
 
-# 19) Sa se numere de cate ori apare un element intr-o lista incluzand si listele imbricate.
+# 52. Sa se numere de cate ori apare un element intr-o lista incluzand si listele imbricate.
 # # Exemplu: [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]] si elementul 1 -> apare de 4 ori
 
-# 20) Scrieti un program care sa genereze un numar aleator intre 1 si 100. Utilizatorul trebuie sa
+# 53. Scrieti un program care sa genereze un numar aleator intre 1 si 100. Utilizatorul trebuie sa
 # ghiceasca numarul, iar programul sa ii ofere indicatii daca numarul introdus este mai mare sau mai mic decat cel generat.
 # Programul se termina cand utilizatorul ghiceste numarul corect sau daca introduce cuvantul exit. 
 # La final se afiseaza numarul de incercari facute.
@@ -526,30 +526,52 @@
 # numar_aleator = random.randint(1, 100)
 # print(numar_aleator)
 
-# 21) Sa se scrie un program primeste date in urmatorul format: 
+# 54. Sa se scrie un program primeste date in urmatorul format: 
 # "Nume: Ionescu Prenume: Ion" pana cand se introduce caracterul #. 
 # Programul trebuie sa stocheze toate datele citite, iar la final sa le afiseze in ordine alfabetica
 # in functie de numele de familie.
 
-# lista = [ [Ion ,Popescu ], [Paul, Abesei] ]
+# lista = []
+# sublista = []
+# while True :
+#     data = input("Introdu un nume :")
+#     if data == "#" :
+#         print("iesire")
+#         break
+#     else : 
+#         sublista.append(data)
+#         data = input("Introdu un prenume :")  
+#         sublista.append(data)      
+#         lista.append(sublista)
+#         # treci pe indexul urmator in lista
+#         sublista = [] # resetare sublista pentru urmatorul nume prenume
+# lista.sort()
+# print("Lista sortata este : ",lista)
 
-# for sublista in lista:
-#     for element in sublista:
-#         if element == "xxxxx":
-#             print(element)
-#                                0.      1 
-# lista[0]= sublista[0][1] // Paul    Abesei
-# lista[1]= sublista[0][1] // Andrei   Popescu
-lista=[]
-flag = True
-while flag :
-    for sublista in lista : 
-        nume = input("nume")
-        prenume = input("prenume")
-        if lista[nume] or lista[prenume] != '#' :
-            for element in sublista :
-                sublista.append(nume)
-                sublista.append[prenume]
-        else :
-            flag = False
-print(lista)
+# # sau Chat GPT
+
+# persoane = []
+# for _ in range(1000):   # număr suficient de mare
+#     linie = input("Introdu datele: ")
+#     if linie == "#":
+#         break
+#     parti = linie.split()
+#     nume = parti[0]
+#     prenume = parti[1]
+#     persoane.append([nume, prenume])
+# persoane.sort(key=lambda x: x[0])
+# for p in persoane:
+#     print(f"Nume: {p[0]} Prenume: {p[1]}")
+
+# # sau Visual Studio
+
+# date_intrare = []
+# while True :
+#     date = input("Introduceti datele in formatul 'Nume: Ionescu Prenume: Ion' sau '#' pentru a termina: ")
+#     if date == "#" :
+#         break
+#     date_intrare.append(date)
+# date_intrare.sort()
+# print("Datele in ordine alfabetica dupa numele de familie:")
+# for date in date_intrare :
+#     print(date)
