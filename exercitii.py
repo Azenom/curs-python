@@ -161,8 +161,6 @@
 # print("Divizorii numarului sunt:", divizori)
 
 # 30. Primește un text și verifică dacă are cel puțin o literă mare, una mică și o cifră.
-
-# Exercitii pentru oameni supraincalziti (31-33):
 # 31. Fizz Buzz: Primește un număr n și afișează numerele de la 1 la n. Pentru multiplii de 3, afișează "Fizz", pentru multiplii de 5, afișează "Buzz", iar pentru multiplii de ambele, afișează "FizzBuzz".
 # 32. Primește un text și afișează-l cu fiecare cuvânt inversat, dar în aceeași ordine. (Exemplu: "Ana are mere" -> "anA era erem")
 
@@ -189,6 +187,7 @@
 # Utilizatorul trebuie sa introduca optiunea, iar apoi:
 # Pentru optiunile 1->4, utilizatorul trebuie sa introduca doua numere, iar programul va afisa rezultatul operatiei.
 # In cazul in care introduce 5, atunci iesim din program. 
+
 # print("Meniu:")
 # print("1. Adunarea a doua numere.")
 # print("2. Scaderea a doua numere.")
@@ -264,7 +263,7 @@
 
 # 38. Afișează toate elementele de pe poziții impare dintr-o listă dată.
 # Exemplu: [10,20,30,40,50,60] -> 20,40,60
-
+#.       0. 1. 2. 3. 4. 5. 
 # lista = [10,20,30,40,50,60]
 # for i in range(1, len(lista), 2):
 #     print(lista[i])
@@ -278,16 +277,35 @@
 #         lista[i] = 5
 # print(lista)
 
+# sau 
+
+# lista = [1,2,3,2,4]
+# lista2 = []
+# for i in lista :
+#     if i == 2 :
+#         lista2.append(5)
+#     else :
+#         lista2.append(i)
+# print(lista2)
+
+# sau
+
+# a = [1,2,3,2,4]
+# userinput = input('please choose a number from 1-4: ')
+# x = int(input("What's the new number? "))
+# a = [num if num != int(userinput) else x for num in a]
+# print(a)
+
 # 40. Afișează elementul maxim și minim dintr-o listă fără a folosi funcțiile max/min.
 # Exemplu: [3,1,4,1,5,9,2] -> max=9, min=1
 
 # lista = [3,1,4,1,5,9,2]
 # maxim = lista[0]
 # minim = lista[0]
-# for i in lista:
-#     if i > maxim:
+# for i in lista :
+#     if i > maxim :
 #         maxim = i
-#     if i < minim:
+#     if i < minim :
 #         minim = i
 # print("Maximul este: ", maxim)
 # print("Minimul este: ", minim)
@@ -295,7 +313,7 @@
 # 41. Elimină toate elementele pare dintr-o listă de numere.
 # Exemplu: [1,2,3,4,5,6] -> [1,3,5]
 
-# lista = [1,2,3,4,5,6]
+# lista = [1,2,3,2,5,6]
 # for i in lista :
 #     if i % 2 == 0 :
 #         lista.remove(i)
@@ -312,6 +330,15 @@
 #             lista_noua.append(i)
 #             break
 # print("Lista ce contine cuvinte cu litera 'a' este: ",lista_noua)
+
+# # sau 
+
+# mylist = ['ana', 'mere', 'casa', 'masina']
+# mylist2 = []
+# for word in mylist:
+#     if "a" in word:
+#         mylist2.append(word)
+# print(mylist2)
 
 # 43. Verifică dacă o listă este palindrom (se citește la fel de la stânga la dreapta și invers).
 # # Exemplu: [1,2,3,2,1] -> True, [1,2,3,4] -> False
@@ -352,9 +379,9 @@
 
 # lista = [1,2,2,3,4,4,5]
 # lista_unica = []
-# for item in lista:
-#     if lista.count(item) == 1:
-#         lista_unica.append(item)
+# for i in lista:
+#     if lista.count(i) == 1:
+#         lista_unica.append(i)
 # print(lista_unica)
 
 # 47. Primește o listă de numere și grupează elementele în două liste: una cu numere negative, alta cu numere pozitive și zero.
@@ -366,17 +393,18 @@
 # for i in lista :
 #     if i < 0 :
 #         negative.append(i)
-#     else :
+#     else : # i>= 0
 #         restul.append(i)
 # print("Numerele negative : ",negative)
 # print("Pozitive si zero : ",restul)
 
 # 48. Primește o listă de stringuri și sorteaz-o crescător după numărul de vocale din fiecare string.
 # Fara a folosi functia sort() sau sorted().
-# # Exemplu: ['ana', 'mere', 'casa', 'masina'] -> ['ana', 'casa', 'mere', 'masina']
+# # Exemplu: ['ana', 'masina', 'casa', 'mere'] -> ['ana', 'casa', 'mere', 'masina']
 
 # lista  = ['ana', 'masina', 'casa', 'mere']
 # vocale = 'aeiou'
+# temporar = ''
 # for i in range(len(lista)):
 #     for j in range(i + 1, len(lista)):
 #         count_i = 0
@@ -388,7 +416,7 @@
 #             if char in vocale:
 #                 count_j += 1
 #         if count_i > count_j:
-#             lista[i], lista[j] = lista[j], lista[i]
+#             lista[i], lista[j] = lista[j], lista[i] # temporar = lista[i] // list[i] = lista[j] // lista[j]=temorar
 # print(lista)   
 
 # 49. Primește o listă de liste (matrice) și calculează suma elementelor de pe diagonala principală (doar dacă matricea este pătratică).
@@ -419,7 +447,7 @@
 
 # for sublista in lista:
 #     for element in sublista:
-#         if element == "Ionut":
+#         if element == "xxxxx":
 #             print(element)
 
 # 51. Se da lista: [[10, 5, 29], ["Marian", "Ionut", "Marcel"], [10.2, 7.5, 3.4]]. Sa se extraga litera "r" din numele "Marcel" si sa se afiseze.
@@ -440,14 +468,88 @@
 
 # 20) Scrieti un program care sa genereze un numar aleator intre 1 si 100. Utilizatorul trebuie sa
 # ghiceasca numarul, iar programul sa ii ofere indicatii daca numarul introdus este mai mare sau mai mic decat cel generat.
-# Programul se termina cand utilizatorul ghiceste numarul corect sau daca introduce cuvantul exit. La final se afiseaza numarul de incercari facute.
+# Programul se termina cand utilizatorul ghiceste numarul corect sau daca introduce cuvantul exit. 
+# La final se afiseaza numarul de incercari facute.
+
+# import random
+# numar_ales = random.randint(1,100)
+# print(numar_ales)
+# nr_g = ''
+# count = 1
+# flag = True
+# while flag :
+#     nr_g = int(input("Ghiceste numar : "))
+#     if numar_ales == nr_g :
+#         print ("ai gasit numarul")
+#         flag = False
+#     elif nr_g > numar_ales :
+#         print("Numarul ghicit e mai mare ")
+#         count += 1
+#     else :
+#         print("Numarul ghicit e mai mic ") 
+#         count += 1
+#     if nr_g == "exit" :
+#         flag = False # break
+# print("Ti-a luat "+str(count)+" incercari sa ghicesti")
+
+# sau 
+
+# import random
+# def cere_numar():
+#     """Cere input de la utilizator și îl returnează."""
+#     return input("Introdu un număr (sau 'exit' pentru a ieși): ")
+# def main():
+#     """Docstring main"""
+#     numar_aleator = random.randint(1, 100)
+#     while True:
+#         raspuns = cere_numar()
+#         if raspuns.upper() == "EXIT":
+#             print("Joc încheiat.")
+#             break
+#         try:
+#             incercare = int(raspuns)
+#         except ValueError:
+#             print("Te rog introdu un număr valid sau 'exit'.")
+#             continue
+#         if incercare > numar_aleator:
+#             print("Numărul tău este prea mare!")
+#         elif incercare < numar_aleator:
+#             print("Numărul pe care îl cauți este mai mare.")
+#         else:
+#             print(f"Felicitări! Ai ghicit numărul {numar_aleator}!")
+#             break
+# if name == "main":
+#     main()
 
 # Pentru generarea numarului aleator:
 # import random
 # numar_aleator = random.randint(1, 100)
 # print(numar_aleator)
 
-# 21) Sa se scrie un program primeste date in urmatorul format: "Nume: Ionescu Prenume: Ion" pana cand se introduce
-# caracterul #. Programul trebuie sa stocheze toate datele citite, iar la final sa le afiseze in ordine alfabetica
+# 21) Sa se scrie un program primeste date in urmatorul format: 
+# "Nume: Ionescu Prenume: Ion" pana cand se introduce caracterul #. 
+# Programul trebuie sa stocheze toate datele citite, iar la final sa le afiseze in ordine alfabetica
 # in functie de numele de familie.
-#
+
+# lista = [ [Ion ,Popescu ], [Paul, Abesei] ]
+
+# for sublista in lista:
+#     for element in sublista:
+#         if element == "xxxxx":
+#             print(element)
+
+# lista[0]= lista[0][1] 
+# lista[1]= lista[0][1] 
+lista=[]
+while True :
+    for sublista in lista :
+        for nume,prenume in sublista :
+            lista[nume] = input("Introdu numele")
+            lista[prenume] = input("Introdu prenumele")
+            if lista[nume] or lista[prenume] != '#' :
+                lista[nume].append()
+                lista[prenume].append()
+            else :
+                break
+
+print(lista)
