@@ -1,33 +1,31 @@
-# ------------------------------------------------------ Afisare date ------------------------------------------------------------------------
+# ------------------------------------------------------ Afisare date ----------------------------------------------------------------------
 
 # text = 'Python'
 # nume = "Paul"
 # nume = "Aura"
-# text1 = 'aici putem scrie un "text" simplu'
+# text1 = 'textul este un "text" simplu'
 # text2 = "Paul's bike is blue."
-# text3 = """aici
-# putem
-# scrie
-# pe'
-# "mai"
+# text3 = """chiar 
+# daca scriem
+# text la 'olalta
+# pe "mai"
 # multe linii."""
 # text4 = input("Introdu text aici : ") # se introduce de la tastatura
 
-# print(nume) # Aura deoarece a suprascris peste Paul
-# print(text1) # aici putem scrie un "text" simplu
-# print(text2) # Paul's bike is blue.
-# print(text3) # aici
-# putem
-# scrie
-# pe'
-# "mai"
-# multe linii.
+# print(nume) # ------> Aura deoarece a suprascris peste Paul
+# print(text1) # ------> textul este un "text" simplu
+# print(text2) # ------> Paul's bike is blue.
+# print(text3) # afiseaza : #   chiar 
+#                               daca scriem
+#                               text la 'olalta
+#                               pe "mai"
+#                               multe linii.
 # print(text4) # afiseaza textul introdus de la tastatura
 
-# ----------------------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------
 
 # ------------------------------------------------------------ Operatii ---------------------------------------------------------------------
-# # Adunare ------------------------------------------------
+# Adunare ------------------------------------------------
 
 # print(5 + 2)
 # text = 'IT School'
@@ -63,14 +61,6 @@
 # print(5**2) # ------> 25
 
 # Comparatie == ------------------------------------------------
-
-# adevarat = True
-# fals = False
-
-# print(adevarat) # -------> True
-# print(type(adevarat)) # -------> <class 'bool'>
-# print(fals) # -------> False
-# print(type(fals)) # -------> <class 'bool'>
 
 # numar_1 = 5
 # numar_2 = 10
@@ -124,9 +114,14 @@
 
 # Structura for ... in ... ------------------------------------------------
 
-# my_str = 'mama are 10 pere'
+# my_str = "python"
 # for char in my_str : 
-#     print(char) # afiseaza fiecare caracter pe linie noua
+#     print(char) # --------> afiseaza fiecare caracter pe linie noua : p
+#                                                                       y
+#                                                                       t
+#                                                                       h
+#                                                                       o
+#                                                                       n
 
 # -----------------------------------------------
 
@@ -420,4 +415,4 @@
 # numar = random.randint(1, 100)
 # print(numar) # -------> 57 (numar random intre 1 si 100)
 
-# ---------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------
