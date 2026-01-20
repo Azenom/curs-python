@@ -423,7 +423,7 @@
 # print(nume.pascalcase()) # -----> Abesei Paul # fiecare cuvant cu litera mare
 
 # nume = "PAUL"
-# print(nume.lower()) # -----> paul
+# print("noul nume este :",nume.lower()) # -----> paul
 
 # lista_fructe = ["banane", "capsuni"]
 # print(lista_fructe)

@@ -722,10 +722,10 @@
 # print (lista)
 # 61. Creeaza o lista cu toate vocalele dintr-un text dat. 
 # Ex: 'Aceasta este o propozitie de test.' -> ['A', 'e', 'a', 'a', 'e', 'o', 'o', 'i', 'i', 'e', 'e']
-lista = input("Introdu text : ")
-lista_vocale = "aeiouAEIOU"
-lista_extrase = [char for char in lista if char in lista_vocale]
-print("Lista vocalelor extrase este : ", lista_extrase)
+# lista = input("Introdu text : ")
+# lista_vocale = "aeiouAEIOU"
+# lista_extrase = [char for char in lista if char in lista_vocale]
+# print("Lista vocalelor extrase este : ", lista_extrase)
 
 # Folositi any pentru rezolvarea urmatoarelor exercitii:
 # 62. Verifica daca intr-o lista de numere exista cel putin un numar par. Ex: [1, 3, 5, 7, 8] -> True
