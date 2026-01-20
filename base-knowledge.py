@@ -254,7 +254,7 @@
 
 # ------------------------------------
 
-# Inlocuire/stergere remove(), replace(), replace() ------------------------------------------------
+# Inlocuire/stergere remove(), replace(), pop(), clear() ------------------------------------------------
 
 # var = 'mama tata fratele sora sotia sotul copilul mama'
 # print(var.replace('sotia', 'nevasta')) # -------> mama tata fratele sora nevasta sotul copilul mama
@@ -266,6 +266,16 @@
 # lista = ['mere', 'pere', 'banane', 'kiwi', 'struguri']
 # lista.replace('kiwi')
 # print(lista) # -------> ['mere', 'pere', 'banane', 'struguri']
+
+# lista = ['mere', 'pere', 'banane', 'kiwi', 'struguri']
+# lista.pop(2) # sterge elementul de la indexul 2
+# element_sters = lista.pop(2) # sterge elementul de la indexul 2 si il salveaza in variabila element_sters
+# print(lista) # -------> ['mere', 'pere', 'kiwi', 'struguri']
+# print("Elementul sters este : " + element_sters) # -------> Elementul sters este : banane
+
+# lista = ['mere', 'pere', 'banane', 'kiwi', 'struguri']
+# lista.clear() # sterge toate elementele din lista
+# print(lista) # -------> []
 
 # ------------------------------------
 
@@ -317,16 +327,19 @@
 #         print("produsul " + i[0] + " are pretul " + str(i[1]) + " RON.")
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 
-# -------------------------------------------------Verificari pe string/liste -------------------------------------------------------------
-# -----------------len(), startswith(), endswith(), isalpha(), isdigit(), isalnum(), type(), any(), all() ---------------------------
+# -------------------------------------------------Verificari pe string/liste -----------------------------------------------------------------
+# -------------len(), index(), startswith(), endswith(), isalpha(), isdigit(), isalnum(), type(), any(), all(), count(), find()  --------------
 
 # nume = "abracadabra"
 # print(len(nume)) # --------> 11 caractere
 
+# nume = "abracadabra"
+# print(nume.index('c')) # -------> 4 (indexul la care se gaseste litera c)
+
 # text = "Abesei Paul"
 # print(text.startswith('A')) # -------> True
 
-# # sau
+# sau
 
 # print('Abesei Paul'.startswith('A')) # -------> True
 # print(text.endswith('l'))   # -------> True
@@ -361,6 +374,10 @@
 #         lista_pare.append(x)
 # print(lista_pare) # ------> 2,4,6,8,10
 
+# var = 'mama tata fratele sora sotia sotul copilul mama'
+# print(var.count('mama')) # -------> 2 ori gasit
+# print(var.find('fratele')) # -------> la indexul 10 din string
+
 # ------------------------------------------------------ Caractere speciale ------------------------------------------------------------------
 # Caractere speciale in string-uri : \n \t \\ \' \" ----------------------------------------------------
 
@@ -373,7 +390,7 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------
 
 # ------------------------------------------------------ Metode string/liste ---------------------------------------------------------------
-# ----------------- upper(), capitalize(), lower(), camel(), pascalcase(), append(), count, find ----------------
+# ----------------- upper(), capitalize(), lower(), camel(), pascalcase(), append(), extend() ----------------
 
 # nume = "paul"
 # print(nume.upper()) # -----> PAUL
@@ -398,9 +415,10 @@
 # print(lista_fructe)
 # print(lista_fructe[1])
 
-# var = 'mama tata fratele sora sotia sotul copilul mama'
-# print(var.count('mama')) # -------> 2 ori gasit
-# print(var.find('fratele')) # -------> la indexul 10 din string
+# lista_vegetale = ["morcovi", "cartofi"]
+# lista_fructe = ["banane", "capsuni"]
+# lista_fructe.extend(lista_vegetale)
+# print(lista_fructe) # -------> ['banane', 'capsuni', 'morcovi', 'cartofi']
 
 # ------------------------------------------------
 
