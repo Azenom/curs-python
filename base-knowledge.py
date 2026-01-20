@@ -15,7 +15,7 @@
 # print(nume) # ------> Aura deoarece a suprascris peste Paul
 # print(text1) # ------> textul este un "text" simplu
 # print(text2) # ------> Paul's bike is blue.
-# print(text3) # afiseaza : #   chiar 
+# print(text3) # afiseaza :     chiar 
 #                               daca scriem
 #                               text la 'olalta
 #                               pe "mai"
@@ -227,10 +227,13 @@
 # print(var1) # -------> are
 
 # var = "tata mama fratele sora"
+# print(type(var)) # -------> <class 'str'>
 # print(var.split()) # -------> ['tata', 'mama', 'fratele', 'sora'] taie spatiile
 # print(var.split('f')) # -------> ['tata mama ', 'ratele sora'] taie litera f si imparte in 2
 # var_old = var.split()   # -------> ['tata', 'mama', 'fratele', 'sora']
+# print(type(var_old)) # -------> <class 'list'>
 # new_var = '#'.join(var_old)
+# print(type(new_var)) # -------> <class 'str'>
 # print(new_var) # -------> tata#mama#fratele#sora
 
 # my_str = 'mama are 10 pere'
