@@ -705,3 +705,49 @@
 #     print("All good ✅ : ", password)
 # else:
 #     print("Not good enough ❌")
+
+# Folositi list comprehension pentru a rezolva urmatoarele exercitii :
+# 57. Creeaza o lista cu patratele numerelor de la 0 la 9. Ex: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+# lista = [i**2 for i in range(10)]
+# print (lista)
+# 58. Creeaza o lista cu toate numerele pare divizibile cu 3 de la 1 la 50 inclusiv. Ex: [6, 12, 18, 24, 30, 36, 42, 48]
+# lista = [i for i in range(50) if i%3 == 0 and i%2 == 0]
+# print (lista)
+# 59. Dintr-o lista cu cuvinte creeaza o lista cu lungimile fiecarui cuvant. Ex: ['ana', 'maria', 'ion', 'marioara', '1468912'] -> [3, 5, 3, 8, 7]
+# lista = ['ana', 'maria', 'ion', 'marioara', '1468912']
+# lungime = [ len(i) for i in lista ]
+# print(lungime)
+# 60. Dintr-o lista cu numere de la 1 la 50, creeaza o lista cu patratele numerelor care sunt divizibile cu 4 si cu 6. Ex: [144, 576, 1296, 2304]
+# lista = [i**2 for i in range(1,25) if i%4 == 0 and i%6 == 0]
+# print (lista)
+# 61. Creeaza o lista cu toate vocalele dintr-un text dat. 
+# Ex: 'Aceasta este o propozitie de test.' -> ['A', 'e', 'a', 'a', 'e', 'o', 'o', 'i', 'i', 'e', 'e']
+lista = input("Introdu text : ")
+lista_vocale = "aeiouAEIOU"
+lista_extrase = [char for char in lista if char in lista_vocale]
+print("Lista vocalelor extrase este : ", lista_extrase)
+
+# Folositi any pentru rezolvarea urmatoarelor exercitii:
+# 62. Verifica daca intr-o lista de numere exista cel putin un numar par. Ex: [1, 3, 5, 7, 8] -> True
+# lista = [1, 3, 5, 7, 9]
+# verificare = any(i%2 == 0 for i in lista)
+# print(verificare)
+# 63. Verifica daca intr-o lista de cuvinte exista cel putin un cuvant care sa contina litera 'z'. Ex: ['azna', 'maria', 'ioana', 'ebra'] -> True
+# lista = ['ana', 'maria', 'ioana', 'zebra']
+# verificare = any('z' for i in lista)
+# print(verificare)
+# 64. Verifica daca intr-o lista de numere exista cel putin un numar negativ. Ex: [4, 5, -1, 3, 0] -> True
+# lista = [4, 5, -1, 3, 0]
+# verificare = any(i for i in lista if i <0 )
+# print(verificare)
+# 65. Verifica daca intr-o lista de stringuri exista cel putin un string care sa fie gol. Ex: ['ana', '', 'maria'] -> True
+# lista = ['ana', '', 'maria']
+# verificare = any( i == "" for i in lista)
+# print(verificare)
+# 66. Verifica daca intr-o lista de caractere exista cel putin o vocala mare (A, E, I, O, U). Ex: ['a', 'b', 'C', 'D', 'E'] -> True 
+# lista = ['a', 'b', 'C', 'D', 'E']
+# lista_vocale = "AEIOU"
+# verificare = [char for char in lista if char in lista_vocale]
+# print("Lista vocalelor extrase este : ", verificare)
+# verificare_bool = any([char for char in lista if char in lista_vocale])
+# print("Adev sau fals : ", verificare_bool)
