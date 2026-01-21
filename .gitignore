@@ -1,2 +1,4 @@
-# Ignore macOS .DS_Store files
-.DS_Store
+# This file is intentionally left blank.
+
+# Exclude .DS_Store from being tracked by Git.
+# Reference: https://git-scm.com/docs/gitignore
