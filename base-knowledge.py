@@ -340,7 +340,7 @@
 
 # ------------------------------------
 
-# Tuple ------------------------------------------------
+# Tuple Set - modificari si operatii ------------------------------------------------
 
 # tuple_exemplu = (1, 2, 3, "patru", "cinci")
 # print("Tuple exemplu:", tuple_exemplu)
