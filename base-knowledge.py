@@ -200,7 +200,7 @@
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------
 
-# ------------------------------------------------- Modificari pe string/liste ----------------------------------------------------------------- 
+# ------------------------------------------------- Modificari pe string/liste/tuple ----------------------------------------------------------------- 
 # Slicesing, split(), join(), zip(), sort() ------------------------------------------------
 
 # nume = "Paul"
@@ -337,6 +337,126 @@
 #         print("am gasit")
 #     else : 
 #         print("produsul " + i[0] + " are pretul " + str(i[1]) + " RON.")
+
+# ------------------------------------
+
+# Tuple ------------------------------------------------
+
+# tuple_exemplu = (1, 2, 3, "patru", "cinci")
+# print("Tuple exemplu:", tuple_exemplu)
+# Unpacking - cate variabile definesti, atatea elemente in tuplu le ia
+# a, b, c, d, e = tuple_exemplu
+# print("Unpacked values:", a, b, c, d, e) # -------> 1 2 3 patru cinci
+
+# Accesare element din tuplu
+# tuple_exemplu = (1, 2, 3, "patru", "cinci")
+# print(tuple_exemplu[3]) # -------> patru
+
+# Lungimea tuplului 
+# tuple_exemplu = (1, 2, 3, "patru", "cinci")
+# print(len(tuple_exemplu)) # -------> 5
+
+# Numarul de aparitii ale unui element in tuplu
+# tuple_exemplu = (1, 2, 3, "patru", "cinci")
+# print(tuple_exemplu.count(2))   # -----> 1
+
+# Slicing
+# sub_tuple = tuple_exemplu[1:4] # Elemente de la index 1 la 3
+# print("Sub-tuple:", sub_tuple) # -----> (2, 3, 'patru')
+
+# Generare tuplu folosind comprehension
+# tuple_exemplu = ('a', 'b', 'c', 'd', 'e', 'i', 'f', 'g', 'h', 'i')
+# tuple1 = tuple(zi for zi in tuple_exemplu if zi == 'i')  
+# print(tuple1) # -----> ('i', 'i')
+
+# Modificarea unui tuple prin conversie la lista si inapoi la tuplu, deoarece tuplele sunt imutabile(nu pot fi modificate direct)
+# tuple_numere = (1,2,3,4)
+# tuple_numere = list(tuple_numere)
+# tuple_numere.append(5)
+# tuple_numere = tuple(tuple_numere)
+# print(tuple_numere)
+
+# -----------------------------------------------
+
+# Set - modificari si operatii -----------------------------------------------
+# set_exemplu = {1, 2, 3, "patru", "cinci"}
+# print("Set exemplu:", set_exemplu)
+
+# Accesare elemente din set (nu se poate accesa un element specific)
+#print(set_exemplu[0]) # eroare
+
+# Creare set folosinf comprehansion
+# set_nou = {x**2 for x in range(5)}
+# print("Set creat prin comprehensiune:", set_nou) # -----> {0, 1, 4, 9, 16}
+
+# Afisarea unui element din set
+# for element in set_exemplu:
+#     print("Element din set:", element)
+
+# Adaugare element in set
+# set_exemplu = {1, 2, 3, "patru", "cinci"}
+# set_exemplu.add("sase")
+# print("Set dupa adaugare:", set_exemplu)
+
+# Stergere element din set
+# set_exemplu = {1, 2, 3, "patru", "cinci"}
+# set_exemplu.remove("patru")
+# print("Set dupa stergere:", set_exemplu)
+
+# Verificare existenta element in set
+# set_exemplu = {1, 2, 3, "patru", "cinci"}
+# print("Exista 'cinci' in set?", "cinci" in set_exemplu)
+
+# Operatii cu seturi
+# set1 = {1, 2, 3}
+# set2 = {3, 4, 5}
+# print("Intersectie:", set1 & set2) # sau set1.intersection(set2)
+# print("Reuniune:", set1 | set2) # sau set1.union(set2)
+# print("Diferenta:", set1 - set2) # sau set1.difference(set2)
+
+# Unire seturi
+# set_unire = set1.union(set2)
+# print("Set unire:", set_unire)
+
+# Intersection - returneaza intersectia dintre doua seturi
+# set1 = {1, 2, 3, 4}
+# set2 = {3, 4, 5, 6}
+# print("Intersectie set1 si set2:", set1.intersection(set2)) # -----> {3, 4}
+
+# Difference - diferenta intre doua seturi
+# set1 = {1, 2, 3, 4}
+# set2 = {3, 4, 5, 6}
+# print("Diferenta set1 si set2:", set1.difference(set2)) # -----> {1, 2}
+
+# Issubset - verificare submultime intre doua seturi si returneaza True/False
+# set1 = {1, 2, 3, 4}
+# set2 = {3, 4, 5, 6}
+# set3 = {1, 2, 3, 4, 7, 8}
+# print("set1 este submultime a set2:", set1.issubset(set2)) # -----> False
+# print("set1 este submultime a set3:", set1.issubset(set3)) # -----> True
+
+# Conversie lista in set
+# lista = [1, 2, 2, 3, 4]
+# lista_modificata = set(lista)
+
+# Conversie set in lista
+# lista_noua = {1, 2, 3, 4}
+# lista_noua = list(set_exemplu)
+
+# Update set cu elemente din alta colectie fara a lua duplicatele
+# set_1 = {1, 2, 3, 4}
+# set_2 = {4, 5, 6}
+# set_1.update(set_2)
+# print("Set 1 dupa update:", set_1) # -----> {1, 2, 3, 4, 5, 6}
+
+# Functia pop() pentru seturi
+# my_set = {10, 20, 30, 40}
+# print("Element scos din set:", my_set.pop())  # Scoate si returneaza un element arbitrar din set
+
+# Frozen set - set imuabil, nu poate fi modificat dupa creare, nu se pot adauga sau sterge elemente, dar se pot face operatii de intersectie, reuniune, diferenta
+# frozen_set_exemplu = frozenset([1, 2, 3, 4])
+# print("Frozen set exemplu:", frozen_set_exemplu)
+# frozen_set_exemplu.add(5) # eroare deoarece frozen set este imuabil
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 
