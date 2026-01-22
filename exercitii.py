@@ -464,6 +464,7 @@
 
 lista = [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]]
 element_cautat = 1
+count = 0
 for i in lista :
     if type(i) == list :
         for j in i :
@@ -487,7 +488,7 @@ print("Elementul ", element_cautat, " apare de ", count, " ori.")
 
 # import random
 # numar_ales = random.randint(1,100)
-# print(numar_ales)
+# print(numar_ales) # de test sa verific daca functioneaza
 # nr_g = ''
 # count = 1
 # flag = True
