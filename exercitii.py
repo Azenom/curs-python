@@ -412,7 +412,10 @@
 #             if char in vocale:
 #                 count_j += 1
 #         if count_i > count_j:
-#             lista[i], lista[j] = lista[j], lista[i] # temporar = lista[i] // list[i] = lista[j] // lista[j]=temorar
+#             # lista[i], lista[j] = lista[j], lista[i] 
+#             temporar = lista[i] 
+#             lista[i] = lista[j] 
+#             lista[j] = temporar
 # print(lista)   
 
 # 49. Primește o listă de liste (matrice) și calculează suma elementelor de pe diagonala principală (doar dacă matricea este pătratică).
@@ -462,24 +465,44 @@
 # 52. Sa se numere de cate ori apare un element intr-o lista incluzand si listele imbricate.
 # # Exemplu: [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]] si elementul 1 -> apare de 4 ori
 
-lista = [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]]
-element_cautat = 1
-count = 0
-for i in lista :
-    if type(i) == list :
-        for j in i :
-            if type(j) == list :
-                for k in j :
-                    if k == element_cautat :
-                        count = count + 1
-            else :
-                if j == element_cautat :
-                    count = count + 1
-    else :
-        if i == element_cautat :
-            count = count + 1
+# lista = [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]]
+# element_cautat = 1
+# count = 0
+# for i in lista :
+#     if type(i) == list : # verificam daca elementul este o lista
+#         for j in i : 
+#             if type(j) == list :
+#                 for k in j :
+#                     if k == element_cautat :
+#                         count = count + 1
+#             else :
+#                 if j == element_cautat :
+#                     count = count + 1
+#     else :
+#         if i == element_cautat :
+#             count = count + 1
+# print("Elementul ", element_cautat, " apare de ", count, " ori.")
 
-print("Elementul ", element_cautat, " apare de ", count, " ori.")
+# sau 
+
+# lista = [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]]
+# text_lista = str(lista) #convertim lista intr-un string cu tot de paranteze, virgule si spatii
+# rezultat = text_lista.count('1')
+# print(rezultat)
+
+# sau
+
+# lista_elemente = [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]]
+# element = 1
+# count = 0
+# index = 0
+# while index < len(lista_elemente):
+#     if isinstance(lista_elemente[index], list):
+#         lista_elemente.extend(lista_elemente[index])
+#     else:
+#         if lista_elemente[index] == element:
+#             count += 1
+#     index += 1
 
 # 53. Scrieti un program care sa genereze un numar aleator intre 1 si 100. Utilizatorul trebuie sa
 # ghiceasca numarul, iar programul sa ii ofere indicatii daca numarul introdus este mai mare sau mai mic decat cel generat.
@@ -487,24 +510,24 @@ print("Elementul ", element_cautat, " apare de ", count, " ori.")
 # La final se afiseaza numarul de incercari facute.
 
 # import random
-# numar_ales = random.randint(1,100)
-# print(numar_ales) # de test sa verific daca functioneaza
+# numar_random = random.randint(1,100)
+# print(numar_random) # de test sa verific daca functioneaza
 # nr_g = ''
 # count = 1
 # flag = True
 # while flag :
-#     nr_g = int(input("Ghiceste numar : "))
-#     if numar_ales == nr_g :
+#     nr_ales = input("Ghiceste numar : ")
+#     if nr_ales == "exit" :
+#         break
+#     if numar_random == int(nr_ales) :
 #         print ("ai gasit numarul")
 #         flag = False
-#     elif nr_g > numar_ales :
+#     elif int(nr_ales) > numar_random :
 #         print("Numarul ghicit e mai mare ")
 #         count += 1
 #     else :
 #         print("Numarul ghicit e mai mic ") 
 #         count += 1
-#     if nr_g == "exit" :
-#         flag = False # break
 # print("Ti-a luat "+str(count)+" incercari sa ghicesti")
 
 # sau 
@@ -566,7 +589,7 @@ print("Elementul ", element_cautat, " apare de ", count, " ori.")
 # sau Chat GPT
 
 # persoane = []
-# for _ in range(1000):   # număr suficient de mare
+# for _ in range(1000):   # număr suficient de mare iar _ pentru că nu folosim valoarea
 #     linie = input("Introdu datele: ")
 #     if linie == "#":
 #         break
