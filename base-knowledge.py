@@ -378,7 +378,7 @@
 
 # -----------------------------------------------
 
-# Set - modificari si operatii -----------------------------------------------
+# Set-uri - modificari si operatii -----------------------------------------------
 # set_exemplu = {1, 2, 3, "patru", "cinci"}
 # print("Set exemplu:", set_exemplu)
 
