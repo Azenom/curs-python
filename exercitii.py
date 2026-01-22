@@ -462,6 +462,24 @@
 # 52. Sa se numere de cate ori apare un element intr-o lista incluzand si listele imbricate.
 # # Exemplu: [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]] si elementul 1 -> apare de 4 ori
 
+lista = [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]]
+element_cautat = 1
+for i in lista :
+    if type(i) == list :
+        for j in i :
+            if type(j) == list :
+                for k in j :
+                    if k == element_cautat :
+                        count = count + 1
+            else :
+                if j == element_cautat :
+                    count = count + 1
+    else :
+        if i == element_cautat :
+            count = count + 1
+
+print("Elementul ", element_cautat, " apare de ", count, " ori.")
+
 # 53. Scrieti un program care sa genereze un numar aleator intre 1 si 100. Utilizatorul trebuie sa
 # ghiceasca numarul, iar programul sa ii ofere indicatii daca numarul introdus este mai mare sau mai mic decat cel generat.
 # Programul se termina cand utilizatorul ghiceste numarul corect sau daca introduce cuvantul exit. 
@@ -544,7 +562,7 @@
 # lista.sort()
 # print("Lista sortata este : ",lista)
 
-# # sau Chat GPT
+# sau Chat GPT
 
 # persoane = []
 # for _ in range(1000):   # număr suficient de mare
@@ -559,7 +577,7 @@
 # for p in persoane:
 #     print(f"Nume: {p[0]} Prenume: {p[1]}")
 
-# # sau Visual Studio
+# sau Visual Studio
 
 # date_intrare = []
 # while True :
