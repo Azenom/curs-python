@@ -750,20 +750,29 @@
 
 # Folositi list comprehension pentru a rezolva urmatoarele exercitii :
 # 57. Creeaza o lista cu patratele numerelor de la 0 la 9. Ex: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
 # lista = [i**2 for i in range(10)]
 # print (lista)
+
 # 58. Creeaza o lista cu toate numerele pare divizibile cu 3 de la 1 la 50 inclusiv. Ex: [6, 12, 18, 24, 30, 36, 42, 48]
+
 # lista = [i for i in range(50) if i%3 == 0 and i%2 == 0]
 # print (lista)
+
 # 59. Dintr-o lista cu cuvinte creeaza o lista cu lungimile fiecarui cuvant. Ex: ['ana', 'maria', 'ion', 'marioara', '1468912'] -> [3, 5, 3, 8, 7]
+
 # lista = ['ana', 'maria', 'ion', 'marioara', '1468912']
 # lungime = [ len(i) for i in lista ]
 # print(lungime)
+
 # 60. Dintr-o lista cu numere de la 1 la 50, creeaza o lista cu patratele numerelor care sunt divizibile cu 4 si cu 6. Ex: [144, 576, 1296, 2304]
+
 # lista = [i**2 for i in range(1,25) if i%4 == 0 and i%6 == 0]
 # print (lista)
+
 # 61. Creeaza o lista cu toate vocalele dintr-un text dat. 
 # Ex: 'Aceasta este o propozitie de test.' -> ['A', 'e', 'a', 'a', 'e', 'o', 'o', 'i', 'i', 'e', 'e']
+
 # lista = input("Introdu text : ")
 # lista_vocale = "aeiouAEIOU"
 # lista_extrase = [char for char in lista if char in lista_vocale]
@@ -771,25 +780,220 @@
 
 # Folositi any pentru rezolvarea urmatoarelor exercitii:
 # 62. Verifica daca intr-o lista de numere exista cel putin un numar par. Ex: [1, 3, 5, 7, 8] -> True
+
 # lista = [1, 3, 5, 7, 9]
 # verificare = any(i%2 == 0 for i in lista)
 # print(verificare)
+
 # 63. Verifica daca intr-o lista de cuvinte exista cel putin un cuvant care sa contina litera 'z'. Ex: ['azna', 'maria', 'ioana', 'ebra'] -> True
+
 # lista = ['ana', 'maria', 'ioana', 'zebra']
 # verificare = any('z' for i in lista)
 # print(verificare)
+
 # 64. Verifica daca intr-o lista de numere exista cel putin un numar negativ. Ex: [4, 5, -1, 3, 0] -> True
+
 # lista = [4, 5, -1, 3, 0]
 # verificare = any(i for i in lista if i <0 )
 # print(verificare)
+
 # 65. Verifica daca intr-o lista de stringuri exista cel putin un string care sa fie gol. Ex: ['ana', '', 'maria'] -> True
+
 # lista = ['ana', '', 'maria']
 # verificare = any( i == "" for i in lista)
 # print(verificare)
+
 # 66. Verifica daca intr-o lista de caractere exista cel putin o vocala mare (A, E, I, O, U). Ex: ['a', 'b', 'C', 'D', 'E'] -> True 
+
 # lista = ['a', 'b', 'C', 'D', 'E']
 # lista_vocale = "AEIOU"
 # verificare = [char for char in lista if char in lista_vocale]
 # print("Lista vocalelor extrase este : ", verificare)
 # verificare_bool = any([char for char in lista if char in lista_vocale])
 # print("Adev sau fals : ", verificare_bool)
+
+# Exercitii pentru tuples:
+# 67. Creează un tuplu care conține numele a trei fructe și afișează-le pe ecran.
+#     Exemplu: ('măr', 'banană', 'cireașă') -> măr, banană, cireașă
+
+# Se da tuplul: fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi').
+
+# fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
+# for i in fructe :
+#     print(i)
+
+# 68. Afișează al doilea și al patrulea fruct din tuplu.
+
+# fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
+# print(fructe[1], fructe[3])
+
+# 69. Afișează tuplul inversat.
+
+# fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
+# fructe_inversate = tuple(reversed(fructe)) # tuple apare „în față” pentru că reversed() NU returnează un tuple, ci un iterator.
+# print(fructe_inversate)
+
+# sau cu slicing
+
+# fructe_inversate = fructe[::-1]
+# print(fructe_inversate)
+
+
+# 70. Verifică dacă 'kiwi' este în tuplu și afișează un mesaj corespunzător.
+
+# fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
+# print('kiwi' in fructe) # -------> True
+
+# sau
+
+# if 'kiwi' in fructe :
+#     print("Am gasit kiwi in fructe")
+# else :
+#     print("Nu am gasit kiwi in fructe")
+
+# 71. Creează un tuplu nou care conține doar fructele de la pozițiile(index) pare din tuplul original.
+
+# fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
+
+# fructe_noi = fructe[::2]
+# print("varianta 1 ", fructe_noi)
+
+# sau 
+
+# fructe_noi2 = tuple(fructe[i] for i in range(len(fructe)) if i % 2 == 0)
+# print("varianta 2 ", fructe_noi2)
+
+# sau 
+
+# fructe_noi3 = tuple(elem for i, elem in enumerate(fructe) if i % 2 == 0)
+# print("varianta 3 ", fructe_noi3)
+
+# 72. Afișează lungimea fiecarui element din tuplu.
+
+# fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
+# lungime = tuple(len(i) for i in fructe)
+# print(lungime)
+
+# 72. Concatenează tuplul cu un alt tuplu care conține alte două fructe și afișează rezultatul.
+
+# fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
+# legume = ('rosie', 'cartof', 'varza')
+# lista_cumparaturi = fructe + legume 
+# print(lista_cumparaturi)
+
+# sau prin conversie la liste si apoi afisare ca tuple
+
+# lista_fructe = list(fructe)
+# lista_legume = list(legume)
+# lista_fructe.extend(lista_legume)
+# print(tuple(lista_fructe))
+
+# sau dar nu merge
+
+# fructe = fructe.extend(legume) # extend nu se aplica la tuple doar la liste pentru ca string-ul este immutable
+# print(fructe) # nu o sa mearga
+
+# 73. Adauga un fruct nou 'ananas' in tuplu.
+
+# fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
+# fructe += ('ananas',)
+# print(fructe)
+
+# 74. Se da tuplul: ('măr', 'banană', 'cireașă'). Faceti unpacking pentru a extrage fiecare element in variabile separate si afisati-le.
+
+# fructe = ('măr', 'banană', 'cireașă')
+# a,b,c = fructe
+# print("Unpacking : ",a,b,c)
+
+# Exerciții pentru seturi:
+# 75. Creează un set care conține numele a cinci culori și afișează-le pe ecran.
+
+# culori = {'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
+# for culoare in culori :
+#     print(culoare)
+
+# 76. Adaugă o culoare nouă în setul de mai sus și afișează setul actualizat.
+
+# culori = {'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
+# culori.add("negru") # il adauga pe pozitie random
+# print(culori)
+
+# 77. Elimină o culoare din set și afișează setul actualizat.
+
+# culori = {'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
+# culori.remove("rosu")
+# print(culori)
+
+# 78. Verifică dacă o anumită culoare (de exemplu, 'albastru') este în set și afișează un mesaj corespunzător.
+
+# culori = {'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
+# if 'albastru' in culori : 
+#     print("gasit")
+# else :
+#     print("nu am gasit")
+
+# 79. Creează un alt set cu alte trei culori și afișează elementele comune din cele două seturi.
+
+# culori = {'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
+# culori2 = {'rosu', 'galben', 'albastru', 'alb', 'gri' }
+# print("Culori comune", culori.intersection(culori2))  # --------> {'rosu', 'galben', 'albastru'}
+# sau 
+# print(culori & culori2)
+
+# 80. Afișează toate culorile din primul set care nu sunt în al doilea set.
+
+# culori = {'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
+# culori2 = {'rosu', 'galben', 'albastru', 'alb', 'gri' }
+
+# culori_diferite = culori.difference(culori2)
+# print("diferite",culori_diferite) # --------> {'portocaliu', 'verde'}
+# sau
+# print("sau asa : ",culori - culori2) # --------> {'portocaliu', 'verde'}
+
+# 81. Se da lista: [1, 3, 5, 1, 6, 7, 9, 9, 1, 3, 4, 7, 1, 6, 7, 9, 5, 3, 3, 2, 1, 8, 4]. Eliminati duplicatele din lista,
+# astfel incat fiecare element sa apara o singura data.
+
+# numere = [1, 3, 5, 1, 6, 7, 9, 9, 1, 3, 4, 7, 1, 6, 7, 9, 5, 3, 3, 2, 1, 8, 4]
+# numere_duble = list(set(numere)) # daca se doreste returnare tot in lista
+# print(numere_duble)
+
+# 82. Exercitiu extra:
+# Se dau urmatoarele expresii matematice:
+# ( (a + b) * (c - d) + e ) / f - ( g * (h + i) ) -> corect deschise si inchise
+# ( (a + b) * (c - d) + e ) / f - ) g * (h + i) ( -> incorect deschise si inchise
+# Sa se verifice daca parantezele sunt corect deschise si inchise.
+
+# expresie = "( (a + b) * (c - d) + e ) / f - ) g * (h + i) ("
+# expresie = "( (a + b) * (c - d) + e ) / f - ( g * (h + i) )"
+# contor = 0
+# for i in expresie :
+#     if contor < 0 :
+#         break
+#     if i == "(" :
+#         contor += 1
+#     elif i == ")" :
+#         contor -= 1
+# if contor == 0 :
+#     print ("Corect")
+# else : 
+#     print("Incorect")
+
+# sau cu lista cu verificare ordine inchideri si deschideri
+
+# expresie = "( (a + b) * (c - d) + e ) / f - ) g * (h + i) ("
+# expresie = "( (a + b) * (c - d) + e ) / f - ( g * (h + i) )"
+# stiva = []
+# flag = True
+# for i in expresie :
+#     if i == "(" :
+#         stiva.append(i)
+#     elif i ==")" :
+#         if not stiva :
+#             flag = False
+#             break
+#         else : 
+#             stiva.pop()
+# if flag and len(stiva) == 0 :
+#     print("corect")
+# else : 
+#     print ("incorect")
