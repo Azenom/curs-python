@@ -934,8 +934,8 @@
 
 # 79. Creează un alt set cu alte trei culori și afișează elementele comune din cele două seturi.
 
-# culori = {'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
-# culori2 = {'rosu', 'galben', 'albastru', 'alb', 'gri' }
+# culori = { 'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
+# culori2 = { 'rosu', 'galben', 'albastru', 'alb', 'gri' }
 # print("Culori comune", culori.intersection(culori2))  # --------> {'rosu', 'galben', 'albastru'}
 # sau 
 # print(culori & culori2)
