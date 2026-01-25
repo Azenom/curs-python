@@ -710,7 +710,7 @@
 #     if flag_special and flag_letters and flag_digits and flag_len :        
 #         key = True
 #     else :
-#         # print status to check and reset all flags in order to avoid partial checks
+        # print status to check and reset all flags in order to avoid partial checks
 #         print ('Special :', flag_special, 
 #                '---- Letter :',flag_letters, 
 #                '---- Digits :', flag_digits, 
