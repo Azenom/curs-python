@@ -337,7 +337,7 @@
 
 # ------------------------------------
 
-'''# Tuple-uri - modificari si operatii ------------------------------------------------'''
+'''# Tuple-uri (value, value, value)- modificari si operatii ------------------------------------------------'''
 
 # tuple_exemplu = (1, 2, 3, "patru", "cinci")
 # print("Tuple exemplu:", tuple_exemplu)
@@ -375,7 +375,7 @@
 
 # -----------------------------------------------
 
-'''# Set-uri - modificari si operatii -----------------------------------------------'''
+'''# Set-uri {value, value, value} - modificari si operatii ----------------------------------------------- '''
 
 # set_exemplu = {1, 2, 3, "patru", "cinci"}
 # print("Set exemplu:", set_exemplu)
@@ -383,7 +383,7 @@
 # Accesare elemente din set (nu se poate accesa un element specific)
 #print(set_exemplu[0]) # eroare
 
-# Creare set folosinf comprehansion
+# Creare set folosind comprehansion
 # set_nou = {x**2 for x in range(5)}
 # print("Set creat prin comprehensiune:", set_nou) # -----> {0, 1, 4, 9, 16}
 
@@ -468,12 +468,11 @@
 # print(dictionarul.get('masina', 'Cheia nu exista in dictionar')) # -----> Cheia nu exista in dictionar
 # print(dictionarul.get('Ana', 'Cheia nu exista in dictionar')) # -----> 19
 
-# Modificare vailoare folosind cheia:
-
+# Modificare valoare folosind cheia:
 # dictionarul['Marian'] = 40
 # print(dictionarul['Marian']) # -----> 40
 
-# Afisare keys si values folosind metodele keys() si values()
+# Afisare keys si values
 
 # for key in dictionarul.keys():
 #    print(key)  # ------> Ana
@@ -492,7 +491,6 @@
     #         Key: Marian  Value: 40
 
 # Adaugare pereche noua in dictionar 
-
 # dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
 # dictionarul['Ion'] = 25
 # print(dictionarul) # -----> {'Ana': 19, 'Maria': 20, 'Marian': 40, 'Ion': 25}
