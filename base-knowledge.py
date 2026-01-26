@@ -454,7 +454,7 @@
 # my_set = {10, 20, 30, 40}
 # print("Element scos din set:", my_set.pop())  # Scoate si returneaza un element arbitrar din set
 
-'''# Frozen set - set imuabil, nu poate fi modificat dupa creare, nu se pot adauga sau sterge elemente, dar se pot face operatii de intersectie, reuniune, diferenta'''
+# Frozen set - set imuabil, nu poate fi modificat dupa creare, nu se pot adauga sau sterge elemente, dar se pot face operatii de intersectie, reuniune, diferenta
 
 # frozen_set_exemplu = frozenset([1, 2, 3, 4])
 # print("Frozen set exemplu:", frozen_set_exemplu)
