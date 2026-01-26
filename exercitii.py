@@ -1015,3 +1015,9 @@
 # lista = ['ana', 'maria', 'ioana', 'zebra']
 # verificare = any('z' in i for i in lista)
 # print(verificare)
+
+
+'''# 85. Dintr-o lista cu numere de la 1 la 50, creeaza o lista cu patratele numerelor care sunt divizibile cu 4 si cu 6.
+# Ex: [144, 576, 1296, 2304] '''
+# lista = [i**2 for i in range(1,51) if i%4 == 0 and i%6 == 0]
+# print (lista)
