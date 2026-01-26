@@ -110,20 +110,19 @@
 # else :        # ------- > daca a nu este mai mic si nici egal cu b
 #     print("a este mai mare decat b")
 
-# -----------------------------------------------
-
-'''# Structura if ... else ... ------------------------------------------------'''
+# sau
 
 # numar_1 = 5
 # numar_2 = 5
 
 # if numar_1 == numar_2 :
 #     print("numarul 1 este egal cu numarul 2")
-
 # if int(input("ce varsta ai ? ")) >= 20 :
 #      print("ai voie in parc")
 # else :
 #      print("nu ai voie in parc")
+
+# -----------------------------------------------
 
 '''# Structura for ... in ... ------------------------------------------------'''
 
