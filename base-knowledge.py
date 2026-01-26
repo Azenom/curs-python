@@ -337,7 +337,7 @@
 
 # ------------------------------------
 
-'''# Tuple-uri (value, value, value)- modificari si operatii ------------------------------------------------'''
+'''# Tuple-uri (value, value, value) - modificari si operatii ------------------------------------------------'''
 
 # tuple_exemplu = (1, 2, 3, "patru", "cinci")
 # print("Tuple exemplu:", tuple_exemplu)
@@ -472,7 +472,7 @@
 # dictionarul['Marian'] = 40
 # print(dictionarul['Marian']) # -----> 40
 
-# Afisare keys si values
+# Afisare keys si values -------------------------------
 
 # for key in dictionarul.keys():
 #    print(key)  # ------> Ana
@@ -490,11 +490,14 @@
     #         Key: Maria  Value: 20
     #         Key: Marian  Value: 40
 
-# Adaugare pereche noua in dictionar 
+# -------------------------------
+
+# Adaugare pereche noua in dictionar -------------------------------
 # dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
 # dictionarul['Ion'] = 25
 # print(dictionarul) # -----> {'Ana': 19, 'Maria': 20, 'Marian': 40, 'Ion': 25}
 
+#-------------------------------
 # Metodele pop(), popitem(), clear() si update() -------------------------------
 
 # dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
@@ -512,12 +515,16 @@
 # dictionarul.update({'Maria':22}) # Modifica valoarea cheii 'Maria' din 20 in 22
 # print(dictionarul) # -----> {'Ana': 19, 'Maria': 22, 'Marian': 45, 'Elena': 30, 'George': 50}
 
-# Setdefault() - adauga o pereche noua doar daca cheia nu exista deja in dictionar
+# -------------------------------
+
+# Setdefault() - adauga o pereche noua doar daca cheia nu exista deja in dictionar -------------------------------
 
 # dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
 # dictionarul.setdefault('Ion', 25) # Adauga perechea 'Ion':25
 # dictionarul.setdefault('Maria', 22) # Nu modifica perechea 'Maria':20 deoarece cheia 'Maria' exista deja
 # print(dictionarul) # -----> {'Ana': 19, 'Maria': 20, 'Marian': 45, 'Ion': 25}
+
+# -------------------------------
 
 # Dictionar cu valori complexe (dictionare in interiorul dictionarului) -------------------------------
 # persoane = {
