@@ -337,7 +337,7 @@
 
 # ------------------------------------
 
-'''# Tuple Set - modificari si operatii ------------------------------------------------'''
+'''# Tuple-uri - modificari si operatii ------------------------------------------------'''
 
 # tuple_exemplu = (1, 2, 3, "patru", "cinci")
 # print("Tuple exemplu:", tuple_exemplu)
@@ -457,6 +457,105 @@
 # print("Frozen set exemplu:", frozen_set_exemplu)
 # frozen_set_exemplu.add(5) # eroare deoarece frozen set este imuabil
 
+'''# Dictionar {key:value} - modificari si operatii ------------------------------- '''
+
+# dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
+
+# Afisare valori folosind cheile : Ana, Maria, Marian - keys si 19, 29, 45 - values
+
+# print(dictionarul['Maria']) # -----> 20
+
+# print(dictionarul.get('masina', 'Cheia nu exista in dictionar')) # -----> Cheia nu exista in dictionar
+# print(dictionarul.get('Ana', 'Cheia nu exista in dictionar')) # -----> 19
+
+# Modificare vailoare folosind cheia:
+
+# dictionarul['Marian'] = 40
+# print(dictionarul['Marian']) # -----> 40
+
+# Afisare keys si values folosind metodele keys() si values()
+
+# for key in dictionarul.keys():
+#    print(key)  # ------> Ana
+                #        Maria
+                #        Marian 
+
+# for value in dictionarul.values():
+#    print(value) # ------> 19
+                 #         20
+                 #         40
+
+# for key, value in dictionarul.items():
+#     print(f'Key: {key}  Value: {value}') 
+    # ------> Key: Ana  Value: 19
+    #         Key: Maria  Value: 20
+    #         Key: Marian  Value: 40
+
+# Adaugare pereche noua in dictionar 
+
+# dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
+# dictionarul['Ion'] = 25
+# print(dictionarul) # -----> {'Ana': 19, 'Maria': 20, 'Marian': 40, 'Ion': 25}
+
+# Metodele pop(), popitem(), clear() si update() -------------------------------
+
+# dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
+# dictionarul.pop('Ana') # Sterge perechea cu cheia 'Ana'
+# print(dictionarul) # -----> {'Maria': 20, 'Marian': 40, 'Ion': 25}
+
+# dictionarul.popitem() # Sterge ultima pereche adaugata
+# print(dictionarul) # -----> {'Maria': 20, 'Marian': 40}
+
+# dictionarul.clear() # Sterge toate perechile din dictionar
+# print(dictionarul) # -----> {}
+
+# dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
+# dictionarul.update({'Elena':30, 'George':50}) # Adauga perechi noi in dictionar la final
+# dictionarul.update({'Maria':22}) # Modifica valoarea cheii 'Maria' din 20 in 22
+# print(dictionarul) # -----> {'Ana': 19, 'Maria': 22, 'Marian': 45, 'Elena': 30, 'George': 50}
+
+# Setdefault() - adauga o pereche noua doar daca cheia nu exista deja in dictionar
+
+# dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
+# dictionarul.setdefault('Ion', 25) # Adauga perechea 'Ion':25
+# dictionarul.setdefault('Maria', 22) # Nu modifica perechea 'Maria':20 deoarece cheia 'Maria' exista deja
+# print(dictionarul) # -----> {'Ana': 19, 'Maria': 20, 'Marian': 45, 'Ion': 25}
+
+# Dictionar cu valori complexe (dictionare in interiorul dictionarului) -------------------------------
+# persoane = {
+#     1234 : {
+#             'nume':'Popescu',
+#             'prenume':'Ion',
+#             'varsta':30,
+#             'masina':{
+#                 'marca':'Dacia',
+#                 'model':'Logan',
+#                 'tip_combustibil':'benzina'
+#                     }
+#             },
+#     5678 : {
+#             'nume':'Ionescu',
+#             'prenume':'Maria',
+#             'varsta':25,
+#             'masina':{
+#                 'marca':'Ford',
+#                 'model':'Focus',
+#                 'tip_combustibil':'motorina'
+#                     }
+#             }
+#             }
+# Accesare model masina persoanei cu CNP 1234
+# print(persoane['1234']['masina']['model']) # -----> Logan
+
+# Modificare tip_combustibil masina persoanei cu CNP 5678
+# persoane['5678']['masina']['tip_combustibil'] = 'electric'
+# sau cu update():
+# persoane['5678']['masina'].update({'tip_combustibil':'electric'})
+
+# Afisare folosind get() la tip_combustibil masina persoanei cu CNP 5678
+# print(persoane.get('5678').get('masina').get('tip_combustibil')) # -----> electric
+# print(persoane.get('1234').get('nume')) # -----> Popescu
+
 # ---------------------------------------------------------------------------------------------------------------------------------------------
 
 '''# ------------------------------------------------- Verificari pe string/liste -----------------------------------------------------------------'''
@@ -567,5 +666,31 @@
 
 # numar = random.randint(1, 100)
 # print(numar) # -------> 57 (numar random intre 1 si 100)
+
+'''# import json ------------------------------------------------'''
+
+# persoane = {
+#     1234 : {
+#             'nume':'Popescu',
+#             'prenume':'Ion',
+#             'varsta':30,
+#             'masina':{
+#                 'marca':'Dacia',
+#                 'model':'Logan',
+#                 'tip_combustibil':'benzina'
+#                     } 
+#             },
+#     5678 : {
+#             'nume':'Ionescu',
+#             'prenume':'Maria',
+#             'varsta':25,
+#             'masina':{
+#                 'marca':'Ford',
+#                 'model':'Focus',
+#                 'tip_combustibil':'motorina'
+#                     }
+#             }
+#             }
+# print(json.dumps(persoane, indent=4)) # -----> afiseaza dictionarul persoane frumos formatat
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
