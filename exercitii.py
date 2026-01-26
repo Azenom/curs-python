@@ -1,26 +1,26 @@
-# 1. Creează două variabile cu valori numerice și afișează suma lor.
+'''# 1. Creează două variabile cu valori numerice și afișează suma lor.'''
 
 # a = 5
 # b = 10
 # print("Suma celor doua numere este:", a+b)
 
-# 2. Afișează produsul a două numere introduse de la tastatură.
+'''# 2. Afișează produsul a două numere introduse de la tastatură. '''
 
 # a = 5
 # b = 10
 # print("Suma celor doua numere este:", a*b)
 
-# 3. Primește un nume de la tastatură și afișează-l cu litere mari.
+'''# 3. Primește un nume de la tastatură și afișează-l cu litere mari. '''
 
 # nume = input("Introdu numele:")
 # print ("Numele tau este : ", nume.upper())
 
-# 4. Afișează lungimea unui string introdus de la tastatură.
+'''# 4. Afișează lungimea unui string introdus de la tastatură. '''
 
 # sir = input("Introdu un sir de caractere : ")
 # print("Lungimea sirului : ", len(sir))
 
-# 5. Verifică dacă un număr este par sau impar.
+'''# 5. Verifică dacă un număr este par sau impar. '''
 
 # numar = int(input("Introdu un numar:"))
 # if numar % 2 == 0 :
@@ -28,18 +28,18 @@
 # else : 
 #     print("Numar impar")
 
-# 6. Primește un text și un caracter, afișează de câte ori apare caracterul în text.
+'''# 6. Primește un text și un caracter, afișează de câte ori apare caracterul în text. '''
 
 # text = input ("Introdu un text: ")
 # caracter = input("Introdu un caracter: ")
 # print ("caracterul '", caracter , "' apare de ", text.count(caracter), " ori in textul introdus.")
 
-# 7. Afișează ultimul caracter dintr-un string introdus de la tastatură.
+'''# 7. Afișează ultimul caracter dintr-un string introdus de la tastatură. '''
 
 # text = input ("Introdu un text: ")
 # print("Ultimul caracter din text este: ", text[-1])
 
-# 8. Primește un număr și afișează dacă este pozitiv, negativ sau zero.
+'''# 8. Primește un număr și afișează dacă este pozitiv, negativ sau zero. '''
 
 # numar = input ("Introdu un numar: ")
 # if float(numar) > 0 :
@@ -49,13 +49,13 @@
 # else :
 #     print("Numarul este zero")
 
-# 9. Afișează toate caracterele unui string, câte unul pe linie.
+'''# 9. Afișează toate caracterele unui string, câte unul pe linie. '''
 
 # text = input ("Introdu un text: ")
 # for i in text :
 #     print(i)
 
-# 10. Primește două numere și afișează cel mai mare dintre ele.
+'''# 10. Primește două numere și afișează cel mai mare dintre ele. '''
 
 # numar1 = float(input("Introdu primul numar: "))
 # numar2 = float(input("Introdu al doilea numar: "))
@@ -66,7 +66,7 @@
 # else:
 #     print("Numerele sunt egale."
 
-# 11. Primește trei numere și afișează cel mai mic si cel mai mare dintre ele.
+'''# 11. Primește trei numere și afișează cel mai mic si cel mai mare dintre ele. '''
 
 # numar1 = float(input("Introdu primul numar: "))
 # numar2 = float(input("Introdu al doilea numar: "))
@@ -83,9 +83,11 @@
 # print("Cel mai mic numar este: ", min(numar1, numar2, numar3))
 # print("Cel mai mare numar este: ", max(numar1, numar2, numar3))
 
-# 12. Primește un text și verifică dacă este palindrom.
-# 13. Primește o parolă și verifică dacă are cel puțin 8 caractere și conține o cifră.
-# 14. Primește un text și construiește un nou string numai cu vocalele din el.
+'''# 12. Primește un text și verifică dacă este palindrom. '''
+
+'''# 13. Primește o parolă și verifică dacă are cel puțin 8 caractere și conține o cifră. '''
+
+'''# 14. Primește un text și construiește un nou string numai cu vocalele din el. '''
 
 # text = input("Introdu un text: ")
 # text_vocale = ""
@@ -95,16 +97,25 @@
 #         text_vocale += char
 # print("Textul format doar din vocale este:", text_vocale)
 
-# 15. Primește un număr n și afișează toate numerele pare de la 0 la n (inclusiv).
-# 16. Primește un text și afișează doar literele mici din el.
-# 17. Primește două numere și afișează toate numerele între ele (inclusiv), în ordine crescătoare.
-# 18. Primește un text și afișează fiecare cuvânt pe o linie nouă.
-# 19. Primește un număr și afișează tabla înmulțirii pentru acel număr (de la 1 la 10).
-# 20. Primește un text și verifică dacă toate caracterele sunt litere mici.
-# 21. Primește un text și afișează-l inversat.
-# 22. Primește o propoziție și numără câte cuvinte conține.
-# 23. Primește un text și înlocuiește toate spațiile cu caracterul "_".
-# 24. Primește un număr și afișează suma cifrelor sale.
+'''# 15. Primește un număr n și afișează toate numerele pare de la 0 la n (inclusiv). '''
+
+'''# 16. Primește un text și afișează doar literele mici din el. '''
+
+'''# 17. Primește două numere și afișează toate numerele între ele (inclusiv), în ordine crescătoare. '''
+
+'''# 18. Primește un text și afișează fiecare cuvânt pe o linie nouă. '''
+
+'''# 19. Primește un număr și afișează tabla înmulțirii pentru acel număr (de la 1 la 10). '''
+
+'''# 20. Primește un text și verifică dacă toate caracterele sunt litere mici. '''
+
+'''# 21. Primește un text și afișează-l inversat. '''
+
+'''# 22. Primește o propoziție și numără câte cuvinte conține. '''
+
+'''# 23. Primește un text și înlocuiește toate spațiile cu caracterul "_". '''
+
+'''# 24. Primește un număr și afișează suma cifrelor sale. '''
 
 # numar = input("Introdu un numar: ")
 # suma_cifre = 0
@@ -112,8 +123,9 @@
 #     suma_cifre += int(cifra)    
 # print("Suma cifrelor numarului este:", suma_cifre)
 
-# 25. Primește un text și afișează doar caracterele care sunt cifre.
-# 26. Primește un text și verifică dacă începe și se termină cu aceeași literă.
+'''# 25. Primește un text și afișează doar caracterele care sunt cifre. '''
+
+'''# 26. Primește un text și verifică dacă începe și se termină cu aceeași literă. '''
 
 # text = input("Introdu un text: ")
 # if text[0].lower() == text[-1].lower():
@@ -121,7 +133,7 @@
 # else:
 #     print("Textul nu începe și nu se termină cu aceeași literă.")       
 
-# 27. Primește un text și afișează toate caracterele distincte din el.
+'''# 27. Primește un text și afișează toate caracterele distincte din el. '''
 
 # text = input("Introdu un text: ")
 # caractere_distincte = set()
@@ -138,7 +150,7 @@
 #         caractere_distincte += char
 # print("Caracterele distincte din text sunt:", caractere_distincte)
 
-# 28. Primește un text și afișează literele care apar de exact două ori.
+'''# 28. Primește un text și afișează literele care apar de exact două ori. '''
 
 # text = input("Introdu un text: ")
 # litere_doua_ori = ""
@@ -147,7 +159,7 @@
 #         litere_doua_ori += char
 # print("Literele care apar de exact doua ori sunt:", litere_doua_ori)
 
-# 29. Primește un număr n și afișează toți divizorii săi.
+'''# 29. Primește un număr n și afișează toți divizorii săi. '''
 
 # numar = int(input("Introdu un numar: "))
 # divizori = []
@@ -156,9 +168,12 @@
 #         divizori.append(i)
 # print("Divizorii numarului sunt:", divizori)
 
-# 30. Primește un text și verifică dacă are cel puțin o literă mare, una mică și o cifră.
-# 31. Fizz Buzz: Primește un număr n și afișează numerele de la 1 la n. Pentru multiplii de 3, afișează "Fizz", pentru multiplii de 5, afișează "Buzz", iar pentru multiplii de ambele, afișează "FizzBuzz".
-# 32. Primește un text și afișează-l cu fiecare cuvânt inversat, dar în aceeași ordine. (Exemplu: "Ana are mere" -> "anA era erem")
+'''# 30. Primește un text și verifică dacă are cel puțin o literă mare, una mică și o cifră. '''
+
+'''# 31. Fizz Buzz: Primește un număr n și afișează numerele de la 1 la n. 
+# Pentru multiplii de 3, afișează "Fizz", pentru multiplii de 5, afișează "Buzz", iar pentru multiplii de ambele, afișează "FizzBuzz". '''
+
+'''# 32. Primește un text și afișează-l cu fiecare cuvânt inversat, dar în aceeași ordine. (Exemplu: "Ana are mere" -> "anA era erem") '''
 
 # text = input("Introdu un text: ")
 # cuvinte = text.split()          
@@ -168,7 +183,7 @@
 #     text_inversat = ' '.join(cuvinte_inversate)
 # print("Textul cu cuvintele inversate este:", text_inversat)
 
-# 33. Primește un text care contine o insiruire de numere și afișează media lor. (Exemplu: "1,2,3,4,5,10" -> 25/6 = 4.1666)
+'''# 33. Primește un text care contine o insiruire de numere și afișează media lor. (Exemplu: "1,2,3,4,5,10" -> 25/6 = 4.1666) '''
 
 # text_numere = input("Introdu o insiruire de numere separate prin virgula: ")
 # numere_str = text_numere.split(",")             
@@ -178,11 +193,11 @@
 # media = sum(numere) / len(numere)
 # print("Media numerelor este:", media)
 
-# 34. Trebuie implementat un meniu interactiv in consola care pune la dispozitie utilizatorului urmatoarele optiuni:
+'''# 34. Trebuie implementat un meniu interactiv in consola care pune la dispozitie utilizatorului urmatoarele optiuni:
 # Adunare / # Scadere / # Inmultire / # Impartire / # Iesire din program
 # Utilizatorul trebuie sa introduca optiunea, iar apoi:
 # Pentru optiunile 1->4, utilizatorul trebuie sa introduca doua numere, iar programul va afisa rezultatul operatiei.
-# In cazul in care introduce 5, atunci iesim din program. 
+# In cazul in care introduce 5, atunci iesim din program.  '''
 
 # print("Meniu:")
 # print("1. Adunarea a doua numere.")
@@ -223,8 +238,8 @@
 #         print("Optiune nepermisa. Alege o optiune valida!")
 #         numar = int(input("Optiunea ta este: "))
 
-# 35. Sa se afiseze toate puterile lui 2 aflate intre un interval dat de utilizator.
-# Exemplu: 10, 50 -> 16, 32
+'''# 35. Sa se afiseze toate puterile lui 2 aflate intre un interval dat de utilizator.
+# Exemplu: 10, 50 -> 16, 32 '''
 
 # lim_min = int(input("Introdu limita inferioara: "))
 # lim_max = int(input("Introdu limita superioara: "))
@@ -234,8 +249,8 @@
 #     if lim_min < val & val <lim_max :
 #         print(val)
 
-# 36. Creează o listă cu 7 numere întregi, apoi afișează suma și media elementelor fara a utiliza functiile sum() si avg().
-# Exemplu: [1,2,3,4,5,6,7] -> suma=28, media=4.0
+'''# 36. Creează o listă cu 7 numere întregi, apoi afișează suma și media elementelor fara a utiliza functiile sum() si avg().
+# Exemplu: [1,2,3,4,5,6,7] -> suma=28, media=4.0 '''
 
 # lista = [1,2,3,4,5,6,7]
 # sum = 0
@@ -244,8 +259,8 @@
 # print("Suma elementelor este: ", sum)
 # print("Media elementelor este: ", sum/len(lista))
 
-# 37. Primește o listă de la tastatură (elemente separate prin spațiu) și afișează lista inversată.
-# Exemplu: input: 1 2 3 4 5 -> output: [5,4,3,2,1]
+'''# 37. Primește o listă de la tastatură (elemente separate prin spațiu) și afișează lista inversată.
+# Exemplu: input: 1 2 3 4 5 -> output: [5,4,3,2,1] '''
 
 # lista = input("Introdu o lista de elemente separate prin spatiu: ").split()
 # lista_inversata = lista[::-1]
@@ -257,15 +272,16 @@
 # lista_inversata = list(reversed(lista))
 # print("Lista inversată este:", lista_inversata)
 
-# 38. Afișează toate elementele de pe poziții impare dintr-o listă dată.
-# Exemplu: [10,20,30,40,50,60] -> 20,40,60
+'''# 38. Afișează toate elementele de pe poziții impare dintr-o listă dată.
+# Exemplu: [10,20,30,40,50,60] -> 20,40,60 '''
+
 #.       0. 1. 2. 3. 4. 5. 
 # lista = [10,20,30,40,50,60]
 # for i in range(1, len(lista), 2):
 #     print(lista[i])
 
-# 39. Înlocuiește toate aparițiile unui element dat cu altă valoare într-o listă.
-# Exemplu: [1,2,3,2,4], inlocuieste 2 cu 5 -> [1,5,3,5,4]
+'''# 39. Înlocuiește toate aparițiile unui element dat cu altă valoare într-o listă.
+# Exemplu: [1,2,3,2,4], inlocuieste 2 cu 5 -> [1,5,3,5,4] '''
 
 # lista = [1,2,3,2,4]
 # for i in range(len(lista)):
@@ -292,8 +308,8 @@
 # a = [num if num != int(userinput) else x for num in a]
 # print(a)
 
-# 40. Afișează elementul maxim și minim dintr-o listă fără a folosi funcțiile max/min.
-# Exemplu: [3,1,4,1,5,9,2] -> max=9, min=1
+'''# 40. Afișează elementul maxim și minim dintr-o listă fără a folosi funcțiile max/min.
+# Exemplu: [3,1,4,1,5,9,2] -> max=9, min=1 '''
 
 # lista = [3,1,4,1,5,9,2]
 # maxim = lista[0]
@@ -306,8 +322,8 @@
 # print("Maximul este: ", maxim)
 # print("Minimul este: ", minim)
 
-# 41. Elimină toate elementele pare dintr-o listă de numere.
-# Exemplu: [1,2,3,4,5,6] -> [1,3,5]
+'''# 41. Elimină toate elementele pare dintr-o listă de numere.
+# Exemplu: [1,2,3,4,5,6] -> [1,3,5] '''
 
 # lista = [1,2,3,2,5,6]
 # for i in lista :
@@ -315,8 +331,8 @@
 #         lista.remove(i)
 # print(lista)
 
-# 42. Primește o listă de stringuri și construiește o nouă listă cu stringurile care conțin litera 'a'.
-# Exemplu: ['ana', 'mere', 'casa', 'masina'] -> ['ana', 'casa', 'masina']
+'''# 42. Primește o listă de stringuri și construiește o nouă listă cu stringurile care conțin litera 'a'.
+# Exemplu: ['ana', 'mere', 'casa', 'masina'] -> ['ana', 'casa', 'masina'] '''
 
 # lista = ['ana', 'mere', 'casa', 'masina']
 # lista_noua = []
@@ -336,8 +352,8 @@
 #         mylist2.append(word)
 # print(mylist2)
 
-# 43. Verifică dacă o listă este palindrom (se citește la fel de la stânga la dreapta și invers).
-# # Exemplu: [1,2,3,2,1] -> True, [1,2,3,4] -> False
+'''# 43. Verifică dacă o listă este palindrom (se citește la fel de la stânga la dreapta și invers).
+# # Exemplu: [1,2,3,2,1] -> True, [1,2,3,4] -> False '''
 
 # lista = [1,2,3,2,1]
 # flag = True
@@ -350,8 +366,8 @@
 # else:
 #     print("Lista nu este palindrom.")
 
-# 44. Interclasează două liste de aceeași lungime într-o singură listă.
-# # Exemplu: [1,2], [3,4] => [1,3,2,4]
+'''# 44. Interclasează două liste de aceeași lungime într-o singură listă.
+# # Exemplu: [1,2], [3,4] => [1,3,2,4] '''
 
 # lista1 = [1,2]
 # print(lista1)
@@ -360,8 +376,8 @@
 # lista1.extend(lista2)
 # print(lista1)
 
-# 45. Creează o listă de liste [index, valoare] pentru fiecare element dintr-o listă dată.
-# # Exemplu: [10,20,30] -> [[0,10],[1,20],[2,30]]
+'''# 45. Creează o listă de liste [index, valoare] pentru fiecare element dintr-o listă dată.
+# # Exemplu: [10,20,30] -> [[0,10],[1,20],[2,30]] '''
 
 # lista = [10,20,30]
 # lista2 = []
@@ -369,9 +385,9 @@
 #     lista2.append([i, lista[i]])
 # print(lista2)
 
-# 46. Primește o listă de numere și elimină toate elementele care apar de mai mult de o dată (păstrează doar elementele unice).
+'''# 46. Primește o listă de numere și elimină toate elementele care apar de mai mult de o dată (păstrează doar elementele unice).
 # Fara a folosi set().
-# # Exemplu: [1,2,2,3,4,4,5] -> [1,3,5]
+# # Exemplu: [1,2,2,3,4,4,5] -> [1,3,5] '''
 
 # lista = [1,2,2,3,4,4,5]
 # lista_unica = []
@@ -380,8 +396,8 @@
 #         lista_unica.append(i)
 # print(lista_unica)
 
-# 47. Primește o listă de numere și grupează elementele în două liste: una cu numere negative, alta cu numere pozitive și zero.
-# # Exemplu: [10,-1,2,-3,0,4,-5] -> negative: [-1,-3,-5], pozitive_si_zero: [10,2,0,4]
+'''# 47. Primește o listă de numere și grupează elementele în două liste: una cu numere negative, alta cu numere pozitive și zero.
+# # Exemplu: [10,-1,2,-3,0,4,-5] -> negative: [-1,-3,-5], pozitive_si_zero: [10,2,0,4]'''
 
 # lista = [10,-1,2,-3,0,4,-5]
 # negative = []
@@ -394,9 +410,9 @@
 # print("Numerele negative : ",negative)
 # print("Pozitive si zero : ",restul)
 
-# 48. Primește o listă de stringuri și sorteaz-o crescător după numărul de vocale din fiecare string.
+'''# 48. Primește o listă de stringuri și sorteaz-o crescător după numărul de vocale din fiecare string.
 # Fara a folosi functia sort() sau sorted().
-# # Exemplu: ['ana', 'masina', 'casa', 'mere'] -> ['ana', 'casa', 'mere', 'masina']
+# # Exemplu: ['ana', 'masina', 'casa', 'mere'] -> ['ana', 'casa', 'mere', 'masina'] '''
 
 # lista  = ['ana', 'masina', 'casa', 'mere']
 # vocale = 'aeiou'
@@ -418,8 +434,8 @@
 #             lista[j] = temporar
 # print(lista)   
 
-# 49. Primește o listă de liste (matrice) și calculează suma elementelor de pe diagonala principală (doar dacă matricea este pătratică).
-# # Exemplu: [[1,2,3],[4,5,6],[7,8,9]] -> 15 (1+5+9)
+'''# 49. Primește o listă de liste (matrice) și calculează suma elementelor de pe diagonala principală (doar dacă matricea este pătratică).
+# # Exemplu: [[1,2,3],[4,5,6],[7,8,9]] -> 15 (1+5+9) '''
 
 # lista = [[1,2,3],[4,5,6],[7,8,9]]
 # lista = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
@@ -436,7 +452,7 @@
 # else :
 #     print ("nu e matrice patratica")
 
-# 50. Se da lista: [ [10, 5, 29] , ["Marian", "Ionut", "Marcel"] , [10.2, 7.5, 3.4] ]. Sa se extraga numele "Ionut" si sa se afiseze.
+'''# 50. Se da lista: [ [10, 5, 29] , ["Marian", "Ionut", "Marcel"] , [10.2, 7.5, 3.4] ]. Sa se extraga numele "Ionut" si sa se afiseze.'''
 
 # lista = [ [10, 5, 29] , ["Marian", "Ionut", "Marcel"] , [10.2, 7.5, 3.4] ]
 # for i in lista :
@@ -449,7 +465,7 @@
 #         if element == "xxxxx":
 #             print(element)
 
-# 51. Se da lista: [[10, 5, 29], ["Marian", "Ionut", "Marcel"], [10.2, 7.5, 3.4]]. Sa se extraga litera "r" din numele "Marcel" si sa se afiseze.
+'''# 51. Se da lista: [[10, 5, 29], ["Marian", "Ionut", "Marcel"], [10.2, 7.5, 3.4]]. Sa se extraga litera "r" din numele "Marcel" si sa se afiseze.'''
 
 # lista = [ [10, 5, 29], ["Marian", "Ionut", "Marcel"] , [10.2, 7.5, 3.4] ]
 # for sublista in lista :
@@ -462,8 +478,8 @@
 #                 if caracter == "r":
 #                     print(caracter," din ",element)
 
-# 52. Sa se numere de cate ori apare un element intr-o lista incluzand si listele imbricate.
-# # Exemplu: [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]] si elementul 1 -> apare de 4 ori
+'''# 52. Sa se numere de cate ori apare un element intr-o lista incluzand si listele imbricate.
+# Exemplu: [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]] si elementul 1 -> apare de 4 ori '''
 
 # lista = [1, 2, [3, 1, 4], 7, [1, 2, [1, 5]]]
 # element_cautat = 1
@@ -504,10 +520,10 @@
 #             count += 1
 #     index += 1
 
-# 53. Scrieti un program care sa genereze un numar aleator intre 1 si 100. Utilizatorul trebuie sa
+'''# 53. Scrieti un program care sa genereze un numar aleator intre 1 si 100. Utilizatorul trebuie sa
 # ghiceasca numarul, iar programul sa ii ofere indicatii daca numarul introdus este mai mare sau mai mic decat cel generat.
 # Programul se termina cand utilizatorul ghiceste numarul corect sau daca introduce cuvantul exit. 
-# La final se afiseaza numarul de incercari facute.
+# La final se afiseaza numarul de incercari facute.'''
 
 # import random
 # numar_random = random.randint(1,100)
@@ -559,15 +575,10 @@
 # if name == "main":
 #     main()
 
-# Pentru generarea numarului aleator:
-# import random
-# numar_aleator = random.randint(1, 100)
-# print(numar_aleator)
-
-# 54. Sa se scrie un program primeste date in urmatorul format: 
+'''# 54. Sa se scrie un program primeste date in urmatorul format: 
 # "Nume: Ionescu Prenume: Ion" pana cand se introduce caracterul #. 
 # Programul trebuie sa stocheze toate datele citite, iar la final sa le afiseze in ordine alfabetica
-# in functie de numele de familie.
+# in functie de numele de familie.'''
 
 # lista = []
 # sublista = []
@@ -614,8 +625,8 @@
 # for date in date_intrare :
 #     print(date)
 
-# 55. Sa se scrie un program care sa implementeze un joc de tip quiz cu adevarat/fals. Sa se foloseasca o lista de intrebari.
-# La final sa se afiseze scorul obtinut de utilizator. Se poate folosii random pentru a amesteca intrebarile.
+'''# 55. Sa se scrie un program care sa implementeze un joc de tip quiz cu adevarat/fals. Sa se foloseasca o lista de intrebari.
+# La final sa se afiseze scorul obtinut de utilizator. Se poate folosii random pentru a amesteca intrebarile. '''
 
 # import random
 # name = input("Care este numele tau ? ")
@@ -667,8 +678,8 @@
 # else :
 #     print("Felicitari ai atins scorul maxim de 5 puncte")
 
-# 56. Sa se sccrie un prog care verifica complexitatea unei parole. 
-# Cel putin 10 caractere, cel putin o litera, cel putin un caracter special, cel putin o cifra.
+'''# 56. Sa se sccrie un prog care verifica complexitatea unei parole. 
+# Cel putin 10 caractere, cel putin o litera, cel putin un caracter special, cel putin o cifra. '''
 
 # # create list for special characters
 # pool_special = [ '!' , '#' , '$' , '%' , '&' , '(' , ')' , '*' , '+' , ',' , '-' , '.' , '/' , ':' , ';' , '<' , '=' , '>' , '?' , '@' , '^' , '_' , '' , '|' , '~' ]
@@ -748,62 +759,62 @@
 # else:
 #     print("Not good enough ❌")
 
-# Folositi list comprehension pentru a rezolva urmatoarele exercitii :
-# 57. Creeaza o lista cu patratele numerelor de la 0 la 9. Ex: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+'''# Folositi list comprehension pentru a rezolva urmatoarele exercitii : '''
+'''# 57. Creeaza o lista cu patratele numerelor de la 0 la 9. Ex: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81] '''
 
 # lista = [i**2 for i in range(10)]
 # print (lista)
 
-# 58. Creeaza o lista cu toate numerele pare divizibile cu 3 de la 1 la 50 inclusiv. Ex: [6, 12, 18, 24, 30, 36, 42, 48]
+'''# 58. Creeaza o lista cu toate numerele pare divizibile cu 3 de la 1 la 50 inclusiv. Ex: [6, 12, 18, 24, 30, 36, 42, 48] '''
 
 # lista = [i for i in range(50) if i%3 == 0 and i%2 == 0]
 # print (lista)
 
-# 59. Dintr-o lista cu cuvinte creeaza o lista cu lungimile fiecarui cuvant. Ex: ['ana', 'maria', 'ion', 'marioara', '1468912'] -> [3, 5, 3, 8, 7]
+'''# 59. Dintr-o lista cu cuvinte creeaza o lista cu lungimile fiecarui cuvant. Ex: ['ana', 'maria', 'ion', 'marioara', '1468912'] -> [3, 5, 3, 8, 7] '''
 
 # lista = ['ana', 'maria', 'ion', 'marioara', '1468912']
 # lungime = [ len(i) for i in lista ]
 # print(lungime)
 
-# 60. Dintr-o lista cu numere de la 1 la 50, creeaza o lista cu patratele numerelor care sunt divizibile cu 4 si cu 6. Ex: [144, 576, 1296, 2304]
+'''# 60. Dintr-o lista cu numere de la 1 la 50, creeaza o lista cu patratele numerelor care sunt divizibile cu 4 si cu 6. Ex: [144, 576, 1296, 2304] '''
 
 # lista = [i**2 for i in range(1,25) if i%4 == 0 and i%6 == 0]
 # print (lista)
 
-# 61. Creeaza o lista cu toate vocalele dintr-un text dat. 
-# Ex: 'Aceasta este o propozitie de test.' -> ['A', 'e', 'a', 'a', 'e', 'o', 'o', 'i', 'i', 'e', 'e']
+'''# 61. Creeaza o lista cu toate vocalele dintr-un text dat. 
+# Ex: 'Aceasta este o propozitie de test.' -> ['A', 'e', 'a', 'a', 'e', 'o', 'o', 'i', 'i', 'e', 'e'] '''
 
 # lista = input("Introdu text : ")
 # lista_vocale = "aeiouAEIOU"
 # lista_extrase = [char for char in lista if char in lista_vocale]
 # print("Lista vocalelor extrase este : ", lista_extrase)
 
-# Folositi any pentru rezolvarea urmatoarelor exercitii:
-# 62. Verifica daca intr-o lista de numere exista cel putin un numar par. Ex: [1, 3, 5, 7, 8] -> True
+'''# Folositi any pentru rezolvarea urmatoarelor exercitii:
+# 62. Verifica daca intr-o lista de numere exista cel putin un numar par. Ex: [1, 3, 5, 7, 8] -> True '''
 
 # lista = [1, 3, 5, 7, 9]
 # verificare = any(i%2 == 0 for i in lista)
 # print(verificare)
 
-# 63. Verifica daca intr-o lista de cuvinte exista cel putin un cuvant care sa contina litera 'z'. Ex: ['azna', 'maria', 'ioana', 'ebra'] -> True
+'''# 63. Verifica daca intr-o lista de cuvinte exista cel putin un cuvant care sa contina litera 'z'. Ex: ['azna', 'maria', 'ioana', 'ebra'] -> True '''
 
 # lista = ['ana', 'maria', 'ioana', 'zebra']
 # verificare = any('z' for i in lista)
 # print(verificare)
 
-# 64. Verifica daca intr-o lista de numere exista cel putin un numar negativ. Ex: [4, 5, -1, 3, 0] -> True
+'''# 64. Verifica daca intr-o lista de numere exista cel putin un numar negativ. Ex: [4, 5, -1, 3, 0] -> True '''
 
 # lista = [4, 5, -1, 3, 0]
 # verificare = any(i for i in lista if i <0 )
 # print(verificare)
 
-# 65. Verifica daca intr-o lista de stringuri exista cel putin un string care sa fie gol. Ex: ['ana', '', 'maria'] -> True
+'''# 65. Verifica daca intr-o lista de stringuri exista cel putin un string care sa fie gol. Ex: ['ana', '', 'maria'] -> True '''
 
 # lista = ['ana', '', 'maria']
 # verificare = any( i == "" for i in lista)
 # print(verificare)
 
-# 66. Verifica daca intr-o lista de caractere exista cel putin o vocala mare (A, E, I, O, U). Ex: ['a', 'b', 'C', 'D', 'E'] -> True 
+'''# 66. Verifica daca intr-o lista de caractere exista cel putin o vocala mare (A, E, I, O, U). Ex: ['a', 'b', 'C', 'D', 'E'] -> True  '''
 
 # lista = ['a', 'b', 'C', 'D', 'E']
 # lista_vocale = "AEIOU"
@@ -812,8 +823,8 @@
 # verificare_bool = any([char for char in lista if char in lista_vocale])
 # print("Adev sau fals : ", verificare_bool)
 
-# Exercitii pentru tuples:
-# 67. Creează un tuplu care conține numele a trei fructe și afișează-le pe ecran.
+'''# Exercitii pentru tuples: '''
+'''# 67. Creează un tuplu care conține numele a trei fructe și afișează-le pe ecran. '''
 #     Exemplu: ('măr', 'banană', 'cireașă') -> măr, banană, cireașă
 
 # Se da tuplul: fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi').
@@ -822,12 +833,12 @@
 # for i in fructe :
 #     print(i)
 
-# 68. Afișează al doilea și al patrulea fruct din tuplu.
+'''# 68. Afișează al doilea și al patrulea fruct din tuplu. '''
 
 # fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
 # print(fructe[1], fructe[3])
 
-# 69. Afișează tuplul inversat.
+'''# 69. Afișează tuplul inversat. '''
 
 # fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
 # fructe_inversate = tuple(reversed(fructe)) # tuple apare „în față” pentru că reversed() NU returnează un tuple, ci un iterator.
@@ -839,7 +850,7 @@
 # print(fructe_inversate)
 
 
-# 70. Verifică dacă 'kiwi' este în tuplu și afișează un mesaj corespunzător.
+'''# 70. Verifică dacă 'kiwi' este în tuplu și afișează un mesaj corespunzător. '''
 
 # fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
 # print('kiwi' in fructe) # -------> True
@@ -851,7 +862,7 @@
 # else :
 #     print("Nu am gasit kiwi in fructe")
 
-# 71. Creează un tuplu nou care conține doar fructele de la pozițiile(index) pare din tuplul original.
+'''# 71. Creează un tuplu nou care conține doar fructele de la pozițiile(index) pare din tuplul original. '''
 
 # fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
 
@@ -868,13 +879,13 @@
 # fructe_noi3 = tuple(elem for i, elem in enumerate(fructe) if i % 2 == 0)
 # print("varianta 3 ", fructe_noi3)
 
-# 72. Afișează lungimea fiecarui element din tuplu.
+'''# 72. Afișează lungimea fiecarui element din tuplu. '''
 
 # fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
 # lungime = tuple(len(i) for i in fructe)
 # print(lungime)
 
-# 72. Concatenează tuplul cu un alt tuplu care conține alte două fructe și afișează rezultatul.
+'''# 73. Concatenează tuplul cu un alt tuplu care conține alte două fructe și afișează rezultatul. '''
 
 # fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
 # legume = ('rosie', 'cartof', 'varza')
@@ -893,38 +904,38 @@
 # fructe = fructe.extend(legume) # extend nu se aplica la tuple doar la liste pentru ca string-ul este immutable
 # print(fructe) # nu o sa mearga
 
-# 73. Adauga un fruct nou 'ananas' in tuplu.
+'''# 74. Adauga un fruct nou 'ananas' in tuplu. '''
 
 # fructe = ('măr', 'banană', 'cireașă', 'portocală', 'kiwi')
 # fructe += ('ananas',)
 # print(fructe)
 
-# 74. Se da tuplul: ('măr', 'banană', 'cireașă'). Faceti unpacking pentru a extrage fiecare element in variabile separate si afisati-le.
+'''# 75. Se da tuplul: ('măr', 'banană', 'cireașă'). Faceti unpacking pentru a extrage fiecare element in variabile separate si afisati-le. '''
 
 # fructe = ('măr', 'banană', 'cireașă')
 # a,b,c = fructe
 # print("Unpacking : ",a,b,c)
 
-# Exerciții pentru seturi:
-# 75. Creează un set care conține numele a cinci culori și afișează-le pe ecran.
+'''# Exerciții pentru seturi: '''
+'''# 76. Creează un set care conține numele a cinci culori și afișează-le pe ecran. '''
 
 # culori = {'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
 # for culoare in culori :
 #     print(culoare)
 
-# 76. Adaugă o culoare nouă în setul de mai sus și afișează setul actualizat.
+'''# 77. Adaugă o culoare nouă în setul de mai sus și afișează setul actualizat. '''
 
 # culori = {'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
 # culori.add("negru") # il adauga pe pozitie random
 # print(culori)
 
-# 77. Elimină o culoare din set și afișează setul actualizat.
+'''# 78. Elimină o culoare din set și afișează setul actualizat. '''
 
 # culori = {'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
 # culori.remove("rosu")
 # print(culori)
 
-# 78. Verifică dacă o anumită culoare (de exemplu, 'albastru') este în set și afișează un mesaj corespunzător.
+'''# 79. Verifică dacă o anumită culoare (de exemplu, 'albastru') este în set și afișează un mesaj corespunzător. '''
 
 # culori = {'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
 # if 'albastru' in culori : 
@@ -932,7 +943,7 @@
 # else :
 #     print("nu am gasit")
 
-# 79. Creează un alt set cu alte trei culori și afișează elementele comune din cele două seturi.
+'''# 80. Creează un alt set cu alte trei culori și afișează elementele comune din cele două seturi. '''
 
 # culori = { 'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
 # culori2 = { 'rosu', 'galben', 'albastru', 'alb', 'gri' }
@@ -940,7 +951,7 @@
 # sau 
 # print(culori & culori2)
 
-# 80. Afișează toate culorile din primul set care nu sunt în al doilea set.
+'''# 81. Afișează toate culorile din primul set care nu sunt în al doilea set. '''
 
 # culori = {'rosu', 'galben', 'albastru', "verde", 'portocaliu' }
 # culori2 = {'rosu', 'galben', 'albastru', 'alb', 'gri' }
@@ -950,18 +961,18 @@
 # sau
 # print("sau asa : ",culori - culori2) # --------> {'portocaliu', 'verde'}
 
-# 81. Se da lista: [1, 3, 5, 1, 6, 7, 9, 9, 1, 3, 4, 7, 1, 6, 7, 9, 5, 3, 3, 2, 1, 8, 4]. Eliminati duplicatele din lista,
-# astfel incat fiecare element sa apara o singura data.
+'''# 82. Se da lista: [1, 3, 5, 1, 6, 7, 9, 9, 1, 3, 4, 7, 1, 6, 7, 9, 5, 3, 3, 2, 1, 8, 4]. Eliminati duplicatele din lista, 
+# astfel incat fiecare element sa apara o singura data.'''
 
 # numere = [1, 3, 5, 1, 6, 7, 9, 9, 1, 3, 4, 7, 1, 6, 7, 9, 5, 3, 3, 2, 1, 8, 4]
 # numere_duble = list(set(numere)) # daca se doreste returnare tot in lista
 # print(numere_duble)
 
-# 82. Exercitiu extra:
+'''# 83. Exercitiu extra:
 # Se dau urmatoarele expresii matematice:
 # ( (a + b) * (c - d) + e ) / f - ( g * (h + i) ) -> corect deschise si inchise
 # ( (a + b) * (c - d) + e ) / f - ) g * (h + i) ( -> incorect deschise si inchise
-# Sa se verifice daca parantezele sunt corect deschise si inchise.
+# Sa se verifice daca parantezele sunt corect deschise si inchise. '''
 
 # expresie = "( (a + b) * (c - d) + e ) / f - ) g * (h + i) ("
 # expresie = "( (a + b) * (c - d) + e ) / f - ( g * (h + i) )"
