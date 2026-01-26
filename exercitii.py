@@ -1008,3 +1008,10 @@
 #     print("corect")
 # else : 
 #     print ("incorect")
+
+'''# 84. Verifica daca intr-o lista de cuvinte exista cel putin un cuvant care sa contina litera 'z'. 
+# Ex: ['ana', 'maria', 'ioana', 'zebra'] -> True '''
+
+# lista = ['ana', 'maria', 'ioana', 'zebra']
+# verificare = any('z' in i for i in lista)
+# print(verificare)
