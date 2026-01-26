@@ -112,6 +112,19 @@
 
 # -----------------------------------------------
 
+'''# Structura if ... else ... ------------------------------------------------'''
+
+# numar_1 = 5
+# numar_2 = 5
+
+# if numar_1 == numar_2 :
+#     print("numarul 1 este egal cu numarul 2")
+
+# if int(input("ce varsta ai ? ")) >= 20 :
+#      print("ai voie in parc")
+# else :
+#      print("nu ai voie in parc")
+
 '''# Structura for ... in ... ------------------------------------------------'''
 
 # my_str = "python"
@@ -132,21 +145,6 @@
 # while numar <= limita :
 #     print("Numarul curent este: " + str(numar))
 #     numar = numar + 1
-
-# -----------------------------------------------
-
-'''# Structura if ... else ... ------------------------------------------------'''
-
-# numar_1 = 5
-# numar_2 = 5
-
-# if numar_1 == numar_2 :
-#     print("numarul 1 este egal cu numarul 2")
-
-# if int(input("ce varsta ai ? ")) >= 20 :
-#      print("ai voie in parc")
-# else :
-#      print("nu ai voie in parc")
 
 # -------------------------------------------------------------------------------------------------------------------------------------------
 
