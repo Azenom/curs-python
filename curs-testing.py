@@ -54,14 +54,38 @@
 # persona("Marinescu") # apelarea functiei cu un singur parametru : prenumele va avea valoarea implicita
 # persona(nume="Georgescu", prenume="Mihai") # apelarea functiei cu ambii parametrii folosind nume
 
-def func_with_params(param1, param2) :
-    print("Hello from func_with_params")
-    print(f"Parametrul 1 este {param1}")
-    print(f"Parametrul 2 este {param2}")
-    return param1 + param2, param1 * param2, param1 - param2
+# def func_with_params(param1, param2) :
+#     print("Hello from func_with_params")
+#     print(f"Parametrul 1 este {param1}")
+#     print(f"Parametrul 2 este {param2}")
+#     return param1 + param2, param1 * param2, param1 - param2
 
-x, y, z = func_with_params(10,7)
-print(x,y,z) # 
+# x, y, z = func_with_params(10,7)
+# print(x,y,z) # (17, 70, 3)
+
+# Variabile locale si globale
+
+# def functie_extra (param1, param2) :
+#     rezultat = param1 + param2 
+#     return rezultat
+
+# print(functie_extra(10, 20))
+
+
+def functie_nou (param1, param2) :
+    global var # fiind definita ca si global, variabila poate sa sufere modificari atat in functie cat si inafara ei
+    var = param1 + param2
+    print(var)
+
+print(var)
+
+functie_nou (100,200)
+var = var + 10
+print(var)
+
+
+
+
 
 
 
