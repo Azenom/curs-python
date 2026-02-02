@@ -461,6 +461,14 @@
 
 # dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
 
+# persoane = {} # dicționar gol
+# n = int(input("Câte persoane vrei să adaugi? ")) # citim câte persoane vrem să adăugăm
+# for i in range(n):
+#     nume = input("Introdu numele persoanei: ")
+#     varsta = int(input("Introdu vârsta: "))
+#     persoane[nume] = varsta  # adăugăm în dicționar
+# print("Dictionar : ", persoane)
+
 # Afisare valori folosind : Ana, Maria, Marian - keys si 19, 29, 45 - values
 
 # print(dictionarul['Maria']) # -----> 20
@@ -500,10 +508,10 @@
 #-------------------------------
 # Metodele pop(), popitem(), clear() si update() -------------------------------
 
-dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
-print(dictionarul)
-dictionarul.pop('Ana') # Sterge perechea cu cheia 'Ana'
-print(dictionarul) # -----> {'Maria': 20, 'Marian': 40, 'Ion': 25}
+# dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
+# print(dictionarul)
+# dictionarul.pop('Ana') # Sterge perechea cu cheia 'Ana'
+# print(dictionarul) # -----> {'Maria': 20, 'Marian': 40, 'Ion': 25}
 
 # dictionarul.popitem() # Sterge ultima pereche adaugata
 # print(dictionarul) # -----> {'Maria': 20, 'Marian': 40}
@@ -562,7 +570,74 @@ print(dictionarul) # -----> {'Maria': 20, 'Marian': 40, 'Ion': 25}
 # print(persoane.get('5678').get('masina').get('tip_combustibil')) # -----> electric
 # print(persoane.get('1234').get('nume')) # -----> Popescu
 
-# ---------------------------------------------------------------------------------------------------------------------------------------------
+# --------------------------------------------
+
+"""# Functii : def si return ------------------------------- """
+
+# def func_basic() :
+#     print("Hello from func_basic")
+#     return "Orice tip de data sau nimic"
+
+# func_basic() # apelarea functiei si executarea codului din interiorul ei : Hello from func_basic
+# var = func_basic()
+# print(var) # None : deoarece functia nu are return
+
+# def persoana (nume="Popescu", varsta=30) : # functia are doi parametrii cu valori implicite
+#     print("Numele persoanei este:", nume)
+#     print("Varsta persoanei este:", varsta)
+
+# persoana() # apelarea functiei fara parametrii : se folosesc valorile implicite
+# persoana("Ionescu") # apelarea functiei cu un singur parametru : varsta va avea valoarea implicita 
+# persoana(25) # apelarea functiei cu un singur parametru : numele va avea valoarea implicita
+
+# def persona (nume, prenume = "Anonim") : # functia are un parametru obligatoriu si unul cu valoare implicita
+#     print("Numele complet al persoanei este:", nume, prenume)
+
+# persona("Vasilescu", "Andrei") # apelarea functiei cu ambii parametrii
+# persona("Marinescu") # apelarea functiei cu un singur parametru : prenumele va avea valoarea implicita
+# persona(nume="Georgescu", prenume="Mihai") # apelarea functiei cu ambii parametrii folosind nume
+
+# def func_with_params(param1, param2) :
+#     print("Hello from func_with_params")
+#     print(f"Parametrul 1 este {param1}")
+#     print(f"Parametrul 2 este {param2}")
+#     return param1 + param2, param1 * param2, param1 - param2
+
+# x, y, z = func_with_params(10,7)
+# print(x,y,z) # (17, 70, 3)
+
+# Variabile locale si globale
+
+# def functie_extra (param1, param2) :
+#     rezultat = param1 + param2 
+#     return rezultat
+
+# print(functie_extra(10, 20)) 
+
+# def functie_nou (param1, param2) :
+#     global var # fiind definita ca si global, variabila poate sa sufere modificari atat in functie cat si inafara ei
+#     var = param1 + param2
+#     print(var)
+
+# print(var)
+# functie_nou (100,200)
+# var = var + 10
+# print(var)
+
+# Functie recursiva atentie la oprire pentru a evita : # eroare de stack overflow
+
+# lista = [1,2,3, [1,3,5], 6, [1, [1,2,3,1], 6,7],8]
+# def frecv_nr (lista_in_care_caut, nr_cautat) :
+#     counter = 0
+#     for nr in lista_in_care_caut :
+#         if type(nr) == list : 
+#             counter += frecv_nr(nr , nr_cautat)
+#         elif nr == nr_cautat :
+#             counter += 1
+#     return counter
+# print(frecv_nr(lista,1))
+
+# ----------------------------------------------------------------------------------------
 
 '''# ------------------------------------------------- Verificari pe string/liste -----------------------------------------------------------------'''
 '''# ------------- len(), index(), startswith(), endswith(), isalpha(), isdigit(), isalnum(), type(), any(), all(), count(), find(), sorted()  --------------'''
@@ -630,7 +705,36 @@ print(dictionarul) # -----> {'Maria': 20, 'Marian': 40, 'Ion': 25}
 # --------------------------------------------------------------------------------------------------------------------------------------------
 
 '''# ------------------------------------------------------ Metode string/liste ---------------------------------------------------------------'''
-'''# ----------------- upper(), capitalize(), lower(), camel(), pascalcase(), append(), extend() ----------------'''
+'''# ----------------- id(), copy(), copy.deepcopy(), upper(), capitalize(), lower(), camel(), pascalcase(), append(), extend() ----------------'''
+
+# Locatie in memorie id()
+
+# str1 = "ceva"
+# str2 = str1
+
+# print(id(str1)) # returneaza adresa de memorie a obiectului str1
+# print(id(str2))
+
+# list1 = [1, 2, 3, 4]
+# list2 = list1
+
+# print(id(list1)) # returneaza adresa de memorie a obiectului list1
+# print(id(list2))
+
+# Copierea obiectelor copy() pentru a crea o copie separata cu adresa de memorie diferita
+
+# list1 = [1, 2, 3, 4]
+# list2 = list1.copy()
+
+# print(id(list1)) # returneaza adresa de memorie a obiectului list1
+# print(id(list2))
+
+# Copierea obiectelor in adancime deepcopy() pentru a crea o copie separata cu adresa de memorie diferita
+# import copy
+# list1 = [[1, 2], [3, 4]]
+# list2 = copy.deepcopy(list1)
+# print(id(list1)) # returneaza adresa de memorie a obiectului list1
+# print(id(list2)) # returneaza adresa de memorie a obiectului list2
 
 # nume = "paul"
 # print(nume.upper()) # -----> PAUL

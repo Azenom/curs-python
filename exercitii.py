@@ -1162,15 +1162,71 @@ Exercitii Functii Python:
 3) Scrie o funcție care primește două numere și returnează suma, diferența și produsul lor (returnează un tuple).
 4) Scrie o funcție care primește un număr și returnează True dacă este par, altfel False.
 5) Scrie o functie care primeste ca parametru un numar si modifica valoarea unei variabile globale cu valoarea numarului la patrat.
-5) Scrie o funcție care primește o listă de numere și returnează suma tuturor numerelor.
+'''
+
+''' # 5) Scrie o funcție care primește o listă de numere de la tastatura cu spatii si | și returnează suma tuturor numerelor. '''
+'''# 1 | 3 | 4 | 6 | 9 | 75'''
+
+# def suma_numere(lista) :
+#     suma = 0 
+#     for i in lista :
+#         suma+= i
+#     return suma
+
+# char = input("Introdu sirul")
+# numar_clar = char.split("|")
+# lista = [int(i.strip()) for i in numar_clar]
+# rezultat = suma_numere(lista)
+# print("Rezultatul este : ", rezultat)
+
+'''
 6) Scrie o funcție care primește un string și returnează stringul inversat.
 7) Scrie o funcție care primește o listă de stringuri și returnează o listă cu lungimile fiecărui string.
 8) Scrie o funcție care primește doua liste de numere si returneaza o lista cu numerele comune celor doua liste.
 9) Scrie o functie care primeste un dictionar de forma {nume: varsta} si returneaza numele persoanei cu cea mai mica varsta.
-10) Scrie o functie care primeste un dictionar de forma {nume: varsta} si returneaza un dictionar cu persoanele care au varsta peste 18 ani.
+10) Scrie o functie care primeste un dictionar de forma {nume: varsta} si returneaza un dictionar cu persoanele care au varsta peste 18 ani.'''
+
+# Nume - Ionescu | Varsta - 18
+# Nume - Popescu | Varsta - 15
+# Nume - Ana | Varsta - 21
+# Nume - Paul | Varsta - 31
+
+# persoane = {}
+# def filtru (persoane):
+#     rezultat = {}
+#     for nume, varsta in persoane.items() :
+#         if int(varsta) >= 18 :
+#             rezultat[nume] = varsta
+#     return rezultat
+# while True :
+#     date = input("Introdu datele : ")
+#     if date == 'stop' :
+#         break
+#     date_separate = date.split()
+#     nume = date_separate[2]
+#     varsta = date_separate[-1]
+#     persoane[nume] = varsta
+# print(filtru(persoane))
+
+'''
 11) Scrie o functie care primeste o lista de numere si un numar n, si returneaza o lista cu numerele mai mici decat n.
 12) Scrie o functie care primeste o lista de numere si returneaza cel mai mic numar, cel mai mare numar si media aritmetica a numerelor din lista.
-13) Scrie o functie care primeste o lista de numere si returneaza un dictionar cu frecventa fiecarui numar in lista (cheia este numarul, valoarea este frecventa).
+13) Scrie o functie care primeste o lista de numere si returneaza un dictionar cu frecventa fiecarui numar in lista (cheia este numarul, valoarea este frecventa). '''
+
+# def frecv_numere(lista) : 
+#     dictionar = {}
+#     for x in lista : 
+#         if x in dictionar :
+#             dictionar[x] += 1
+#         else :
+#             dictionar[x] = 1 
+#     return dictionar
+
+# numere = [10, 20, 10 ,20 ,30, 40, 30 ,40 ,50]
+# rezultat = frecv_numere(numere)
+# print(rezultat)
+
+'''
 14) Scrie o functie care primeste o lista de numere si returneaza o lista care contine numerele fara duplicate.
 15) Scrie o functie care primeste o lista de numere si returneaza o lista doar cu numerele prime.
 '''
