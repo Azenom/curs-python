@@ -1016,8 +1016,161 @@
 # verificare = any('z' in i for i in lista)
 # print(verificare)
 
-
 '''# 85. Dintr-o lista cu numere de la 1 la 50, creeaza o lista cu patratele numerelor care sunt divizibile cu 4 si cu 6.
 # Ex: [144, 576, 1296, 2304] '''
+
 # lista = [i**2 for i in range(1,51) if i%4 == 0 and i%6 == 0]
 # print (lista)
+
+'''# 86. Creeaza un dictionar care sa contina numele si varsta a 5 persoane.'''
+
+# dic_persoane = {"paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+
+'''# 87. Afiseaza varsta unei persoane specifificate de utilizator.'''
+
+# dic_persoane = {"paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# varianta = input("Introdu persoana la care doresti sa afisezi varsta: ")
+# flag = True
+# while flag : 
+#         if varianta == "paul" :
+#                 print(dic_persoane["paul"])
+#         elif varianta == "catalin" :
+#                 print(dic_persoane["catalin"])
+#         elif varianta == "aura" : 
+#                 print(dic_persoane["aura"])
+#         elif varianta == "mama" :
+#                 print(dic_persoane["mama"])
+#         elif varianta == "tata" :
+#                 print(dic_persoane["tata"])
+#         else :
+#                 print("Persoana nu exista in dictionar")
+#                 break
+#         varianta2 = input("Mai vrei sa afisezi si alta varsta ? y/n  ")
+#         if varianta2 == "y" :
+#                 varianta = input("Introdu persoana la care doresti sa afisezi varsta: ")
+#         else : 
+#                 flag = False
+
+'''# 88. Afiseaza cea mai mare si cea mai mica varsta din dictionar.'''
+
+# persoane = {"paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# cea_mai_mica = min(persoane.values())
+# cea_mai_mare = max(persoane.values())
+# print("Cea mai mică vârstă:", cea_mai_mica)
+# print("Cea mai mare vârstă:", cea_mai_mare)
+
+'''# 89. Adauga 3 noi persoane in dictionar.'''
+
+# persoane = {"paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# persoane["Ana"] = 25
+# persoane["Pope"] = 27
+# persoane["Benny"] = 3
+# print(persoane)
+
+'''# 90. Afiseaza varsta medie a persoanelor din dictionar.'''
+
+# persoane = {"paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# suma = 0
+# for x in persoane.values() :
+#     suma += x
+# medie = suma / len(persoane)
+# print("Media varstelor este : ",medie)
+
+'''# 91. Sterge o persoana specificata de utilizator din dictionar.'''
+
+# dic_persoane = {"paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# print("Acestea sunt persoanele : ")
+# for x in dic_persoane.keys():
+#         print(x)
+# varianta = input("Introdu persoana pe care doresti sa o stergi: ")
+# flag = True
+# while flag : 
+#         if varianta == "paul" :
+#                 dic_persoane.pop("paul")
+#                 print("Persoanle ramase sunt :")
+#                 for x in dic_persoane.keys():
+#                     print(x)
+#         elif varianta == "catalin" :
+#                 dic_persoane.pop("catalin")
+#                 print("Persoanle ramase sunt :")
+#                 for x in dic_persoane.keys():
+#                     print(x)
+#         elif varianta == "aura" : 
+#                 dic_persoane.pop("aura")
+#                 print("Persoanle ramase sunt :")
+#                 for x in dic_persoane.keys():
+#                     print(x)
+#         elif varianta == "mama" :
+#                 dic_persoane.pop("mama")
+#                 print("Persoanle ramase sunt :")
+#                 for x in dic_persoane.keys():
+#                     print(x)
+#         elif varianta == "tata" :
+#                 dic_persoane.pop("tata")
+#                 print("Persoanle ramase sunt :")
+#                 for x in dic_persoane.keys():
+#                     print(x)
+#         else :
+#                 print("Persoana nu exista in dictionar")
+#                 break
+#         varianta2 = input("Mai vrei sa stergi si alta persoana ? y/n  ")
+#         if varianta2 == "y" :
+#                 varianta = input("Introdu persoana pe care doresti sa o stergi: ")
+#         else : 
+#                 flag = False
+
+'''# 92. Afiseaza toate persoanele cu varsta peste o valoare specificata de utilizator.'''
+
+# dic_persoane = {"paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# varsta = int(input("Introdu varsta pentru care vrei sa afisezi persoanele ce depasesc minimul :"))
+# minimul = min(dic_persoane.values())
+# if varsta < minimul :
+#         print("Nu avem persoane")
+# else : 
+#     for x in dic_persoane:
+#         if dic_persoane[x] > varsta:
+#             print(x)
+
+'''# 93. Afiseaza toate persoanele din dictionar in urmatorul format: "Nume: <nume_persoana>, Varsta: <varsta_persoana>".'''
+
+
+
+'''
+Exercitii pentru dictionare:
+
+9) Verifica daca o persoana specificata de utilizator exista in dictionar.
+10) Actualizeaza varsta unei persoane specificate de utilizator.
+11) Afiseaza numarul total de persoane din dictionar.
+12) Creeaza o lista cu toate numele persoanelor din dictionar si afiseaza-le.
+13) Creeaza un nou dictionar care sa contina doar persoanele cu varsta peste 18 ani.
+14) Creeaza o lista care contine toate varstele din dictionar, fara duplicate, si afiseaz-o.
+15) Afiseaza persoana cu cea mai apropiata varsta de o valoare specificata de utilizator.
+16) Afiseaza toate persoanele grupate dupa decadele varstei (0-9, 10-19, 20-29, etc.).
+17) Afiseaza persoanele sortate alfabetic dupa nume. (Utilizati functia sorted pentru a rezolva acest exercitiu).
+18) Afiseaza persoanele sortate dupa varsta, de la cea mai mica la cea mai mare. (Utilizati functia sorted pentru a rezolva acest exercitiu).
+   (Folositi functia sorted() si pentru cheia de sortare (key) accesati valorile dictionarului).
+19) Se da urmatorul text: "Ana are 12 ani, Ion are 15 ani, Maria are 12 ani, George are 15 ani, Elena are 14 ani".
+    Creeaza un dictionar care sa contina numele persoanelor ca si chei si varstele ca si valori.
+20) Se da urmatorul text: "Ana are 12 ani, Ion are 15 ani, Maria are 12 ani, George are 15 ani, Elena are 14 ani".
+    Creeaza un dictionar care sa stocheze frecventa literelor din text si afiseaza-l. Exemplu: {'a': 7, 'n': 3, ... }.
+'''
+
+'''
+Exercitii Functii Python:
+1) Scrie o funcție care primește un nume și afișează "Salut, <nume>!".
+2) Scrie o funcție care primește două numere și returnează suma lor.
+3) Scrie o funcție care primește două numere și returnează suma, diferența și produsul lor (returnează un tuple).
+4) Scrie o funcție care primește un număr și returnează True dacă este par, altfel False.
+5) Scrie o functie care primeste ca parametru un numar si modifica valoarea unei variabile globale cu valoarea numarului la patrat.
+5) Scrie o funcție care primește o listă de numere și returnează suma tuturor numerelor.
+6) Scrie o funcție care primește un string și returnează stringul inversat.
+7) Scrie o funcție care primește o listă de stringuri și returnează o listă cu lungimile fiecărui string.
+8) Scrie o funcție care primește doua liste de numere si returneaza o lista cu numerele comune celor doua liste.
+9) Scrie o functie care primeste un dictionar de forma {nume: varsta} si returneaza numele persoanei cu cea mai mica varsta.
+10) Scrie o functie care primeste un dictionar de forma {nume: varsta} si returneaza un dictionar cu persoanele care au varsta peste 18 ani.
+11) Scrie o functie care primeste o lista de numere si un numar n, si returneaza o lista cu numerele mai mici decat n.
+12) Scrie o functie care primeste o lista de numere si returneaza cel mai mic numar, cel mai mare numar si media aritmetica a numerelor din lista.
+13) Scrie o functie care primeste o lista de numere si returneaza un dictionar cu frecventa fiecarui numar in lista (cheia este numarul, valoarea este frecventa).
+14) Scrie o functie care primeste o lista de numere si returneaza o lista care contine numerele fara duplicate.
+15) Scrie o functie care primeste o lista de numere si returneaza o lista doar cu numerele prime.
+'''

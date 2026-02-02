@@ -461,7 +461,7 @@
 
 # dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
 
-# Afisare valori folosind cheile : Ana, Maria, Marian - keys si 19, 29, 45 - values
+# Afisare valori folosind : Ana, Maria, Marian - keys si 19, 29, 45 - values
 
 # print(dictionarul['Maria']) # -----> 20
 
@@ -500,9 +500,10 @@
 #-------------------------------
 # Metodele pop(), popitem(), clear() si update() -------------------------------
 
-# dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
-# dictionarul.pop('Ana') # Sterge perechea cu cheia 'Ana'
-# print(dictionarul) # -----> {'Maria': 20, 'Marian': 40, 'Ion': 25}
+dictionarul = {'Ana':19, 'Maria':20, 'Marian':45}
+print(dictionarul)
+dictionarul.pop('Ana') # Sterge perechea cu cheia 'Ana'
+print(dictionarul) # -----> {'Maria': 20, 'Marian': 40, 'Ion': 25}
 
 # dictionarul.popitem() # Sterge ultima pereche adaugata
 # print(dictionarul) # -----> {'Maria': 20, 'Marian': 40}
