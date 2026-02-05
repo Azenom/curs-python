@@ -573,6 +573,7 @@
 # --------------------------------------------
 
 """# Functii : def si return ------------------------------- """
+''' Se foloseste return cand vrei sa stochezi ceea ce transmite functia'''
 
 # def func_basic() :
 #     print("Hello from func_basic")
