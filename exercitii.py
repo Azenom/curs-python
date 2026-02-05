@@ -1387,17 +1387,3 @@ Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 3
 5) Scrie o functie recursiva care calculeaza suma tuturor elementelor dintr-o lista imbricata.
 Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 28
 """
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
