@@ -1131,26 +1131,161 @@
 #         if dic_persoane[x] > varsta:
 #             print(x)
 
-'''# 93. Afiseaza toate persoanele din dictionar in urmatorul format: "Nume: <nume_persoana>, Varsta: <varsta_persoana>".'''
+'''# 93. Afiseaza toate persoanele din dictionar in urmatorul format: "Nume : <nume_persoana>, Varsta : <varsta_persoana>".'''
 
-dic_persoane = {"paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# dic_persoane = {"paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# for nume,varsta in dic_persoane.items():
+#     print(f'Nume :  {nume} , Varsta : {varsta}')
 
+'''# 94. Verifica daca o persoana specificata de utilizator exista in dictionar.'''
 
+# dic_persoane = {"paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# cautare = input("Ce nume cauti : ")
+# for persoana in dic_persoane.keys() :
+#     if cautare == persoana :
+#         print("gasit")
+#         break
+#     else : 
+#         print("nu am gasit")
+#         break
 
+'''# 95. Actualizeaza varsta unei persoane specificate de utilizator.'''
+
+# dic_persoane = {"paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# act_persoana = input("Ce persoana vrei : ")
+# actualizare = int(input("Ce varsta vrei : "))
+# if act_persoana in dic_persoane :
+#     dic_persoane[act_persoana] = actualizare
+#     print("noua varsta este : ",dic_persoane[act_persoana])
+# print(dic_persoane)
+        
+'''# 96. Afiseaza numarul total de persoane din dictionar.'''
+
+# dic_persoane = {"paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+
+# count = 0
+# for persoane in dic_persoane.keys() :
+#     count += 1
+# print(count)
+
+# # sau
+
+# print(len(dic_persoane.values()))
+
+'''# 97. Creeaza o lista cu toate numele persoanelor din dictionar si afiseaza-le.'''
+
+# dic_persoane = {"paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# lista = []
+
+# for persoana in dic_persoane : 
+#     lista.append(persoana)
+# print(lista)
+
+# # sau
+
+# lista_nume = list(dic_persoane.keys())
+# lista_vrasta = list(dic_persoane.values())
+# print(lista_nume)
+# print(lista_vrasta)
+
+'''# 98. Creeaza un nou dictionar care sa contina doar persoanele cu varsta peste 18 ani.'''
+
+# dic_persoane = {"mihai" : 12, "paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# dic_per_nou = {}
+# for keys, value in dic_persoane.items() :
+#     if value > 18 :
+#         dic_per_nou[keys] = value
+# print(dic_per_nou)
+
+# sau
+
+# dic_persoane = {"mihai" : 12, "paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# dic_per_nou = {keys : value for keys, value in dic_persoane.items() if value >18}
+# print(dic_per_nou)
+
+'''# 99. Creeaza o lista care contine toate varstele din dictionar, fara duplicate, si afiseaz-o.'''
+
+# dic_persoane = {"mihai" : 31, "paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# lista = []
+# for persoana in dic_persoane.values() :
+#     lista.append(persoana)
+# asdasd = set(lista)
+# print(asdasd)
+
+# sau
+
+# dic_persoane = {"mihai" : 31, "paul" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# print(list(set(dic_persoane.values())))
+
+'''# 100. Afiseaza persoana cu cea mai apropiata varsta de o valoare specificata de utilizator.'''
+
+# dic_persoane = {"mihai" : 31, "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# valoare = int(input("ghiceste varsta : "))
+# diff = 0
+# diff_minim = 100
+# persoana = None
+# for nume,varsta in dic_persoane.items() :
+#     if varsta > valoare :
+#         diff = varsta - valoare
+#     else :
+#         diff = valoare - varsta
+#     if diff < diff_minim :
+#         diff_minim = diff
+#         persoana = nume
+# print(persoana , dic_persoane[persoana])
+
+'''# 101. Afiseaza toate persoanele grupate dupa decadele varstei (0-9, 10-19, 20-29, etc.).'''
+
+# dic_persoane = {"mihai" : 31, "paul" : 31,  "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# grupare = {}
+# for nume, varsta in dic_persoane.items():
+#     decada = (varsta // 10) * 10   # ex: 23 → 20
+#     if decada not in grupare : 
+#         grupare[decada] = []
+#     grupare[decada].append(nume)
+# for decada in sorted(grupare) :
+#     print(f"{decada}-{decada + 9}: {', '.join(grupare[decada])}")
+
+# sau
+
+# dic_persoane = {"mihai" : 31, "paul" : 31,  "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# for k, v in dic_persoane.items():
+#     if v in range(0, 9):
+#         print('Persoanele cu varsta cuprinsa intre 0 si 9 ani sunt: ', k)
+#     elif v in range(10, 19):
+#         print('Persoanele cu varsta cuprinsa intre 10 si 19 ani sunt: ', k)
+#     elif v in range(20, 29):
+#         print('Persoanele cu varsta cuprinsa intre 20 si 29 ani sunt: ', k)
+#     elif v in range(30, 39):
+#         print('Persoanele cu varsta cuprinsa intre 30 si 39 ani sunt: ', k)
+#     elif v in range(40, 49):
+#         print('Persoanele cu varsta cuprinsa intre 40 si 49 ani sunt: ', k)
+#     elif v in range(50, 59):
+#         print('Persoanele cu varsta cuprinsa intre 50 si 59 ani sunt: ', k)
+#     elif v in range(60, 69):
+#         print('Persoanele cu varsta cuprinsa intre 60 si 69 ani sunt: ', k)
+#     elif v in range(70, 79):
+#         print('Persoanele cu varsta cuprinsa intre 70 si 79 ani sunt: ', k)
+#     elif v in range(80, 89):
+#         print('Persoanele cu varsta cuprinsa intre 80 si 89 ani sunt: ', k)
+#     elif v in range(90, 99):
+#         print('Persoanele cu varsta cuprinsa intre 90 si 99 ani sunt: ', k)
+#     else:
+#         print('Astia bantuie....', k)
+
+'''# 102. Afiseaza persoanele sortate alfabetic dupa nume. (Utilizati functia sorted pentru a rezolva acest exercitiu).'''
+
+# dic_persoane = {"mihai" : 31, "paul" : 31,  "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+# print(sorted(list(dic_persoane)))
+
+'''# 103. Afiseaza persoanele sortate dupa varsta, de la cea mai mica la cea mai mare. (Utilizati functia sorted pentru a rezolva acest exercitiu).
+(Folositi functia sorted() si pentru cheia de sortare (key) accesati valorile dictionarului).'''
+
+dic_persoane = {"mihai" : 31, "paul" : 31,  "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
+print(sorted(dic_persoane, key=dic_persoane.get))
 '''
 Exercitii pentru dictionare:
 
-9) Verifica daca o persoana specificata de utilizator exista in dictionar.
-10) Actualizeaza varsta unei persoane specificate de utilizator.
-11) Afiseaza numarul total de persoane din dictionar.
-12) Creeaza o lista cu toate numele persoanelor din dictionar si afiseaza-le.
-13) Creeaza un nou dictionar care sa contina doar persoanele cu varsta peste 18 ani.
-14) Creeaza o lista care contine toate varstele din dictionar, fara duplicate, si afiseaz-o.
-15) Afiseaza persoana cu cea mai apropiata varsta de o valoare specificata de utilizator.
-16) Afiseaza toate persoanele grupate dupa decadele varstei (0-9, 10-19, 20-29, etc.).
-17) Afiseaza persoanele sortate alfabetic dupa nume. (Utilizati functia sorted pentru a rezolva acest exercitiu).
-18) Afiseaza persoanele sortate dupa varsta, de la cea mai mica la cea mai mare. (Utilizati functia sorted pentru a rezolva acest exercitiu).
-   (Folositi functia sorted() si pentru cheia de sortare (key) accesati valorile dictionarului).
 19) Se da urmatorul text: "Ana are 12 ani, Ion are 15 ani, Maria are 12 ani, George are 15 ani, Elena are 14 ani".
     Creeaza un dictionar care sa contina numele persoanelor ca si chei si varstele ca si valori.
 20) Se da urmatorul text: "Ana are 12 ani, Ion are 15 ani, Maria are 12 ani, George are 15 ani, Elena are 14 ani".
@@ -1251,134 +1386,134 @@ Exercitii Functii Python:
     # Nota engleza
     # Media                
 
-elevi = [{'nume': 'popescu', 'prenume': 'ana', 'nota romana': 6.0, 'nota mate': 7.0, 'nota engleza': 8.0, 'media': 7.0}, 
-         {'nume': 'abesei', 'prenume': 'paul', 'nota romana': 7.0, 'nota mate': 8.0, 'nota engleza': 9.0, 'media': 8.0},
-         {'nume': 'popescu', 'prenume': 'andrei', 'nota romana': 3.0, 'nota mate': 4.0, 'nota engleza': 5.0, 'media': 4.0}
-         ]
+# elevi = [{'nume': 'popescu', 'prenume': 'ana', 'nota romana': 6.0, 'nota mate': 7.0, 'nota engleza': 8.0, 'media': 7.0}, 
+#          {'nume': 'abesei', 'prenume': 'paul', 'nota romana': 7.0, 'nota mate': 8.0, 'nota engleza': 9.0, 'media': 8.0},
+#          {'nume': 'popescu', 'prenume': 'andrei', 'nota romana': 3.0, 'nota mate': 4.0, 'nota engleza': 5.0, 'media': 4.0}
+#          ]
 
-def adauga_elev ():
-    nume = input("Nume : ")
-    prenume = input("Prenume : ")
-    nota_romana = float(input("Nota romana :"))
-    nota_mate = float(input("Nota mate :"))
-    nota_engl = float(input("Nota engleza :"))
-    elev = {
-        "nume": nume,
-        "prenume": prenume,
-        "nota romana" : nota_romana,
-        "nota mate" : nota_mate,
-        "nota engleza" : nota_engl,
-        "media" : calculeaza_media(nota_romana, nota_mate, nota_engl)
-    }
-    elevi.append(elev)
+# def adauga_elev ():
+#     nume = input("Nume : ")
+#     prenume = input("Prenume : ")
+#     nota_romana = float(input("Nota romana :"))
+#     nota_mate = float(input("Nota mate :"))
+#     nota_engl = float(input("Nota engleza :"))
+#     elev = {
+#         "nume": nume,
+#         "prenume": prenume,
+#         "nota romana" : nota_romana,
+#         "nota mate" : nota_mate,
+#         "nota engleza" : nota_engl,
+#         "media" : calculeaza_media(nota_romana, nota_mate, nota_engl)
+#     }
+#     elevi.append(elev)
 
-def calculeaza_media(nota_romana, nota_mate, nota_engl):
-    x = round((nota_romana + nota_mate + nota_engl)/3,2)
-    return x
+# def calculeaza_media(nota_romana, nota_mate, nota_engl):
+#     x = round((nota_romana + nota_mate + nota_engl)/3,2)
+#     return x
 
-def ia_media(elev):
-    return elev['media']
+# def ia_media(elev):
+#     return elev['media']
 
-def ia_nume(elev):
-    return elev['nume']
+# def ia_nume(elev):
+#     return elev['nume']
 
-def afiseaza_elevi(elevi, sort = False, field = None):
-    if sort :
-        elevi = sorted(elevi, key = field)
-    for elev in elevi :
-        print(f"{elev['nume']} {elev['prenume']} | "
-            f"Romana: {elev['nota romana']} | "
-            f"Matematica: {elev['nota mate']} | "
-            f"Engleza: {elev['nota engleza']} | "
-            f"Media: {elev['media']}")
+# def afiseaza_elevi(elevi, sort = False, field = None):
+#     if sort :
+#         elevi = sorted(elevi, key = field)
+#     for elev in elevi :
+#         print(f"{elev['nume']} {elev['prenume']} | "
+#             f"Romana: {elev['nota romana']} | "
+#             f"Matematica: {elev['nota mate']} | "
+#             f"Engleza: {elev['nota engleza']} | "
+#             f"Media: {elev['media']}")
         
-# def afisare_alfabetic():
-#     elevi_sortati = sorted(elevi, key=ia_nume)
-#     for elev in elevi_sortati:
-#         print(f"{elev['nume']} {elev['prenume']}")
+# # def afisare_alfabetic():
+# #     elevi_sortati = sorted(elevi, key=ia_nume)
+# #     for elev in elevi_sortati:
+# #         print(f"{elev['nume']} {elev['prenume']}")
         
-def sterge_elevi():
-    nume = input("Ce nume vrei elimini ? ")
-    prenume = input("Ce prenume vrei sa elimini ?")
-    for elev in elevi :
-        if elev["nume"] == nume and elev["prenume"] == prenume:
-            elevi.remove(elev)
-            print("Am sters")
-            return
-    print("Elevul nu a fost gasit")
+# def sterge_elevi():
+#     nume = input("Ce nume vrei elimini ? ")
+#     prenume = input("Ce prenume vrei sa elimini ?")
+#     for elev in elevi :
+#         if elev["nume"] == nume and elev["prenume"] == prenume:
+#             elevi.remove(elev)
+#             print("Am sters")
+#             return
+#     print("Elevul nu a fost gasit")
 
-def modificare ():
-    nume = input("Ce nume sa modific : ")
-    prenume = input("Ce prenume sa modific : ")
-    for elev in elevi: 
-        if elev['nume'] == nume and elev['prenume'] == prenume:
-            elev['nota romana'] = float(input("Nota roamana noua: "))
-            elev['nota mate'] = float(input("Nota mate noua: "))
-            elev['nota engleza'] = float(input("Nota engleza noua: "))
-            elev['media'] = calculeaza_media(elev['nota romana'], elev['nota mate'], elev['nota engleza'])
-            print("Date modificate success!")
-            return
-    print("Elev negasit!")
+# def modificare ():
+#     nume = input("Ce nume sa modific : ")
+#     prenume = input("Ce prenume sa modific : ")
+#     for elev in elevi: 
+#         if elev['nume'] == nume and elev['prenume'] == prenume:
+#             elev['nota romana'] = float(input("Nota roamana noua: "))
+#             elev['nota mate'] = float(input("Nota mate noua: "))
+#             elev['nota engleza'] = float(input("Nota engleza noua: "))
+#             elev['media'] = calculeaza_media(elev['nota romana'], elev['nota mate'], elev['nota engleza'])
+#             print("Date modificate success!")
+#             return
+#     print("Elev negasit!")
 
-def cauta_elevi():
-    nume = input("Ce nume vrei ? ")
-    prenume = input("Ce prenume vrei ?")
-    for elev in elevi :
-        if elev["nume"] == nume and elev["prenume"] == prenume:
-            print(f"{elev['nume']} {elev['prenume']} | "
-            f"Romana: {elev['nota romana']} | "
-            f"Matematica: {elev['nota mate']} | "
-            f"Engleza: {elev['nota engleza']} | "
-            f"Media: {elev['media']}")
-            return
-    print("Elevul nu a fost gasit")
+# def cauta_elevi():
+#     nume = input("Ce nume vrei ? ")
+#     prenume = input("Ce prenume vrei ?")
+#     for elev in elevi :
+#         if elev["nume"] == nume and elev["prenume"] == prenume:
+#             print(f"{elev['nume']} {elev['prenume']} | "
+#             f"Romana: {elev['nota romana']} | "
+#             f"Matematica: {elev['nota mate']} | "
+#             f"Engleza: {elev['nota engleza']} | "
+#             f"Media: {elev['media']}")
+#             return
+#     print("Elevul nu a fost gasit")
 
-# def afiseaza_media_crescator():
-#     elevi_sortati = sorted(elevi, key=ia_media)
-#     for elev in elevi_sortati:
-#         print(f"{elev['nume']} {elev['prenume']} | Media: {elev['media']}")
+# # def afiseaza_media_crescator():
+# #     elevi_sortati = sorted(elevi, key=ia_media)
+# #     for elev in elevi_sortati:
+# #         print(f"{elev['nume']} {elev['prenume']} | Media: {elev['media']}")
 
-def medie_5 ():
-    for elev in elevi :
-        if elev['media'] >= 5:
-            print(f"{elev['nume']} {elev['prenume']} | Media: {elev['media']}")
+# def medie_5 ():
+#     for elev in elevi :
+#         if elev['media'] >= 5:
+#             print(f"{elev['nume']} {elev['prenume']} | Media: {elev['media']}")
             
-while True :
-    print(
-    """
-		1. Adaugare elev
-		2. Afisarea elevilor existenti
-		3. Modificare informatii elev existent
-		4. Stergere elev
-		5. Cautare elev dupa nume si prenume
-		6. Afisare elevi in ordinea mediilor
-		7. Afisare elevi cu media peste 8
-		8. Afisare elevi in ordine alfabetica (dupa nume)
-"""
-) 
-    optiune = input("Alege optiune : ")
-    if optiune == '0' :
-        print("Ai iesit din sistem")
-        break
-    if optiune == "1" :
-        adauga_elev()
-    if optiune == "2" :
-        # afiseaza_elevi()
-        afiseaza_elevi(elevi)
-    if optiune == "3" :
-        modificare()
-    if optiune == "4":
-        sterge_elevi()
-    if optiune == "5":
-        cauta_elevi()
-    if optiune == "6":
-        # afiseaza_media_crescator()
-        afiseaza_elevi( elevi, sort = True, field = ia_media )
-    if optiune == "7":
-        medie_5()
-    if optiune == "8":
-        # afiseaza_alfabetic()
-        afiseaza_elevi( elevi, sort = True, field = ia_nume )
+# while True :
+#     print(
+#     """
+# 		1. Adaugare elev
+# 		2. Afisarea elevilor existenti
+# 		3. Modificare informatii elev existent
+# 		4. Stergere elev
+# 		5. Cautare elev dupa nume si prenume
+# 		6. Afisare elevi in ordinea mediilor
+# 		7. Afisare elevi cu media peste 8
+# 		8. Afisare elevi in ordine alfabetica (dupa nume)
+# """
+# ) 
+#     optiune = input("Alege optiune : ")
+#     if optiune == '0' :
+#         print("Ai iesit din sistem")
+#         break
+#     if optiune == "1" :
+#         adauga_elev()
+#     if optiune == "2" :
+#         # afiseaza_elevi()
+#         afiseaza_elevi(elevi)
+#     if optiune == "3" :
+#         modificare()
+#     if optiune == "4":
+#         sterge_elevi()
+#     if optiune == "5":
+#         cauta_elevi()
+#     if optiune == "6":
+#         # afiseaza_media_crescator()
+#         afiseaza_elevi( elevi, sort = True, field = ia_media )
+#     if optiune == "7":
+#         medie_5()
+#     if optiune == "8":
+#         # afiseaza_alfabetic()
+#         afiseaza_elevi( elevi, sort = True, field = ia_nume )
 
 """
 Exercitii Functii recursive:
@@ -1393,36 +1528,3 @@ Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 3
 5) Scrie o functie recursiva care calculeaza suma tuturor elementelor dintr-o lista imbricata.
 Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 28
 """
-
-
-
-# x = "2 + 3 * 4"
-# rezultat = eval(x)
-# print(rezultat) # 14
-# # Atenție: eval() este periculos dacă stringul vine de la utilizator (poate executa cod malițios).
-
-# import ast
-# x = "[1, 2, 3]"
-# rezultat = ast.literal_eval(x)
-# print(rezultat)  # [1, 2, 3]
-# # Interpretează doar literali Python (numere, liste, dicționare etc.)
-
-# import operator
-
-# ops = {
-#     '+' : operator.add,
-#     '-' : operator.sub,
-#     '*' : operator.mul,
-#     '/' : operator.truediv,  # use operator.div for Python 2
-#     '%' : operator.mod,
-#     '^' : operator.xor,
-# }
-
-# def eval_binary_expr(op1, oper, op2):
-#     op1, op2 = int(op1), int(op2)
-#     return ops[oper](op1, op2)
-
-# print(eval_binary_expr(("1 + 3".split())))
-# print(eval_binary_expr(("1 * 3".split())))
-# print(eval_binary_expr(("1 % 3".split())))
-# print(eval_binary_expr(("1 ^ 3".split())))
