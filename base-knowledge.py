@@ -638,6 +638,38 @@
 #     return counter
 # print(frecv_nr(lista,1))
 
+# Functie interpretare string din python
+
+# x = "2 + 3 * 4"
+# rezultat = eval(x)
+# print(rezultat) # 14
+# # Atenție: eval() este periculos dacă stringul vine de la utilizator (poate executa cod malițios).
+
+# import ast
+# x = "[1, 2, 3]"
+# rezultat = ast.literal_eval(x)
+# print(rezultat)  # [1, 2, 3]
+# # Interpretează doar literali Python (numere, liste, dicționare etc.)
+
+# import operator
+# ops = {
+#     '+' : operator.add,
+#     '-' : operator.sub,
+#     '*' : operator.mul,
+#     '/' : operator.truediv,  # use operator.div for Python 2
+#     '%' : operator.mod,
+#     '^' : operator.xor,
+# }
+
+# def eval_binary_expr(op1, oper, op2):
+#     op1, op2 = int(op1), int(op2)
+#     return ops[oper](op1, op2)
+
+# print(eval_binary_expr(("1 + 3".split())))
+# print(eval_binary_expr(("1 * 3".split())))
+# print(eval_binary_expr(("1 % 3".split())))
+# print(eval_binary_expr(("1 ^ 3".split())))
+
 # ----------------------------------------------------------------------------------------
 
 '''# ------------------------------------------------- Verificari pe string/liste -----------------------------------------------------------------'''
