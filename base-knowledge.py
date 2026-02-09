@@ -858,6 +858,74 @@
 # ------------------------------------------------
 
 '''# --------------------------------------------------------------Modules : import------------------------------------------------------------------------'''
+''' Module si pachete ------------------------------------------------'''
+# Import de module ----------------
+
+# import random
+# sau 
+# from random import randint
+# from random import random, randrange <-------- se pot importa mai multe module despartite de virgule
+# sau
+# from random import randint as alalalala <------- alias, se poate punte orice nume dorit
+# sau
+# from random import * <------ importa tot din modulul import
+# sau
+# import random as rand <------ alias
+
+# def calcul():
+#     a = random.randint(1,5) # aloca un numar intreg aleator de la 1 la 5
+#     b = random.randint(1,5)
+    # sau
+    # a = rand.randint(1,5)
+    # b = rand.randint(1,5)
+    # sau
+    # a = alalalala(1,5)
+    # b = alalalala(1,5)
+#     return a+b
+# print(calcul())
+
+# Creare modul personal intr-un alt fisier ----------------
+# def my_function () :
+#     print("Hello from my_function")
+# my_var = 30
+# my_name = __name__
+# ---------------------------------
+
+# Apelare din modul personal -----------------------
+# import fisier
+# fisier.my_function() # apelare modul
+# print(fisier.my_function) # ------> Hello from my_function
+# print(fisier.my_name) # -------> aifseaza numele fisierului de unde importam
+# ---------------------------------
+
+# Import packete ------------------
+# import fisier_package.fisier_modul # importa modulul : fisier_modul din package-ul : fisier_package
+# print (fisier_package.fisier_modul.functie) # printeaza functia din modulul : fisier_modul din package-ul : fisier_package
+
+# Argumente vector - scriere in terminal
+
+# import argparse
+# def parse_args():
+#     my_parser = argparse.ArgumentParser(description='Afisza nume frumos')
+#     my_parser.add_argument('--nume', type=str, required=True,help='Nume de familie')
+#     my_parser.add_argument('--prenume', type=str, help='Prenumele omului')
+#     args = my_parser.parse_args()
+#     return args.nume, args.prenume
+# def main():
+#     nume, prenume = parse_args()
+#     print(f'Nume: {nume}, Prenume: {prenume}')
+#     if __name__ == 'main':
+#         main()
+
+# import sys
+# def afisaza_nume(nume, prenume):
+#     print(f'Nume: {nume}, Prenume: {prenume}')
+# def main():
+#     print(sys.argv)
+# afisaza_nume(sys.argv[1], sys.argv[2])
+# if __name__ == 'main':
+#     main()
+
 '''# import random ------------------------------------------------'''
 
 # lista = [1,2,3,4,5,6,7]
