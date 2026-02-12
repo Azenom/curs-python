@@ -98,7 +98,7 @@
 
 # ------------------------------------------------------------------------------------------------------------------------------------
 
-'''# ------------------------------------------------ Control flux ------------------------------------------------'''
+'''# ------------------------------------------------------------------------ Control flux ------------------------------------------------------------'''
 '''# Structura if ... elif ... else ------------------------------------------------'''
 
 # a = 10
@@ -784,7 +784,9 @@
 # lista = [5,3,8,1,2]
 # print(sorted(lista)) # -------> [1, 2, 3, 5, 8] sorteaza si suprascrie lista
 
-'''# ------------------------------------------------------ Caractere speciale ------------------------------------------------------------------'''
+# --------------------------------------------------------------------------------------------------------------------------------------------
+
+'''# ------------------------------------------------------ Caractere si metode speciale ------------------------------------------------------------------'''
 '''# Caractere speciale in string-uri : \n \t \\ \' \" ----------------------------------------------------'''
 
 # print("Acesta este un text cu un caracter special: \n new line")
@@ -792,6 +794,51 @@
 # print('Acesta este un text cu un caracter special: \\ backslash')
 # print("Acesta este un text cu un caracter special: \' apostrof")
 # print('Acesta este un text cu un caracter special: \" ghilimele')
+
+'''# Docstrings ----------------------------------------------------'''
+
+# def suma(nuamr1 , numar2):
+#     '''
+#     Calculeaza suma a doua numere prmite ca parametru
+    
+#     :param nuamr1 tip int : primul numar de adunat
+#     :param numar2 tip int : al doilea numar de adunat
+#     return tip int : suma celor 2 numere
+#     '''
+#     total = nuamr1 + numar2
+#     return total
+
+# print(suma(10,20))
+# help(suma) # afiseaza ce este pus intre ''' ''' din functia apelata si printeaza functia cu multe detalii
+# print(suma.__doc__) # afiseaza ce este pus intre ''' ''' din functia apelata fara a o apela
+
+'''# Type hinting ----------------------------------------------------'''
+
+# def suma(nuamr1: int , numar2 : int)  -> int :
+#     '''
+#     Calculeaza suma a doua numere prmite ca parametru.
+
+#     Args:
+#         nuamr1 (int) : primul numar de adunat
+#         numar2 (int) : al doilea numar de adunat
+
+#     Returns:
+#         int : suma celor 2 numere
+#     '''
+#     return nuamr1 + numar2
+
+# from typing import List
+# def suma_lista(lista : list[int]) -> int :
+#     '''
+#     Calculeaza suma tuturor elem dintr-o lista primita ca parametru
+
+#     Args :
+#         lista (list[int]) : lista de numere intregi
+    
+#     Returns :
+#         int : suma nr din lista
+#     '''
+#     return sum(lista)
 
 # --------------------------------------------------------------------------------------------------------------------------------------------
 

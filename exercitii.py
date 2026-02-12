@@ -1520,12 +1520,6 @@ def medie_5 ():
 
 
 
-
-
-
-
-
-
 """
 Exercitii Functii recursive:
 1) Scrie o funcție recursivă care calculează factorialul unui număr.
@@ -1539,3 +1533,21 @@ Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 3
 5) Scrie o functie recursiva care calculeaza suma tuturor elementelor dintr-o lista imbricata.
 Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 28
 """
+
+
+'''
+Exercitii Modules si Packages
+1. Sa se creeze un modul numit "operations" care sa contina functii pentru adunare, scadere, inmultire si impartire a doua numere.
+   Din fisierul principal, sa se importe modulul si sa se execute fiecare operatie cu doua numere generate aleatoriu.
+
+2. Sa se creeze un pachet numit "geometry" care sa contina doua module: "area" si "perimeter". Modulul "area" sa contina functii pentru calcularea ariei unui cerc, patrat si dreptunghi, iar modulul "perimeter" sa contina functii pentru calcularea perimetrului acelorasi forme geometrice.
+   Din fisierul principal, sa se importe pachetul si sa se execute fiecare functie cu valori generate aleatoriu.
+
+3. Sa se creeze un script care sa accepte argumente din linia de comanda pentru nume, prenume, varsta, folosind modulul argparse. Scriptul sa afiseze numele complet al persoanei si varsta in urmatorul format:
+    Nume: [nume]
+    Prenume: [prenume]
+    Varsta: [varsta] ani
+
+4. Sa se creeze un modul numit "string_utils" care sa contina functii pentru manipularea stringurilor: inversarea unui string, verificarea daca un string este palindrom.
+   Sa se scrie un script care sa importe modulul si sa se execute fiecare functie asupra unui string primit ca si argument din linia de comanda.
+'''
