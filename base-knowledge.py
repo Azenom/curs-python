@@ -1009,4 +1009,52 @@
 #             }
 # print(json.dumps(persoane, indent=4)) # -----> afiseaza dictionarul persoane frumos formatat
 
-# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------------------------
+
+'''# -------------------------------------------------------- Fisiere ----------------------------------------------------------'''
+
+# mesaj = "Avada cadavra\n"
+# nume_fisier = "fisier-testing.txt"
+
+# my_file = open("fisier-testing.txt", 'w')
+# # print(type(my_file)) # ------> <class '_io.TextIOWrapper'>
+# my_file.write(mesaj)
+# # sau 
+# # my_file.write("Merge si asa")
+# my_file.close()
+
+# my_file = open(nume_fisier, 'r')
+# data = my_file.readlines()
+# print(data)
+# my_file.close()
+
+# mesaj1 = "Ana are mere\n"
+# mesaj2 = "Macbook Air M1\n"
+# mesaj3 = "Vine politia\n"
+# my_file = open(nume_fisier, 'a')
+# # my_file.writelines(mesaj1, mesaj2, mesaj3) # nu o sa mearga, primeste doar un singur parametru
+# my_file.writelines([mesaj1, mesaj2, mesaj3])
+# my_file.close()
+
+# my_file = open(nume_fisier, 'r')
+# linii_fisier = my_file.readlines()
+# my_file.close()
+# for i in range(len(linii_fisier)):
+#     if 'Ana' in linii_fisier[i] :
+#         linii_fisier[i] = linii_fisier[i].replace('Ana', 'Ionela')
+#         break
+# my_file = open(nume_fisier, 'w')
+# print(linii_fisier)
+# my_file.writelines(linii_fisier)
+# my_file.close()
+
+# Context manager - folosind : with - ca sa nu mai folosim open() si close() de fiecare data
+
+# with open(nume_fisier, 'r') as my_file:
+#     linii_fisier = my_file.readlines()
+# for i in range(len(linii_fisier)):
+#     if 'Ana' in linii_fisier[i] :
+#         linii_fisier[i] = linii_fisier[i].replace('Ana', 'Ionela')
+#         break
+# with open(nume_fisier, 'w') as my_file:
+#     my_file.writelines(linii_fisier)
