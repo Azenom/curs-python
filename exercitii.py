@@ -99,11 +99,32 @@
 
 '''# 15. Primește un număr n și afișează toate numerele pare de la 0 la n (inclusiv). '''
 
+# numar = int(input("introdu un numar : "))
+# for i in range(numar) :
+#     if i % 2 == 0 :
+#         print(i)
+
 '''# 16. Primește un text și afișează doar literele mici din el. '''
+
+# text = input("Introdu un text")
+# for i in text :
+#     if i.lower() == i :
+#         print(i)
 
 '''# 17. Primește două numere și afișează toate numerele între ele (inclusiv), în ordine crescătoare. '''
 
+# numar1 = int(input("Introdu primul numar : "))
+# numar2 = int(input("Introdu primul numar : "))
+
+# for i in range(numar1,numar2) :
+#     print(i)
+
 '''# 18. Primește un text și afișează fiecare cuvânt pe o linie nouă. '''
+
+# text = input("Introdu un text")
+# cuvinte = text.split()
+# for i in cuvinte :
+#     print(i)
 
 '''# 19. Primește un număr și afișează tabla înmulțirii pentru acel număr (de la 1 la 10). '''
 
@@ -412,7 +433,7 @@
 
 '''# 48. Primește o listă de stringuri și sorteaz-o crescător după numărul de vocale din fiecare string.
 # Fara a folosi functia sort() sau sorted().
-# # Exemplu: ['ana', 'masina', 'casa', 'mere'] -> ['ana', 'casa', 'mere', 'masina'] '''
+# Exemplu: ['ana', 'masina', 'casa', 'mere'] -> ['ana', 'casa', 'mere', 'masina'] '''
 
 # lista  = ['ana', 'masina', 'casa', 'mere']
 # vocale = 'aeiou'
@@ -435,7 +456,7 @@
 # print(lista)   
 
 '''# 49. Primește o listă de liste (matrice) și calculează suma elementelor de pe diagonala principală (doar dacă matricea este pătratică).
-# # Exemplu: [[1,2,3],[4,5,6],[7,8,9]] -> 15 (1+5+9) '''
+# Exemplu: [[1,2,3],[4,5,6],[7,8,9]] -> 15 (1+5+9) '''
 
 # lista = [[1,2,3],[4,5,6],[7,8,9]]
 # lista = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
@@ -1284,23 +1305,73 @@
 # dic_persoane = {"mihai" : 31, "paul" : 31,  "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
 # print(sorted(dic_persoane, key=dic_persoane.get))
 
+'''Exercitii pentru dictionare: '''
+'''# 104. Se da urmatorul text: "Ana are 12 ani, Ion are 15 ani, Maria are 12 ani, George are 15 ani, Elena are 14 ani".
+Creeaza un dictionar care sa contina numele persoanelor ca si chei si varstele ca si valori.'''
 
-'''
-Exercitii pentru dictionare:
+# text = "Ana are 12 ani, Ion are 15 ani, Maria are 12 ani, George are 15 ani, Elena are 14 ani"
+# dic_pers = {}
+# text_modif = text.split(", ") 
+# # ----> ['Ana are 12 ani', 'Ion are 15 ani', 'Maria are 12 ani', 'George are 15 ani', 'Elena are 14 ani']
+# for i in text_modif:
+#     prop = i.split() # ---> ['Ana', 'are', '12', 'ani']
+#     dic_pers.update({prop[0]:prop[2]})
+# print(dic_pers)
 
-19) Se da urmatorul text: "Ana are 12 ani, Ion are 15 ani, Maria are 12 ani, George are 15 ani, Elena are 14 ani".
-    Creeaza un dictionar care sa contina numele persoanelor ca si chei si varstele ca si valori.
-20) Se da urmatorul text: "Ana are 12 ani, Ion are 15 ani, Maria are 12 ani, George are 15 ani, Elena are 14 ani".
-    Creeaza un dictionar care sa stocheze frecventa literelor din text si afiseaza-l. Exemplu: {'a': 7, 'n': 3, ... }.
-'''
+'''# 105. Se da urmatorul text: "Ana are 12 ani, Ion are 15 ani, Maria are 12 ani, George are 15 ani, Elena are 14 ani".
+Creeaza un dictionar care sa stocheze frecventa literelor din text si afiseaza-l. Exemplu: {'a': 7, 'n': 3, ... }. '''
 
-'''
-Exercitii Functii Python:
-1) Scrie o funcție care primește un nume și afișează "Salut, <nume>!".
-2) Scrie o funcție care primește două numere și returnează suma lor.
-3) Scrie o funcție care primește două numere și returnează suma, diferența și produsul lor (returnează un tuple).
-4) Scrie o funcție care primește un număr și returnează True dacă este par, altfel False.
-5) Scrie o functie care primeste ca parametru un numar si modifica valoarea unei variabile globale cu valoarea numarului la patrat.
+# text = "Ana are 12 ani, Ion are 15 ani, Maria are 12 ani, George are 15 ani, Elena are 14 ani"
+# text = text.lower()
+# dic_pers = {}
+# count = 0
+# for i in text :
+#     for j in text :
+#         if i == j :
+#             count += 1
+#     if i.isalpha():
+#         dic_pers.update({i:count})
+#     count = 0
+# print(dic_pers)
+
+'''Exercitii Functii Python:'''
+'''# 106. Scrie o funcție care primește un nume și afișează "Salut, <nume>!".'''
+
+# def functie (nume):
+#     return nume
+# persoana = input("Intordu numele : ")
+# print(f"Salut, {persoana}!")
+
+'''# 107. Scrie o funcție care primește două numere și returnează suma lor.'''
+
+# def suma (param1,param2):
+#     return param1+param2
+# numar1 = int(input("Introdu primul nuamr :"))
+# numar2 = int(input("Introdu al doilea nuamr :"))
+# print("suma este : ",suma(numar1,numar2))
+
+'''# 108. Scrie o funcție care primește două numere și returnează suma, diferența și produsul lor (returnează un tuple).'''
+
+# def functie(param1,param2):
+#     suma = param1 + param2
+#     dif = param1 - param2
+#     prod = param1 * param2
+#     return suma,dif,prod
+# numar1 = int(input("Introdu primul nuamr :"))
+# numar2 = int(input("Introdu al doilea nuamr :"))
+# print(functie(numar1,numar2))
+
+'''# 109. Scrie o funcție care primește un număr și returnează True dacă este par, altfel False.'''
+
+# def functie(param):
+#     if param % 2 == 0 :
+#         return True
+#     else:
+#         return False
+# numar = int(input("introdu un numar : "))
+# print(functie(numar))
+        
+'''5) Scrie o functie care primeste ca parametru un numar si modifica valoarea unei variabile globale cu valoarea numarului la patrat.
 '''
 
 ''' # 5) Scrie o funcție care primește o listă de numere de la tastatura cu spatii si | și returnează suma tuturor numerelor. '''
