@@ -192,7 +192,7 @@
 '''# 30. Primește un text și verifică dacă are cel puțin o literă mare, una mică și o cifră. '''
 
 '''# 31. Fizz Buzz: Primește un număr n și afișează numerele de la 1 la n. 
-# Pentru multiplii de 3, afișează "Fizz", pentru multiplii de 5, afișează "Buzz", iar pentru multiplii de ambele, afișează "FizzBuzz". '''
+Pentru multiplii de 3, afișează "Fizz", pentru multiplii de 5, afișează "Buzz", iar pentru multiplii de ambele, afișează "FizzBuzz". '''
 
 '''# 32. Primește un text și afișează-l cu fiecare cuvânt inversat, dar în aceeași ordine. (Exemplu: "Ana are mere" -> "anA era erem") '''
 
@@ -344,7 +344,7 @@
 # print("Minimul este: ", minim)
 
 '''# 41. Elimină toate elementele pare dintr-o listă de numere.
-# Exemplu: [1,2,3,4,5,6] -> [1,3,5] '''
+Exemplu: [1,2,3,4,5,6] -> [1,3,5] '''
 
 # lista = [1,2,3,2,5,6]
 # for i in lista :
@@ -353,7 +353,7 @@
 # print(lista)
 
 '''# 42. Primește o listă de stringuri și construiește o nouă listă cu stringurile care conțin litera 'a'.
-# Exemplu: ['ana', 'mere', 'casa', 'masina'] -> ['ana', 'casa', 'masina'] '''
+Exemplu: ['ana', 'mere', 'casa', 'masina'] -> ['ana', 'casa', 'masina'] '''
 
 # lista = ['ana', 'mere', 'casa', 'masina']
 # lista_noua = []
@@ -374,7 +374,7 @@
 # print(mylist2)
 
 '''# 43. Verifică dacă o listă este palindrom (se citește la fel de la stânga la dreapta și invers).
-# # Exemplu: [1,2,3,2,1] -> True, [1,2,3,4] -> False '''
+Exemplu: [1,2,3,2,1] -> True, [1,2,3,4] -> False '''
 
 # lista = [1,2,3,2,1]
 # flag = True
@@ -388,7 +388,7 @@
 #     print("Lista nu este palindrom.")
 
 '''# 44. Interclasează două liste de aceeași lungime într-o singură listă.
-# # Exemplu: [1,2], [3,4] => [1,3,2,4] '''
+Exemplu: [1,2], [3,4] => [1,3,2,4] '''
 
 # lista1 = [1,2]
 # print(lista1)
@@ -407,8 +407,8 @@
 # print(lista2)
 
 '''# 46. Primește o listă de numere și elimină toate elementele care apar de mai mult de o dată (păstrează doar elementele unice).
-# Fara a folosi set().
-# # Exemplu: [1,2,2,3,4,4,5] -> [1,3,5] '''
+Fara a folosi set().
+Exemplu: [1,2,2,3,4,4,5] -> [1,3,5] '''
 
 # lista = [1,2,2,3,4,4,5]
 # lista_unica = []
@@ -418,7 +418,7 @@
 # print(lista_unica)
 
 '''# 47. Primește o listă de numere și grupează elementele în două liste: una cu numere negative, alta cu numere pozitive și zero.
-# # Exemplu: [10,-1,2,-3,0,4,-5] -> negative: [-1,-3,-5], pozitive_si_zero: [10,2,0,4]'''
+Exemplu: [10,-1,2,-3,0,4,-5] -> negative: [-1,-3,-5], pozitive_si_zero: [10,2,0,4]'''
 
 # lista = [10,-1,2,-3,0,4,-5]
 # negative = []
@@ -1371,11 +1371,15 @@ Creeaza un dictionar care sa stocheze frecventa literelor din text si afiseaza-l
 # numar = int(input("introdu un numar : "))
 # print(functie(numar))
         
-'''5) Scrie o functie care primeste ca parametru un numar si modifica valoarea unei variabile globale cu valoarea numarului la patrat.
-'''
+'''# 110. Scrie o functie care primeste ca parametru un numar si modifica valoarea unei variabile globale cu valoarea numarului la patrat.'''
 
-''' # 5) Scrie o funcție care primește o listă de numere de la tastatura cu spatii si | și returnează suma tuturor numerelor. '''
-'''# 1 | 3 | 4 | 6 | 9 | 75'''
+# def functie (param):
+#     return param**2
+# numar = int(input("Introdu un numar : "))
+# print("patratul numarului tau este : ",functie(numar))
+
+'''# 111. Scrie o funcție care primește o listă de numere de la tastatura cu spatii si | și returnează suma tuturor numerelor. 
+exemplu : 1 | 3 | 4 | 6 | 9 | 75 '''
 
 # def suma_numere(lista) :
 #     suma = 0 
@@ -1389,9 +1393,29 @@ Creeaza un dictionar care sa stocheze frecventa literelor din text si afiseaza-l
 # rezultat = suma_numere(lista)
 # print("Rezultatul este : ", rezultat)
 
+'''# 112. Scrie o funcție care primește un string și returnează stringul inversat.'''
+
+# def functie(prop):
+#    prop = prop[::-1]
+#    return prop
+# text = input("scrie un text aici : ")
+# print("textul inversat este : ",functie(text))
+
+'''# 113. Scrie o funcție care primește o listă de stringuri și returnează o listă cu lungimile fiecărui string.'''
+
+# def functie(liste):
+#    return len(liste)
+# lista = []
+# while True : 
+#    i = input("introdu text : ")
+#    if i == '#':
+#       break
+#    else : 
+#       lista.append(i)
+#       lista.append(functie(i))
+# print (lista)
+
 '''
-6) Scrie o funcție care primește un string și returnează stringul inversat.
-7) Scrie o funcție care primește o listă de stringuri și returnează o listă cu lungimile fiecărui string.
 8) Scrie o funcție care primește doua liste de numere si returneaza o lista cu numerele comune celor doua liste.
 9) Scrie o functie care primeste un dictionar de forma {nume: varsta} si returneaza numele persoanei cu cea mai mica varsta.
 10) Scrie o functie care primeste un dictionar de forma {nume: varsta} si returneaza un dictionar cu persoanele care au varsta peste 18 ani.
@@ -1589,22 +1613,43 @@ Creeaza un dictionar care sa stocheze frecventa literelor din text si afiseaza-l
 #         # afiseaza_alfabetic()
 #         afiseaza_elevi( elevi, sort = True, field = ia_nume )
 
-
-
-
-"""
-Exercitii Functii recursive:
+'''Exercitii Functii recursive:
 1) Scrie o funcție recursivă care calculează factorialul unui număr.
-Ex: pentru n = 5, 5 x 4 x 3 x 2 x 1 = 120
-2) Scrie o funcție recursivă care calculează suma numerelor de la 1 la n.
-Ex: pentru n=5, returnează 15 (1+2+3+4+5)
-3) Scrie o functie recursiva care calculeaza cate cifre are un numar dat.
-Ex: pentru 1234 returneaza 4
+Ex: pentru n = 5, 5 x 4 x 3 x 2 x 1 = 120 '''
+
+# def factorial (param):
+#    if param == 0 or param == 1:
+#         return 1 # trebuie sa oprim ca sa nu mearga la infinit
+#    return param * factorial(param-1)
+# val = int(input("introdu un nr : "))
+# print(factorial(val))
+
+'''2) Scrie o funcție recursivă care calculează suma numerelor de la 1 la n.
+Ex: pentru n=5, returnează 15 (1+2+3+4+5) '''
+
+# def suma(param):
+#     if param == 0 :
+#         return 0 # trebuie sa oprim ca sa nu mearga la infinit
+#     return param + suma(param-1)
+# val = int(input("introdu un nr : "))
+# print(suma(val))
+
+'''3) Scrie o functie recursiva care calculeaza cate cifre are un numar dat.
+Ex: pentru 1234 returneaza 4 '''
+
+# def numara (param):
+#    if param<10:
+#       return 1
+#    return 1 + numara(param //10)
+# numar = int(input("introdu un numar : "))
+# print(f"numarul {numar} are {numara(numar)} cifre ")   
+
+'''
 4) Scrie o functie recursiva care calculeaza adancimea(cate liste nivele de liste sunt) unei liste imbricate.
 Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 3
 5) Scrie o functie recursiva care calculeaza suma tuturor elementelor dintr-o lista imbricata.
 Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 28
-"""
+'''
 
 
 '''
