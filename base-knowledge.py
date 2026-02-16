@@ -1058,3 +1058,12 @@
 #         break
 # with open(nume_fisier, 'w') as my_file:
 #     my_file.writelines(linii_fisier)
+
+with open("fisier-testing.txt", 'r') as my_file:
+    text = my_file.read()
+
+text = text.replace("ana", "ionela")
+
+with open("fisier-testing.txt", 'w') as my_file:
+    my_file.write(text)
+    print("a mers")
