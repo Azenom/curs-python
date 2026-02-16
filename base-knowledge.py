@@ -1066,7 +1066,7 @@
 #     my_file.write(text)
 #     print("a mers")
 
-with open("fisier-testing.txt", 'r') as input_file, open('temp_file.txt', 'w') as output_file:
-    for line in input_file:
-        output_file.write(line[::-1])
-    print("Rescriere fisier reusita")
+# with open("fisier-testing.txt", 'r') as input_file, open('temp_file.txt', 'w') as output_file:
+#     for line in input_file:
+#         output_file.write(line[::-1])
+#     print("Rescriere fisier reusita")
