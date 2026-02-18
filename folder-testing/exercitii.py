@@ -1656,15 +1656,224 @@ Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 28
 Exercitii Modules si Packages
 1. Sa se creeze un modul numit "operations" care sa contina functii pentru adunare, scadere, inmultire si impartire a doua numere.
    Din fisierul principal, sa se importe modulul si sa se execute fiecare operatie cu doua numere generate aleatoriu.
+'''
 
-2. Sa se creeze un pachet numit "geometry" care sa contina doua module: "area" si "perimeter". Modulul "area" sa contina functii pentru calcularea ariei unui cerc, patrat si dreptunghi, iar modulul "perimeter" sa contina functii pentru calcularea perimetrului acelorasi forme geometrice.
-   Din fisierul principal, sa se importe pachetul si sa se execute fiecare functie cu valori generate aleatoriu.
+# import random
+# nr1 = random.randint(1,20)
+# print('prmul numar : ',nr1)
+# nr2 = random.randint(21,30)
+# print('al doilea numar : ',nr2)
 
-3. Sa se creeze un script care sa accepte argumente din linia de comanda pentru nume, prenume, varsta, folosind modulul argparse. Scriptul sa afiseze numele complet al persoanei si varsta in urmatorul format:
-    Nume: [nume]
-    Prenume: [prenume]
-    Varsta: [varsta] ani
+# if nr1 < nr2 :
+#    nr1 , nr2 = nr2, nr1
+#    import operatiuni
+#    print(operatiuni.adunare(nr1,nr2))
+#    print(operatiuni.scadere(nr1,nr2))
+#    print(operatiuni.inmultire(nr1,nr2))
+#    print(operatiuni.impartire(nr1,nr2))
 
+'''
+2. Sa se creeze un pachet numit "geometry" care sa contina doua module: "area" si "perimeter". 
+Modulul "area" sa contina functii pentru calcularea ariei unui cerc, patrat si dreptunghi.
+Modulul "perimeter" sa contina functii pentru calcularea perimetrului acelorasi forme geometrice.
+Din fisierul principal, sa se importe pachetul si sa se execute fiecare functie cu valori generate aleatoriu.
+'''
+
+# import random
+# nr1 = random.randint(1,20)
+# print('prmul numar : ',nr1)
+# nr2 = random.randint(21,30)
+# print('al doilea numar : ',nr2)
+
+# # import geometry.aria
+# # import geometry.perimetru
+# # sau
+# from geometry import aria,perimetru
+# print("Arie cerc : ",aria.aria_cerc(nr1))
+# print("Arie patrat : ",aria.aria_patrat(nr2))
+# print("Arie dreptunghi : ",aria.aria_dreptunghi(nr1,nr2))
+# print()
+# print("Perimetru cerc : ",perimetru.perimetru_cerc(nr1))
+# print("Perimetru patrat : ",perimetru.perimetru_patrat(nr2))
+# print("Perimetru dreptunghi : ",perimetru.perimetru_dreptunghi(nr1,nr2))
+
+'''
+3. Sa se creeze un script care sa accepte argumente din linia de comanda pentru nume, prenume, varsta, folosind modulul argparse. 
+Scriptul sa afiseze numele complet al persoanei si varsta in urmatorul format:
+Nume: [nume]
+Prenume: [prenume]
+Varsta: [varsta] ani
+'''
+
+# import argparse
+# def parse_args ():
+#    parcurgator = argparse.ArgumentParser(description='Afiseaza nume frumos')
+#    parcurgator.add_argument('--nume', type=str, required=True,help='Numele omului')
+#    parcurgator.add_argument('--prenume', type=str, help='Prenumele omului')
+#    parcurgator.add_argument('--varsta', type=int, help='Varsta omului')
+#    args = parcurgator.parse_args()
+#    return args.nume, args.prenume, args.varsta
+# nume, prenume, varsta = parse_args()
+# print(f'Nume: {nume}\nPrenume: {prenume}\nVarsta: {varsta} ani')
+
+'''
 4. Sa se creeze un modul numit "string_utils" care sa contina functii pentru manipularea stringurilor: inversarea unui string, verificarea daca un string este palindrom.
    Sa se scrie un script care sa importe modulul si sa se execute fiecare functie asupra unui string primit ca si argument din linia de comanda.
 '''
+
+'''
+Exercitii lucru cu fisiere:
+1. Sa se scrie un program care citeste de la tastatura informatii despre persoane (nume, prenume, varsta, oras)
+   si le salveaza intr-un fisier text numit "persoana.txt" in formatul: "Nume Prenume, Varsta, Oras".'''
+
+# nume = input("Introdu nume : ")
+# prenume = input("inntrodu prenume : ")
+# varsta = input("introdu varsta : ")
+# oras = input("introdu oras : ")
+# detalii = f'{nume} {prenume}, {varsta}, {oras}'
+# with open('persoane.txt','w') as my_file :
+#     my_file.write(detalii)
+
+'''
+2. Sa se scrie un program care citeste un fisier text numit "date.txt" si afiseaza numarul de linii, cuvinte si caractere din fisier. '''
+
+# spatii = 1 # numarul de spatii este mai mic cu 1 decat numarul de cuvinte dintr-o propozitie
+# count_spatii = 0
+# caracter = 0
+# count_caracter = 0
+# with open("date.txt", 'r') as my_file :
+#    linii_fisier = my_file.readlines()
+
+# print(f'Fisierul are : {len(linii_fisier)} linii') # numarul de linii
+# for index in linii_fisier : # parcurgi index-urile din lista
+#    for litera in index : # parcurgi propozitia din index din lista
+#       if litera == " ":
+#          spatii += 1
+#       elif litera != "\n":
+#          caracter += 1
+#    count_spatii += spatii
+#    count_caracter += caracter
+#    spatii = 1 # resetez numarul de spatii memorate inainte sa treaca la urmatoarea linie
+#    caracter = 0 # resetez numarul de caractere memorate inainte sa treaca la urmatoarea linie
+# print("Numarul de cuvinte este : ",count_spatii)
+# print("Numarul de caractere este : ",count_caracter)
+
+# sau
+
+# with open("date.txt", 'r', encoding='utf-8') as fisier:
+#     continut = fisier.read()
+# nr_linii = len(continut.splitlines())
+# nr_cuvinte = len(continut.split())
+# caractere = 0
+# for i in continut:
+#     if i != " " and i != "\n":
+#         caractere = caractere +1
+# print(f"Rezultate\n Numar linii: {nr_linii} \n Numar cuvinte: {nr_cuvinte} \n Numar caractere: {caractere}")
+
+'''
+3. Se da urmatorul fisier "produse.txt" care contine informatii despre produse.
+   Sa se scrie un program care citeste informatiile despre produse din fisierul "produse.txt"
+   si calculeaza pretul total al stocului pentru fiecare produs.'''
+
+# import json
+
+# def nume_produs(text):
+#    return text.split("-", 1)[0].rstrip()
+
+# with open("produse.txt", 'r') as my_file :
+#    linii_fisier = my_file.readlines()
+
+# produs = {}
+
+# for linii in linii_fisier:
+#    date = linii.split()
+#    nume = nume_produs(linii)
+#    pret_total = int( date[-5] ) * int( date[-2] )
+#    produs.update({nume : pret_total})
+
+# print(json.dumps(produs, indent=4))
+
+# sau
+
+# produse = []
+# lista_p = []
+# cantitate = []
+# with open("produse.txt", "r") as my_file:
+#    linii_fisier = my_file.readlines()
+
+# for linie in linii_fisier:
+#    produs = linie.strip().split("-")
+#    produse.append(produs)
+#    lista_p.append(int(produs[1].split()[0]))
+#    cantitate.append(int(produs[2].split()[0]))
+
+# for i in range(len(produse)):
+#    nume_produs = produse[i][0]
+#    total = lista_p[i] * cantitate[i]
+#    print(f"{nume_produs} - {total} lei")
+# SAU
+# for i, produs_info in enumerate(produse):
+#    nume_produs = produs_info[0]
+#    total = lista_p[i] * cantitate[i]
+#    print(f"{nume_produs} - {total} lei")
+
+
+'''
+4. Se da un fisier de logging "log.txt" care contine date referitor la evenimentele dintr-un sistem:
+   Sa se scrie un program care citeste fisierul "log.txt" si afiseaza numarul de evenimente de fiecare tip (INFO, WARNING, ERROR)
+   si afiseaza ora si evenimentul de tip ERROR care a avut loc cel mai recent.
+
+5. Se da un fisier de logging "login.txt" care contine date referitor la incercarile de autentificare ale utilizatorilor:
+   Sa se scrie un program care citeste fisierul "login.txt" si salveaza in fisierul "user_attempts.txt" numarul de incercari de autentificare
+   pentru fiecare utilizator si ora si data ultimei incercari de autentificare reusite in formatul:
+   # <user> | <numar_incercari> | <ultima_data_ora_reusita>
+
+6. Sa se actualizeze programul de la mini proiectul referitor la gestionarea elevilor dintr-o scoala astfel incat informatiile despre elevi
+   sa persiste intr-un fisier text numit "elevi.txt" astfel incat datele sa fie disponibile la repornirea programului.
+'''
+
+'''
+Exercitii parcurgere foldere:
+Sa se scrie un program care parcurge recursiv un folder specificat de utilizator si afiseaza numele tuturor fisierelor cu extensia ".py".
+'''
+
+# import os
+# path = "/Users/paul/Documents/GitHub/curs-python/folder-testing"
+# def cauta_fisier (path):
+#     for root, dir, file in os.walk(path):
+#         for elem in file:
+#             if elem.endswith(".py"):
+#                 print(elem)
+# cauta_fisier(path)
+
+'''
+Sa se scrie un program care parcurge recursiv un folder specificat de utilizator si afiseaza calea absoluta a tuturor fisierelor ".txt".
+'''
+
+# import os
+# path = "/Users/paul/Documents/GitHub/curs-python"
+# def parcurgere_folder(cale_folder):
+#     for radacina, directoare, fisiere in os.walk(cale_folder):
+#         for fisier in fisiere:
+#             if fisier.endswith(".py"):
+#                 cale_absoluta = os.path.abspath(os.path.join(radacina, fisier))
+#                 print(cale_absoluta)
+# parcurgere_folder(path)
+
+'''
+Sa se scrie un program care parcurge recursiv un folder si scrie intr-un fisier calea absoluta catre toate fisierele gasite in folderul respectiv.
+Sa se scrie un program care parcurge recursiv un folder si afiseaza numarul total de fisiere si directoare din acel folder.
+'''
+
+'''Sa se scrie un program care primeste un folder si o extensie de fisier de la utilizator si parcurge recursiv folderul
+pentru a afisa numele tuturor fisierelor care au acea extensie.'''
+
+# import os
+# def cauta_fisier (path,ext):
+#     for root, dir, file in os.walk(path):
+#         for elem in file:
+#             if elem.endswith(ext):
+#                 print(elem)
+# cale = input("introdu path-ul unde vrei sa cauti : ") # ----  "/Users/paul/Documents/GitHub/curs-python"
+# extensie = input("introdu extensia : ")
+# print(cauta_fisier(cale,extensie))

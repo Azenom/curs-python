@@ -945,7 +945,13 @@
 # print(fisier.my_name) # -------> aifseaza numele fisierului de unde importam
 # ---------------------------------
 
-# Import packete ------------------
+# Creare pachete ------------------
+"""
+In folder-ul cu module trebuie sa existe un fisier nou : __init__.py pentru a-i spune programului 
+ca modulele din acel folder constituie un pachet
+"""
+
+# Import packete ------------------ 
 # import fisier_package.fisier_modul # importa modulul : fisier_modul din package-ul : fisier_package
 # print (fisier_package.fisier_modul.functie) # printeaza functia din modulul : fisier_modul din package-ul : fisier_package
 
@@ -953,7 +959,7 @@
 
 # import argparse
 # def parse_args():
-#     my_parser = argparse.ArgumentParser(description='Afisza nume frumos')
+#     my_parser = argparse.ArgumentParser(description='Afiseaza nume frumos')
 #     my_parser.add_argument('--nume', type=str, required=True,help='Nume de familie')
 #     my_parser.add_argument('--prenume', type=str, help='Prenumele omului')
 #     args = my_parser.parse_args()
@@ -963,6 +969,8 @@
 #     print(f'Nume: {nume}, Prenume: {prenume}')
 #     if __name__ == 'main':
 #         main()
+# Pentru rulare din command line : 
+# python3 exercitii.py --nume abesei --prenume paul --varsta 31
 
 # import sys
 # def afisaza_nume(nume, prenume):
@@ -1008,6 +1016,13 @@
 #             }
 #             }
 # print(json.dumps(persoane, indent=4)) # -----> afiseaza dictionarul persoane frumos formatat
+
+'''# import math ------------------------------------------------'''
+
+# from math import pi
+# raza = input("Introdu raza cercului careia doresti sa ii calculezi aria : ")
+# aria = pi * (raza ** 2)
+# print("Aria cercului este : ",aria)
 
 # -----------------------------------------------------------------------------------------------------------------------------------
 
