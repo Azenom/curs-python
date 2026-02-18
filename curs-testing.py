@@ -21,14 +21,14 @@
 
 # o sa verificam daca in folder-testing din curs-python exista un fisier cu extensia .txt si il afisam continutul fisier-folder-testing.txt
 
-import os
-path_proiect = "/Users/paul/Documents/GitHub/curs-python/"
-for elem in os.listdir(path_proiect):
-    if elem.endswith(".txt") :
-        with open(elem, 'r') as my_file: 
-            print(elem)           
-            print()
-            print(my_file.read())     
+# import os
+# path_proiect = "/Users/paul/Documents/GitHub/curs-python/"
+# for elem in os.listdir(path_proiect):
+#     if elem.endswith(".txt") :
+#         with open(elem, 'r') as my_file: 
+#             print(elem)           
+#             print()
+#             print(my_file.read())     
 
 # Error handling cu try, except, else si finally
 
