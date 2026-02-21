@@ -1267,6 +1267,6 @@ ca modulele din acel folder constituie un pachet
 # pastrare antet folosind fieldnames apoi adaugare fara suprascriere folosind a in loc de w :
 # import csv
 # with open ( 'fisier1.csv' , 'a', newline='') as my_file:
-#     antet = (["nume","varsta","oras"]) # exista ca si paramentru ce contine head-ul fisierului
-#     dict_write = csv.DictWriter(my_file, fieldnames=antet)
+#     antet = (["nume","varsta","oras"])
+#     dict_write = csv.DictWriter(my_file, fieldnames=antet) # trebuie adaugat fieldnames ca sa stim antetul ce contine
 #     dict_write.writerow({'nume':'paul', 'varsta':31, 'oras':'bucuresti'})

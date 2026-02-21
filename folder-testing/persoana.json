@@ -1,0 +1,26 @@
+[
+    {
+        "nume": "abesei",
+        "prenume": "paul",
+        "varsta": "31",
+        "oras": "buzau"
+    },
+    {
+        "nume": "stanislav",
+        "prenume": "mihai",
+        "varsta": "38",
+        "oras": "bucuresti"
+    },
+    {
+        "nume": "popescu",
+        "prenume": "ana",
+        "varsta": "27",
+        "oras": "giurgiu"
+    },
+    {
+        "nume": "popescu",
+        "prenume": "mihai",
+        "varsta": "26",
+        "oras": "giurgiu"
+    }
+]

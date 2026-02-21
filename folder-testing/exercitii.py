@@ -1415,11 +1415,11 @@ exemplu : 1 | 3 | 4 | 6 | 9 | 75 '''
 #       lista.append(functie(i))
 # print (lista)
 
-'''
-8) Scrie o funcție care primește doua liste de numere si returneaza o lista cu numerele comune celor doua liste.
-9) Scrie o functie care primeste un dictionar de forma {nume: varsta} si returneaza numele persoanei cu cea mai mica varsta.
-10) Scrie o functie care primeste un dictionar de forma {nume: varsta} si returneaza un dictionar cu persoanele care au varsta peste 18 ani.
-'''
+'''# 114. Scrie o funcție care primește doua liste de numere si returneaza o lista cu numerele comune celor doua liste.'''
+
+'''# 115. Scrie o functie care primeste un dictionar de forma {nume: varsta} si returneaza numele persoanei cu cea mai mica varsta.'''
+
+'''# 116. Scrie o functie care primeste un dictionar de forma {nume: varsta} si returneaza un dictionar cu persoanele care au varsta peste 18 ani.'''
 
 # Nume - Ionescu | Varsta - 18
 # Nume - Popescu | Varsta - 15
@@ -1443,10 +1443,11 @@ exemplu : 1 | 3 | 4 | 6 | 9 | 75 '''
 #     persoane[nume] = varsta
 # print(filtru(persoane))
 
-'''
-11) Scrie o functie care primeste o lista de numere si un numar n, si returneaza o lista cu numerele mai mici decat n.
-12) Scrie o functie care primeste o lista de numere si returneaza cel mai mic numar, cel mai mare numar si media aritmetica a numerelor din lista.
-13) Scrie o functie care primeste o lista de numere si returneaza un dictionar cu frecventa fiecarui numar in lista (cheia este numarul, valoarea este frecventa). '''
+'''# 117. Scrie o functie care primeste o lista de numere si un numar n, si returneaza o lista cu numerele mai mici decat n.'''
+
+'''# 118. Scrie o functie care primeste o lista de numere si returneaza cel mai mic numar, cel mai mare numar si media aritmetica a numerelor din lista.'''
+
+'''# 119. Scrie o functie care primeste o lista de numere si returneaza un dictionar cu frecventa fiecarui numar in lista (cheia este numarul, valoarea este frecventa). '''
 
 # def frecv_numere(lista) : 
 #     dictionar = {}
@@ -1461,28 +1462,27 @@ exemplu : 1 | 3 | 4 | 6 | 9 | 75 '''
 # rezultat = frecv_numere(numere)
 # print(rezultat)
 
-'''
-14) Scrie o functie care primeste o lista de numere si returneaza o lista care contine numerele fara duplicate.
-15) Scrie o functie care primeste o lista de numere si returneaza o lista doar cu numerele prime.
-'''
+'''# 120. Scrie o functie care primeste o lista de numere si returneaza o lista care contine numerele fara duplicate.'''
 
-'''# Sa se scrie un program care tine evidenta elevilor dintr-o scoala. Programul trebuie sa dispuna de un meniu care ne pune la dispozitie urmatoarele optiuni:'''
-	# 	1. Adaugare elev
-	# 	2. Afisarea elevilor existenti
-	# 	3. Modificare informatii elev existent
-	# 	4. Stergere elev
-	# 	5. Cautare elev dupa nume si prenume
-	# 	6. Afisare elevi in ordinea mediilor
-	# 	7. Afisare elevi cu media peste 8
-	# 	8. Afisare elevi in ordine alfabetica (dupa nume)
+'''# 121. Scrie o functie care primeste o lista de numere si returneaza o lista doar cu numerele prime.'''
 
-	# Pentru fiecare elev trebuie sa retinem urmatoarele informatii:
-    # Nume
-    # Prenume
-    # Nota romana
-    # Nota matematica
-    # Nota engleza
-    # Media                
+'''# 122. Sa se scrie un program care tine evidenta elevilor dintr-o scoala. Programul trebuie sa dispuna de un meniu care ne pune la dispozitie urmatoarele optiuni:
+		1. Adaugare elev
+		2. Afisarea elevilor existenti
+		3. Modificare informatii elev existent
+		4. Stergere elev
+		5. Cautare elev dupa nume si prenume
+		6. Afisare elevi in ordinea mediilor
+		7. Afisare elevi cu media peste 8
+		8. Afisare elevi in ordine alfabetica (dupa nume)
+
+	Pentru fiecare elev trebuie sa retinem urmatoarele informatii:
+    Nume
+    Prenume
+    Nota romana
+    Nota matematica
+    Nota engleza
+    Media    '''            
 
 # elevi = [{'nume': 'popescu', 'prenume': 'ana', 'nota romana': 6.0, 'nota mate': 7.0, 'nota engleza': 8.0, 'media': 7.0}, 
 #          {'nume': 'abesei', 'prenume': 'paul', 'nota romana': 7.0, 'nota mate': 8.0, 'nota engleza': 9.0, 'media': 8.0},
@@ -1613,8 +1613,8 @@ exemplu : 1 | 3 | 4 | 6 | 9 | 75 '''
 #         # afiseaza_alfabetic()
 #         afiseaza_elevi( elevi, sort = True, field = ia_nume )
 
-'''Exercitii Functii recursive:
-1) Scrie o funcție recursivă care calculează factorialul unui număr.
+'''Exercitii Functii recursive:'''
+'''# 123. Scrie o funcție recursivă care calculează factorialul unui număr.
 Ex: pentru n = 5, 5 x 4 x 3 x 2 x 1 = 120 '''
 
 # def factorial (param):
@@ -1624,7 +1624,7 @@ Ex: pentru n = 5, 5 x 4 x 3 x 2 x 1 = 120 '''
 # val = int(input("introdu un nr : "))
 # print(factorial(val))
 
-'''2) Scrie o funcție recursivă care calculează suma numerelor de la 1 la n.
+'''# 124. Scrie o funcție recursivă care calculează suma numerelor de la 1 la n.
 Ex: pentru n=5, returnează 15 (1+2+3+4+5) '''
 
 # def suma(param):
@@ -1634,7 +1634,7 @@ Ex: pentru n=5, returnează 15 (1+2+3+4+5) '''
 # val = int(input("introdu un nr : "))
 # print(suma(val))
 
-'''3) Scrie o functie recursiva care calculeaza cate cifre are un numar dat.
+'''# 125. Scrie o functie recursiva care calculeaza cate cifre are un numar dat.
 Ex: pentru 1234 returneaza 4 '''
 
 # def numara (param):
@@ -1644,19 +1644,15 @@ Ex: pentru 1234 returneaza 4 '''
 # numar = int(input("introdu un numar : "))
 # print(f"numarul {numar} are {numara(numar)} cifre ")   
 
-'''
-4) Scrie o functie recursiva care calculeaza adancimea(cate liste nivele de liste sunt) unei liste imbricate.
-Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 3
-5) Scrie o functie recursiva care calculeaza suma tuturor elementelor dintr-o lista imbricata.
-Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 28
-'''
+'''# 126. Scrie o functie recursiva care calculeaza adancimea(cate liste nivele de liste sunt) unei liste imbricate. 
+Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 3 '''
 
+'''# 127. Scrie o functie recursiva care calculeaza suma tuturor elementelor dintr-o lista imbricata.
+Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 28 '''
 
-'''
-Exercitii Modules si Packages
-1. Sa se creeze un modul numit "operations" care sa contina functii pentru adunare, scadere, inmultire si impartire a doua numere.
-   Din fisierul principal, sa se importe modulul si sa se execute fiecare operatie cu doua numere generate aleatoriu.
-'''
+'''Exercitii Modules si Packages'''
+'''# 128. Sa se creeze un modul numit "operations" care sa contina functii pentru adunare, scadere, inmultire si impartire a doua numere.
+   Din fisierul principal, sa se importe modulul si sa se execute fiecare operatie cu doua numere generate aleatoriu.'''
 
 # import random
 # nr1 = random.randint(1,20)
@@ -1672,12 +1668,10 @@ Exercitii Modules si Packages
 #    print(operatiuni.inmultire(nr1,nr2))
 #    print(operatiuni.impartire(nr1,nr2))
 
-'''
-2. Sa se creeze un pachet numit "geometry" care sa contina doua module: "area" si "perimeter". 
+'''# 129. Sa se creeze un pachet numit "geometry" care sa contina doua module: "area" si "perimeter". 
 Modulul "area" sa contina functii pentru calcularea ariei unui cerc, patrat si dreptunghi.
 Modulul "perimeter" sa contina functii pentru calcularea perimetrului acelorasi forme geometrice.
-Din fisierul principal, sa se importe pachetul si sa se execute fiecare functie cu valori generate aleatoriu.
-'''
+Din fisierul principal, sa se importe pachetul si sa se execute fiecare functie cu valori generate aleatoriu.'''
 
 # import random
 # nr1 = random.randint(1,20)
@@ -1697,13 +1691,11 @@ Din fisierul principal, sa se importe pachetul si sa se execute fiecare functie 
 # print("Perimetru patrat : ",perimetru.perimetru_patrat(nr2))
 # print("Perimetru dreptunghi : ",perimetru.perimetru_dreptunghi(nr1,nr2))
 
-'''
-3. Sa se creeze un script care sa accepte argumente din linia de comanda pentru nume, prenume, varsta, folosind modulul argparse. 
+'''# 130. Sa se creeze un script care sa accepte argumente din linia de comanda pentru nume, prenume, varsta, folosind modulul argparse. 
 Scriptul sa afiseze numele complet al persoanei si varsta in urmatorul format:
 Nume: [nume]
 Prenume: [prenume]
-Varsta: [varsta] ani
-'''
+Varsta: [varsta] ani          '''
 
 # import argparse
 # def parse_args ():
@@ -1716,15 +1708,12 @@ Varsta: [varsta] ani
 # nume, prenume, varsta = parse_args()
 # print(f'Nume: {nume}\nPrenume: {prenume}\nVarsta: {varsta} ani')
 
-'''
-4. Sa se creeze un modul numit "string_utils" care sa contina functii pentru manipularea stringurilor: inversarea unui string, verificarea daca un string este palindrom.
-   Sa se scrie un script care sa importe modulul si sa se execute fiecare functie asupra unui string primit ca si argument din linia de comanda.
-'''
+'''# 131. Sa se creeze un modul numit "string_utils" care sa contina functii pentru manipularea stringurilor: inversarea unui string, verificarea daca un string este palindrom.
+   Sa se scrie un script care sa importe modulul si sa se execute fiecare functie asupra unui string primit ca si argument din linia de comanda. '''
 
-'''
-Exercitii lucru cu fisiere:
-1. Sa se scrie un program care citeste de la tastatura informatii despre persoane (nume, prenume, varsta, oras)
-   si le salveaza intr-un fisier text numit "persoana.txt" in formatul: "Nume Prenume, Varsta, Oras".'''
+'''Exercitii lucru cu fisiere: '''
+'''# 132. Sa se scrie un program care citeste de la tastatura informatii despre persoane (nume, prenume, varsta, oras)
+si le salveaza intr-un fisier text numit "persoana.txt" in formatul: "Nume Prenume, Varsta, Oras". '''
 
 # nume = input("Introdu nume : ")
 # prenume = input("inntrodu prenume : ")
@@ -1734,8 +1723,7 @@ Exercitii lucru cu fisiere:
 # with open('persoane.txt','w') as my_file :
 #     my_file.write(detalii)
 
-'''
-2. Sa se scrie un program care citeste un fisier text numit "date.txt" si afiseaza numarul de linii, cuvinte si caractere din fisier. '''
+'''# 133. Sa se scrie un program care citeste un fisier text numit "date.txt" si afiseaza numarul de linii, cuvinte si caractere din fisier. '''
 
 # spatii = 1 # numarul de spatii este mai mic cu 1 decat numarul de cuvinte dintr-o propozitie
 # count_spatii = 0
@@ -1770,8 +1758,7 @@ Exercitii lucru cu fisiere:
 #         caractere = caractere +1
 # print(f"Rezultate\n Numar linii: {nr_linii} \n Numar cuvinte: {nr_cuvinte} \n Numar caractere: {caractere}")
 
-'''
-3. Se da urmatorul fisier "produse.txt" care contine informatii despre produse.
+'''# 134. Se da urmatorul fisier "produse.txt" care contine informatii despre produse.
    Sa se scrie un program care citeste informatiile despre produse din fisierul "produse.txt"
    si calculeaza pretul total al stocului pentru fiecare produs.'''
 
@@ -1818,24 +1805,20 @@ Exercitii lucru cu fisiere:
 #    print(f"{nume_produs} - {total} lei")
 
 
-'''
-4. Se da un fisier de logging "log.txt" care contine date referitor la evenimentele dintr-un sistem:
+'''# 135. Se da un fisier de logging "log.txt" care contine date referitor la evenimentele dintr-un sistem:
    Sa se scrie un program care citeste fisierul "log.txt" si afiseaza numarul de evenimente de fiecare tip (INFO, WARNING, ERROR)
-   si afiseaza ora si evenimentul de tip ERROR care a avut loc cel mai recent.
+   si afiseaza ora si evenimentul de tip ERROR care a avut loc cel mai recent. '''
 
-5. Se da un fisier de logging "login.txt" care contine date referitor la incercarile de autentificare ale utilizatorilor:
+'''# 136. Se da un fisier de logging "login.txt" care contine date referitor la incercarile de autentificare ale utilizatorilor:
    Sa se scrie un program care citeste fisierul "login.txt" si salveaza in fisierul "user_attempts.txt" numarul de incercari de autentificare
    pentru fiecare utilizator si ora si data ultimei incercari de autentificare reusite in formatul:
-   # <user> | <numar_incercari> | <ultima_data_ora_reusita>
+   # <user> | <numar_incercari> | <ultima_data_ora_reusita> '''
 
-6. Sa se actualizeze programul de la mini proiectul referitor la gestionarea elevilor dintr-o scoala astfel incat informatiile despre elevi
-   sa persiste intr-un fisier text numit "elevi.txt" astfel incat datele sa fie disponibile la repornirea programului.
-'''
+'''# 137. Sa se actualizeze programul de la mini proiectul referitor la gestionarea elevilor dintr-o scoala astfel incat informatiile despre elevi
+   sa persiste intr-un fisier text numit "elevi.txt" astfel incat datele sa fie disponibile la repornirea programului. '''
 
-'''
-Exercitii parcurgere foldere:
-Sa se scrie un program care parcurge recursiv un folder specificat de utilizator si afiseaza numele tuturor fisierelor cu extensia ".py".
-'''
+'''Exercitii parcurgere foldere: '''
+'''# 138. Sa se scrie un program care parcurge recursiv un folder specificat de utilizator si afiseaza numele tuturor fisierelor cu extensia ".py".'''
 
 # import os
 # path = "/Users/paul/Documents/GitHub/curs-python/folder-testing"
@@ -1846,9 +1829,7 @@ Sa se scrie un program care parcurge recursiv un folder specificat de utilizator
 #                 print(elem)
 # cauta_fisier(path)
 
-'''
-Sa se scrie un program care parcurge recursiv un folder specificat de utilizator si afiseaza calea absoluta a tuturor fisierelor ".txt".
-'''
+'''# 139. Sa se scrie un program care parcurge recursiv un folder specificat de utilizator si afiseaza calea absoluta a tuturor fisierelor ".txt".'''
 
 # import os
 # path = "/Users/paul/Documents/GitHub/curs-python"
@@ -1860,12 +1841,11 @@ Sa se scrie un program care parcurge recursiv un folder specificat de utilizator
 #                 print(cale_absoluta)
 # parcurgere_folder(path)
 
-'''
-Sa se scrie un program care parcurge recursiv un folder si scrie intr-un fisier calea absoluta catre toate fisierele gasite in folderul respectiv.
-Sa se scrie un program care parcurge recursiv un folder si afiseaza numarul total de fisiere si directoare din acel folder.
-'''
+'''# 140. Sa se scrie un program care parcurge recursiv un folder si scrie intr-un fisier calea absoluta catre toate fisierele gasite in folderul respectiv.'''
 
-'''Sa se scrie un program care primeste un folder si o extensie de fisier de la utilizator si parcurge recursiv folderul
+'''# 141. Sa se scrie un program care parcurge recursiv un folder si afiseaza numarul total de fisiere si directoare din acel folder.'''
+
+'''# 142. Sa se scrie un program care primeste un folder si o extensie de fisier de la utilizator si parcurge recursiv folderul
 pentru a afisa numele tuturor fisierelor care au acea extensie.'''
 
 # import os
@@ -1877,3 +1857,118 @@ pentru a afisa numele tuturor fisierelor care au acea extensie.'''
 # cale = input("introdu path-ul unde vrei sa cauti : ") # ----  "/Users/paul/Documents/GitHub/curs-python"
 # extensie = input("introdu extensia : ")
 # print(cauta_fisier(cale,extensie))
+
+'''Exercitii JSON si CSV: '''
+'''# 143. Sa se scrie un program care citeste de la tastatura informatii desre persone (nume, prenume, varsta, oras)
+pana la introducerea cuvantului "exit" si le salveaza intr-un fisier JSON numit "persoana.json". '''
+
+# catalog = []
+# while True :
+#    nume = input("introdu nume : ")
+#    if nume == 'exit':
+#       print('ai iesit din program')
+#       print('catalogul de persoane contine : ',catalog)
+#       break
+#    prenume = input("introdu prenume : ")
+#    varsta = input("introdu varsta : ")
+#    oras = input("introdu oras : ")
+#    persoana = {
+#       'nume' : nume,
+#       'prenume' : prenume,
+#       'varsta' : varsta,
+#       'oras' : oras
+#             }
+#    catalog.append(persoana)
+#    print(f'am adaugat persoana {nume} {prenume} cu varsta {varsta} ani din orasul {oras} in catalogul de persoane.')
+
+# import json
+# with open('persoana.json', 'w') as my_file :
+#    json.dump(catalog, my_file, indent = 4)
+    
+
+'''# 144. Sa se scrie un program care citeste date despre produse (nume, pret, cantitate) de la tastatura pana la introducerea cuvantului "exit" 
+si le salveaza intr-un fisier CSV numit "produse.csv". '''
+
+# catalog_produse = []
+# while True :
+#    nume = input("introdu nume produs : ")
+#    if nume == 'exit':
+#       print('ai iesit din program')
+#       print('catalogul de persoane contine : ',catalog_produse)
+#       break
+#    pret = input("introdu pret produs : ")
+#    cantitate = input("introdu cantitate produs : ")
+#    produs = {
+#       'nume' : nume,
+#       'pret' : pret,
+#       'cantitate' : cantitate
+#             }
+#    catalog_produse.append(produs)
+#    print(f'am adaugat produsul {nume} cu pretul {pret} ron si cantitatea {cantitate} in catalogul de produse.')
+
+# import csv
+# with open ( 'fisier1.csv' , 'a', newline='') as my_file:
+#    antet = (["nume","pret","cantitate"])
+#    writer = csv.DictWriter(my_file, fieldnames=antet)
+#    writer.writeheader()
+#    writer.writerows(catalog_produse)
+
+'''# 145. Sa se scrie un program care citeste datele despre produse din fisierul "produse.csv", 
+adauga un camp nou "pret_total" care reprezinta pretul total al stocului pentru fiecare produs (pret * cantitate) 
+si salveaza datele intr-un fisier "produse.json". '''
+
+# import csv, json
+# lista = []
+# with open ('fisier1.csv', 'r') as my_file :
+#    reader = csv.reader(my_file)
+#    lista = list(reader)
+
+# stoc=[]
+# lista.remove(lista[0])
+# for elem in lista :
+#         nume = elem[0]
+#         pret = int(elem[1])
+#         cantitate = int(elem[2])
+#         total = pret * cantitate
+#         stoc.append([nume, pret, cantitate, total])
+ 
+# with open ('fisier_1.json', 'a') as out_file:
+#       json.dump(stoc,out_file,indent=4)
+#       print('a mers')
+
+# print(stoc)
+
+# sau 
+
+# import csv,json
+# produse = []
+
+# with open('fisier1.csv', 'r') as my_file:
+#     reader = csv.DictReader(my_file)
+#     for row in reader:
+#         pret = row["pret"]
+#         cantitate = row["cantitate"]
+#         row["pret_total"] = int(pret) * int(cantitate)
+#         produse.append(row)
+#     print(produse)
+
+# with open('fisier_1.json', 'w') as my_file:
+#     json.dump(produse, my_file, indent=4)
+
+'''# 146. Sa se scrie un program care citeste datele despre produse din fisierul "produse.json", 
+adauga un camp nou "tara_origine" care reprezinta tara de origine a produsului si salveaza datele intr-un fisier "produse.csv". '''
+
+'''# 147. Se da urmatoarea structura de directoare care contine informatii despre elevii dintr-o scoala:
+
+school_files/high_school/classA - contine fisiere CSV cu informatii despre elevii de la filologie
+school_files/high_school/classB - contine fisiere JSON cu informatii despre elevii de la mate-info 
+
+Sa se scrie un program care parcurge recursiv structura de directoare "school_files" si:
+Afiseaza toti elevii din clasele de Filologie (ClassA) care au nota peste 90 la Istorie
+Afiseaza toti elevii din clasele de Mate-Info (ClassB) care au media mai mica deca 80,
+Calculeaza media generala a tuturor claselor de Filologie,
+Afiseaza clasele de Mate-info in ordine crescatoare a mediei generale pe clasa,
+Afiseaza elevii cu cea mai mare medie din fiecare clasa,
+Convertește fisierele csv in care sunt salvate informatiile despre elevii de la Filologie in fisiere json.
+Convertește fisierele json in care sunt salvate informatiile despre elevii de la Mate-Info in fisiere csv. '''
+
