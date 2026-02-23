@@ -1,6 +1,6 @@
 # Fisere JSON si CSV -----------------------
 
-# fisierul json arata exact ca un dictionar din Python :
+# fisierul json arata exact ca un dictionar din Python : asdasdas
 
 # import json
 # persoane = {
