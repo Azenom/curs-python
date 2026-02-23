@@ -1972,7 +1972,7 @@ Afiseaza elevii cu cea mai mare medie din fiecare clasa,
 Convertește fisierele csv in care sunt salvate informatiile despre elevii de la Filologie in fisiere json.
 Convertește fisierele json in care sunt salvate informatiile despre elevii de la Mate-Info in fisiere csv. '''
 
-# import csv, json, os
+# import csv, json, os, asdasdasda
 
 # class_A = '/Users/paul/Documents/GitHub/curs-python/folder-testing/school_files/high_school/classA'
 # for file_name in os.listdir(class_A):
