@@ -1118,30 +1118,7 @@ ca modulele din acel folder constituie un pachet
 #             print()
 #             print(my_file.read())     
 
-# Error handling cu try, except, else si finally
-
-# try:
-#     with open("fisier-ce-nu-exista.txt", "r") as my_file:
-#         print(my_file.read())
-# except Exception as my_exception : 
-#     print("Fisierul nu exista") # desi fisierul nu exista, se merge mai departe si se printeaza eroarea
-#     print(my_exception)
-# else :
-#     print("fisierul deschis cu succes") # se printeaza acest mesaj si continutul fisierului  "fisier-ce-nu-exista.txt" daca ar exista
-# finally :
-#     print("aici se pune codul ce se va executa tot timpul")
-
-# while True:
-#     try:
-#         numar = int(input("introdu un nurmar : "))
-#     except Exception as ex:
-#         print(ex)
-#     else : 
-#         print("ai introdus numarul : ", numar)
-#         if numar == 0 :
-#             break
-
-# Fisere JSON si CSV -------------------------------------------------------------------------------------------------------------------
+'''# Fisere JSON si CSV ------------------------------------------------------------------------------------------------------------------- '''
 
 # fisierul json arata exact ca un dictionar din Python :
 
@@ -1219,7 +1196,7 @@ ca modulele din acel folder constituie un pachet
 #     print(json.dump(data, my_file, indent=4))
 
 
-# Lucru cu CSV -------------------------------------------------------------------------------------------------------------------
+'''# Lucru cu CSV ------------------------------------------------------------------------------------------------------------------- '''
 
 # se face totul in fiserul deschis pt ca se citeste linie cu linie csv-ul in Python 
 # import csv
@@ -1270,3 +1247,27 @@ ca modulele din acel folder constituie un pachet
 #     antet = (["nume","varsta","oras"])
 #     dict_write = csv.DictWriter(my_file, fieldnames=antet) # trebuie adaugat fieldnames ca sa stim antetul ce contine
 #     dict_write.writerow({'nume':'paul', 'varsta':31, 'oras':'bucuresti'})
+
+'''# ----------------------------------------------------------------Depanari --------------------------------------------------------------------------------'''
+# Error handling cu try, except, else si finally
+
+# try:
+#     with open("fisier-ce-nu-exista.txt", "r") as my_file:
+#         print(my_file.read())
+# except Exception as my_exception : 
+#     print("Fisierul nu exista") # desi fisierul nu exista, se merge mai departe si se printeaza eroarea
+#     print(my_exception)
+# else :
+#     print("fisierul deschis cu succes") # se printeaza acest mesaj si continutul fisierului  "fisier-ce-nu-exista.txt" daca ar exista
+# finally :
+#     print("aici se pune codul ce se va executa tot timpul")
+
+# while True:
+#     try:
+#         numar = int(input("introdu un nurmar : "))
+#     except Exception as ex:
+#         print(ex)
+#     else : 
+#         print("ai introdus numarul : ", numar)
+#         if numar == 0 :
+#             break

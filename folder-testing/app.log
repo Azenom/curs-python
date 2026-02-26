@@ -1,0 +1,22 @@
+2026-02-26 19:25:34,285 - INFO - Incepere procesare
+2026-02-26 19:25:34,285 - DEBUG - Valoare citita : 10 la pozitia 0
+2026-02-26 19:25:34,286 - DEBUG - Processed result : 5.0
+2026-02-26 19:25:34,286 - WARNING - Valoare negativa : -5 la pozitia 1
+2026-02-26 19:25:34,286 - DEBUG - Valoare citita : 5 la pozitia 2
+2026-02-26 19:25:34,286 - DEBUG - Processed result : 2.5
+2026-02-26 19:25:34,286 - DEBUG - Valoare citita : 12 la pozitia 3
+2026-02-26 19:25:34,286 - DEBUG - Processed result : 6.0
+2026-02-26 19:25:34,286 - DEBUG - Valoare citita : 20 la pozitia 4
+2026-02-26 19:25:34,286 - DEBUG - Processed result : 10.0
+2026-02-26 19:25:34,286 - DEBUG - Valoare citita : 30 la pozitia 5
+2026-02-26 19:25:34,286 - DEBUG - Processed result : 15.0
+2026-02-26 19:25:34,286 - WARNING - Valoare negativa : -6 la pozitia 6
+2026-02-26 19:25:34,286 - INFO - Procesare finalizata
+2026-02-26 19:51:29,184 - INFO - Incepere procesare
+2026-02-26 19:51:29,184 - DEBUG - Valoare citita : 10 la pozitia 0
+2026-02-26 19:51:29,184 - DEBUG - Processed result : 5.0
+2026-02-26 19:51:29,184 - WARNING - Valoare negativa : -5 la pozitia 1
+2026-02-26 19:51:46,507 - INFO - Incepere procesare
+2026-02-26 19:51:46,507 - DEBUG - Valoare citita : 10 la pozitia 0
+2026-02-26 19:51:46,507 - DEBUG - Processed result : 5.0
+2026-02-26 19:51:46,507 - WARNING - Valoare negativa : -5 la pozitia 1
