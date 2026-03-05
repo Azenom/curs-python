@@ -1421,7 +1421,6 @@ ca modulele din acel folder constituie un pachet
 
 # class Elev :
 #     def __init__(self, nume, prenume, nota_romana, nota_mate, nota_engleza):
-
 #         self.nume = nume
 #         self.prenume = prenume
 #         self.nota_romana = nota_romana
