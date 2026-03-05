@@ -2009,3 +2009,71 @@ Convertește fisierele json in care sunt salvate informatiile despre elevii de l
 #          lista_medii.append(medie_elev)
 #       media_clasei = sum(lista_medii) / len(lista_medii)
 #       print(f'Media {file_name} din classA este : {media_clasei}')
+
+'''Exercitii OOP in Python:'''
+'''# 148. Creeaza o clasa numita "Animal" care are atributele "nume", "varsta" si "specie". Adauga o metoda numita "descriere" care returneaza o descriere a animalului.
+Instantiaza doua obiecte ale clasei "Animal" si apeleaza metoda "descriere" pentru fiecare obiect.'''
+
+'''# 149. Creeaza o clasa numita "Masina" care are atributele "marca", "model" si "an_fabricatie". Adauga o metoda numita "descriere" care returneaza o descriere a masinii.
+Instantiaza trei obiecte ale clasei "Masina" si afiseaza informatiile despre fiecare masina.'''
+
+'''# 150.
+a) Creeaza o clasa numita "Persoana" care are atributele "nume", "varsta" si "gen".
+b) Creeaza o lista de 5 persoane si afiseaza numele si varsta fiecarei persoane din lista.
+c) Adauga o metoda numita "introducere" in clasa "Persoana" care returneaza o introducere a persoanei (ex: "Numele meu este X, am Y ani si sunt de gen Z"). Apeleaza aceasta metoda pentru fiecare persoana din lista.
+d) Creeaza o metoda numita "este_major" care returneaza True daca persoana are varsta de 18 ani sau mai mult, si False in caz contrar. Apeleaza aceasta metoda pentru fiecare persoana din lista si afiseaza daca fiecare persoana este major sau nu.
+e) Creeaza o metoda numita "schimba_gen" care schimba genul persoanei (ex: daca genul este "masculin", il schimba in "feminin" si invers). Apeleaza aceasta metoda pentru fiecare persoana din lista si afiseaza noul gen al fiecarei persoane.
+f) Creeaza o metoda numita "adauga_ani" care adauga un numar specificat de ani la varsta persoanei. Apeleaza aceasta metoda pentru fiecare persoana din lista, adaugand un numar aleator de ani si afiseaza noua varsta a fiecarei persoane.
+g) Afiseaza o lista cu toate persoanele care sunt majore.
+h) Afiseaza o lista cu toate persoanele care au genul "masculin" si au peste 14 ani.
+''' 
+
+'''# 151. Sa se citeasca de la tastatura elevi pana se introduce caracterul x
+Pt fiecare elev trb sa il punem sa se prezinte, sa isi zica notele si media lor'''
+
+# class Elev: 
+#     def __init__(self, nume, prenume, nota_romana, nota_mate, nota_engleza):
+#         self.nume = nume
+#         self.prenume = prenume
+#         self.nota_romana = nota_romana 
+#         self.nota_mate = nota_mate
+#         self.nota_engleza = nota_engleza
+#         self.media = self.calcul_medie()
+
+#     def prezinta_te(self):
+#         print(f"Salut! Numele meu este {self.nume} {self.prenume}")
+
+#     def spune_notele(self):
+#         print(f"Notele mele sunt: roman: {self.nota_romana}, mate: {self.nota_mate}, engleza: {self.nota_engleza}")
+
+#     def spune_media(self):
+#         self.media = (self.nota_romana + self.nota_mate + self.nota_engleza) / 3
+#         print(f"Media mea generala este {self.media:.2f}")
+#     def calcul_medie(self):
+#         return (self.nota_romana + self.nota_mate + self.nota_engleza) / 3
+    
+# elev1 = Elev("Ionescu", "Andrei", 8, 10, 9)
+
+# elev1.prezinta_te()
+# elev1.spune_notele()
+# print(elev1.media)
+# elev1.spune_media()
+# print(elev1.media)
+
+'''# 152. Creati o clasa numita "Rectangle" care are atributele "length" si "width".
+# Adauga o metoda numita "area" care returneaza aria dreptunghiului, si o metoda numita
+# "perimeter" care returneaza perimetrul dreptunghiului.
+# Instantiaza un obiect al clasei Rectangle si afiseaza aria si perimetrul acestuia.'''
+
+# class Rectangle :
+#     def __init__ (self, length, width):
+#         self.length = length
+#         self.width = width
+#     def area (self):
+#         return self.length * self.width
+#     def perimeter (self):
+#         return 2*(self.length + self.width)
+
+# deptunghi = Rectangle(10,8)
+# print('Aria dreptunghi',deptunghi.area())
+# print("Perimetru dreptunghi",deptunghi.perimeter())
