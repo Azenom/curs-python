@@ -28,7 +28,7 @@ class Elev:
         if 0 < new_nota <= 10 :
             return True
         else : return False
-    
+
 elev1 = Elev("Abesei",'Paul',8,9,10)
 print (type(Elev))
 print(elev1.get_media())
