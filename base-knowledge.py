@@ -1086,8 +1086,7 @@ ca modulele din acel folder constituie un pachet
 #         output_file.write(line[::-1])
 #     print("Rescriere fisier reusita")
 
-# Parcurgere structurata de fisiere si foldere -----------------------
-
+''''# Parcurgere structurata de fisiere si foldere -----------------------'''
 # import os 
 # print(os.listdir("/Users/paul/Documents/GitHub/curs-python/")) # ---> ['.DS_Store', 'temp_file.txt', '__pycache__', 'curs-testing.py', 'exercitii.py', 'base-knowledge.py', 'fisier-testing.txt', '.git']
 # my_path = os.path.join("/Users/paul/Documents/GitHub/curs-python/ceva")
@@ -1095,7 +1094,7 @@ ca modulele din acel folder constituie un pachet
 # print(os.path.isdir(my_path))
 # print(os.path.isfile(my_path))
 
-# o sa verificam daca in folder-testing -> curs-python exista fisier-folder-testing.txt
+'''# o sa verificam daca in folder-testing -> curs-python exista fisier-folder-testing.txt '''
 # import os
 # continut_proiect = os.listdir("/Users/paul/Documents/GitHub/curs-python/")
 # print(continut_proiect)
@@ -1108,7 +1107,6 @@ ca modulele din acel folder constituie un pachet
 #     print("inexistent")
 
 # o sa verificam daca in folder-testing din curs-python exista un fisier cu extensia .txt si il afisam continutul fisier-folder-testing.txt
-
 # import os
 # path_proiect = "/Users/paul/Documents/GitHub/curs-python/"
 # for elem in os.listdir(path_proiect):
