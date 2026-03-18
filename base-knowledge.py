@@ -1564,3 +1564,117 @@ ca modulele din acel folder constituie un pachet
 
 # print(profesor1.materie)
 # print(profesor1._materie)
+
+'''# Compozition -------------------------------------'''
+
+# class Motor :
+#     def __init__(self, cai, combustibil, capacitate):
+#         self.cai = cai
+#         self.combustibil = combustibil
+#         self.capacitate = capacitate
+    
+#     def start_engine(self):
+#         print("Start motor ! ")
+#         return True
+    
+#     def detalii_motor (self) :
+#         print(f'Motor pe {self.combustibil} cu capacitate {self.capacitate} cm cubi si {self.cai} cai putere')
+
+# class Volan :
+#     def __init__(self, diametru, material):
+#         self.diametru = diametru
+#         self.material = material
+
+#     def viraj_stanga (self):
+#         print("Vireaza stanga")
+    
+#     def viraj_dreapta (self):
+#         print('Vireaza dreapta')
+
+# class Roti :
+#     def __init__(self, material, presiune):
+#         self.material = material
+#         self.presiune = presiune
+
+#     def check_tire(self):
+#         if self.presiune > 2.2:
+#             print('Roata prea umflata')
+#             return False
+#         elif self.presiune < 1.8:
+#             print('Roata dezumflata')
+#         else :
+#             print("presiune ok")
+#             return True
+        
+# class Masina :
+#     def __init__(self, culoare, marca, motor, volan, roti):
+#         self.culoare = culoare
+#         self.marca = marca
+#         self.motor = motor
+#         self.volan = volan
+#         self.roti = roti
+
+#     def porneste_masina(self):
+#         if self.motor.start_engine() and self.roti.check_tire():
+#             print('Masina e gata de drum')
+#         else : 
+#             print('Engine caput, shaize sau presiune roti scazuta')
+    
+#     def deplasare_dreapta(self):
+#         self.volan.viraj_dreapta()
+
+#     def deplasare_stanga(self):
+#         self.volan.viraj_stanga()
+
+# roata_model_1 = Roti('tabla', 2.0)
+# roata_model_2 = Roti('aliaj', 1.7)
+# volan_model_1 = Volan(20, 'piele')
+# volan_model_2 = Volan (18, 'textil')
+# motor_model_1 = Motor(135, 'benzina', 1.5)
+# motor_model_2 = Motor(160, "benzina", 0.9)
+
+# masina_angelo = Masina ('visinie', 'ford', motor_model_2, volan_model_2, roata_model_2)
+# masina_angelo.porneste_masina()
+# masina_angelo.roti = roata_model_1
+# masina_angelo.porneste_masina()
+# masina_angelo.deplasare_stanga()
+# masina_angelo.deplasare_dreapta()
+# masina_angelo.motor.detalii_motor()
+
+
+'''Avem o clasa produs si o clasa comanda(cos cumparaturi), trb sa avem posibilitatea sa adaugam produse
+in acea comanda si sa calculam costul total al comenzii'''
+
+# class Produs :
+#     def __init__(self, nume, pret):
+#         self.nume = nume
+#         self.pret = pret
+#     def prezentare(self):
+#         return f'Produsul este {self.nume} si are pretul de {self.pret} lei'
+
+# class Comanda :
+#     def __init__ (self):
+#         self.cos = []
+#     def adauga_produs (self, produs, cantitate):
+#         self.cos.extend([produs] * cantitate)
+#     def total (self):
+#         total = 0
+#         for produs in self.cos :
+#             total += produs.pret
+#         return f'Comanda are total : {total} lei'
+
+# produs1 = Produs('baterie', 6)
+# produs2 = Produs('ciocolata', 12)
+# produs3 = Produs('bere',9)
+# produs4 = Produs('tigari', 33)
+# produs5 = Produs('chips', 10)
+
+# comanda1 = Comanda()
+# comanda1.adauga_produs(produs1,2)
+# comanda1.adauga_produs(produs2,1)
+# comanda1.adauga_produs(produs3,3)
+# comanda1.adauga_produs(produs4,1)
+# comanda1.adauga_produs(produs5,2)
+
+# print(produs1.prezentare())
+# print(comanda1.total())
