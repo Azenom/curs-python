@@ -1,0 +1,23 @@
+[
+    {
+        "firstname": "Alex",
+        "lastname": "Miron",
+        "rom": 10,
+        "math": 7,
+        "engl": 8
+    },
+    {
+        "firstname": "Maria",
+        "lastname": "Ionescu",
+        "rom": 6,
+        "math": 7,
+        "engl": 10
+    },
+    {
+        "firstname": "Paul",
+        "lastname": "Abesei",
+        "rom": 9,
+        "math": 9,
+        "engl": 6
+    }
+]
