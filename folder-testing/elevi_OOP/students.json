@@ -19,5 +19,19 @@
         "rom": 9,
         "math": 9,
         "engl": 6
+    },
+    {
+        "firstname": "test1",
+        "lastname": "test1",
+        "rom": 1,
+        "math": 1,
+        "engl": 1
+    },
+    {
+        "firstname": "test2",
+        "lastname": "test2",
+        "rom": 2,
+        "math": 2,
+        "engl": 2
     }
 ]
