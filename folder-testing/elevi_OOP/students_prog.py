@@ -105,6 +105,10 @@ class SchoolService :
         self._students.append(student)
         self._student_db.save(self._students)
 
+    def display(self):
+        for entry in self._students :
+            print(entry)
+
     def find_student(self, fname, lname):
         for student in self._students :
             if student.fname == fname and student.lname == lname :
@@ -121,12 +125,12 @@ class SchoolService :
             math = float(input('Enter new math grade : '))
             engl = float(input('Enter new engl grade : '))
             student = Student(fname, lname, rom, math, engl)
-            self.delete(old_fname, old_lname)
+            self.delete(fname, lname)
             print(f'Old student with : {old_fname} {old_lname} has been changed into : {fname} {lname}')
             self.add_student(student)
         else :
             print(f'Student {fname} {lname} not found')
-    
+                
     def delete (self, fname, lname):
         for entry in self._students:
             if fname == entry.fname and lname == entry.lname:
@@ -194,7 +198,9 @@ def main():
             school_service.add_student(student)
 
         if option == '2' : # Afisare elevi
-            print(student_db.load())
+            # print(student_db.load())
+            # sau
+            school_service.display()
 
         if option == '3' : # Modificare elev
             print("Enter stundent's details ")
