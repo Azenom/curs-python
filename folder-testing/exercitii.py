@@ -214,50 +214,6 @@ Pentru multiplii de 3, afișează "Fizz", pentru multiplii de 5, afișează "Buz
 # media = sum(numere) / len(numere)
 # print("Media numerelor este:", media)
 
-'''# 34. Trebuie implementat un meniu interactiv in consola care pune la dispozitie utilizatorului urmatoarele optiuni:
-# Adunare / # Scadere / # Inmultire / # Impartire / # Iesire din program
-# Utilizatorul trebuie sa introduca optiunea, iar apoi:
-# Pentru optiunile 1->4, utilizatorul trebuie sa introduca doua numere, iar programul va afisa rezultatul operatiei.
-# In cazul in care introduce 5, atunci iesim din program.  '''
-
-# print("Meniu:")
-# print("1. Adunarea a doua numere.")
-# print("2. Scaderea a doua numere.")
-# print("3. Inmultirea a doua numere.")
-# print("4. Impartirea a doua numere.") # verificare impartire la zero
-# print("5. Iesire program.")
-# numar = int(input("Optiunea ta este: "))
-# flag = True
-# while flag :
-#     if numar == 1 :
-#         nr1 = float(input("Introdu primul numar: "))
-#         nr2 = float(input("Introdu al doilea numar: "))
-#         print("Suma celor doua numere este: ", nr1+nr2)
-#         flag = False
-#     elif numar == 2 :
-#         nr1 = float(input("Introdu primul numar: "))
-#         nr2 = float(input("Introdu al doilea numar: "))
-#         print("Diferenta celor doua numere este: ", nr1-nr2)
-#         flag = False
-#     elif numar == 3 :
-#         nr1 = float(input("Introdu primul numar: "))
-#         nr2 = float(input("Introdu al doilea numar: "))
-#         print("Produsul celor doua numere este: ", nr1*nr2)
-#         flag = False
-#     elif numar == 4 :
-#         nr1 = float(input("Introdu primul numar: "))
-#         nr2 = float(input("Introdu al doilea numar: "))
-#         if nr2 != 0 :
-#             print("Impartirea celor doua numere este: ", nr1/nr2)
-#         else :
-#             print("Nu se poate impartii la zero!")
-#         flag = False
-#     elif numar == 5 :
-#         print("Iesire program.")
-#         flag = False
-#     else :
-#         print("Optiune nepermisa. Alege o optiune valida!")
-#         numar = int(input("Optiunea ta este: "))
 
 '''# 35. Sa se afiseze toate puterile lui 2 aflate intre un interval dat de utilizator.
 # Exemplu: 10, 50 -> 16, 32 '''
@@ -1270,7 +1226,7 @@ Exemplu: [10,-1,2,-3,0,4,-5] -> negative: [-1,-3,-5], pozitive_si_zero: [10,2,0,
 # sau
 
 # dic_persoane = {"mihai" : 31, "paul" : 31,  "catalin" : 21, "aura" : 25, "mama" : 50, "tata" : 52}
-# for k, v in dic_persoane.items():
+# for k, v in dic_persoane.items(): # k = key , v = value
 #     if v in range(0, 9):
 #         print('Persoanele cu varsta cuprinsa intre 0 si 9 ani sunt: ', k)
 #     elif v in range(10, 19):
@@ -1466,153 +1422,6 @@ exemplu : 1 | 3 | 4 | 6 | 9 | 75 '''
 
 '''# 121. Scrie o functie care primeste o lista de numere si returneaza o lista doar cu numerele prime.'''
 
-'''# 122. Sa se scrie un program care tine evidenta elevilor dintr-o scoala. Programul trebuie sa dispuna de un meniu care ne pune la dispozitie urmatoarele optiuni:
-		1. Adaugare elev
-		2. Afisarea elevilor existenti
-		3. Modificare informatii elev existent
-		4. Stergere elev
-		5. Cautare elev dupa nume si prenume
-		6. Afisare elevi in ordinea mediilor
-		7. Afisare elevi cu media peste 8
-		8. Afisare elevi in ordine alfabetica (dupa nume)
-
-	Pentru fiecare elev trebuie sa retinem urmatoarele informatii:
-    Nume
-    Prenume
-    Nota romana
-    Nota matematica
-    Nota engleza
-    Media    '''            
-
-# elevi = [{'nume': 'popescu', 'prenume': 'ana', 'nota romana': 6.0, 'nota mate': 7.0, 'nota engleza': 8.0, 'media': 7.0}, 
-#          {'nume': 'abesei', 'prenume': 'paul', 'nota romana': 7.0, 'nota mate': 8.0, 'nota engleza': 9.0, 'media': 8.0},
-#          {'nume': 'popescu', 'prenume': 'andrei', 'nota romana': 3.0, 'nota mate': 4.0, 'nota engleza': 5.0, 'media': 4.0}
-#          ]
-
-# def adauga_elev ():
-#     nume = input("Nume : ")
-#     prenume = input("Prenume : ")
-#     nota_romana = float(input("Nota romana :"))
-#     nota_mate = float(input("Nota mate :"))
-#     nota_engl = float(input("Nota engleza :"))
-#     elev = {
-#         "nume": nume,
-#         "prenume": prenume,
-#         "nota romana" : nota_romana,
-#         "nota mate" : nota_mate,
-#         "nota engleza" : nota_engl,
-#         "media" : calculeaza_media(nota_romana, nota_mate, nota_engl)
-#     }
-#     elevi.append(elev)
-
-# def calculeaza_media(nota_romana, nota_mate, nota_engl):
-#     x = round((nota_romana + nota_mate + nota_engl)/3,2)
-#     return x
-
-# def ia_media(elev):
-#     return elev['media']
-
-# def ia_nume(elev):
-#     return elev['nume']
-
-# def afiseaza_elevi(elevi, sort = False, field = None):
-#     if sort :
-#         elevi = sorted(elevi, key = field)
-#     for elev in elevi :
-#         print(f"{elev['nume']} {elev['prenume']} | "
-#             f"Romana: {elev['nota romana']} | "
-#             f"Matematica: {elev['nota mate']} | "
-#             f"Engleza: {elev['nota engleza']} | "
-#             f"Media: {elev['media']}")
-        
-# def afisare_alfabetic():
-#     elevi_sortati = sorted(elevi, key=ia_nume)
-#     for elev in elevi_sortati:
-#         print(f"{elev['nume']} {elev['prenume']}")
-        
-# def sterge_elevi():
-#     nume = input("Ce nume vrei elimini ? ")
-#     prenume = input("Ce prenume vrei sa elimini ?")
-#     for elev in elevi :
-#         if elev["nume"] == nume and elev["prenume"] == prenume:
-#             elevi.remove(elev)
-#             print("Am sters")
-#             return
-#     print("Elevul nu a fost gasit")
-
-# def modificare ():
-#     nume = input("Ce nume sa modific : ")
-#     prenume = input("Ce prenume sa modific : ")
-#     for elev in elevi: 
-#         if elev['nume'] == nume and elev['prenume'] == prenume:
-#             elev['nota romana'] = float(input("Nota roamana noua: "))
-#             elev['nota mate'] = float(input("Nota mate noua: "))
-#             elev['nota engleza'] = float(input("Nota engleza noua: "))
-#             elev['media'] = calculeaza_media(elev['nota romana'], elev['nota mate'], elev['nota engleza'])
-#             print("Date modificate success!")
-#             return
-#     print("Elev negasit!")
-
-# def cauta_elevi():
-#     nume = input("Ce nume vrei ? ")
-#     prenume = input("Ce prenume vrei ?")
-#     for elev in elevi :
-#         if elev["nume"] == nume and elev["prenume"] == prenume:
-#             print(f"{elev['nume']} {elev['prenume']} | "
-#             f"Romana: {elev['nota romana']} | "
-#             f"Matematica: {elev['nota mate']} | "
-#             f"Engleza: {elev['nota engleza']} | "
-#             f"Media: {elev['media']}")
-#             return
-#     print("Elevul nu a fost gasit")
-
-# def afiseaza_media_crescator():
-#     elevi_sortati = sorted(elevi, key=ia_media)
-#     for elev in elevi_sortati:
-#         print(f"{elev['nume']} {elev['prenume']} | Media: {elev['media']}")
-
-# def medie_5 ():
-#     for elev in elevi :
-#         if elev['media'] >= 5:
-#             print(f"{elev['nume']} {elev['prenume']} | Media: {elev['media']}")
-            
-# while True :
-#     print(
-#     """
-# 		1. Adaugare elev
-# 		2. Afisarea elevilor existenti
-# 		3. Modificare informatii elev existent
-# 		4. Stergere elev
-# 		5. Cautare elev dupa nume si prenume
-# 		6. Afisare elevi in ordinea mediilor
-# 		7. Afisare elevi cu media peste 8
-# 		8. Afisare elevi in ordine alfabetica (dupa nume)
-# """
-# ) 
-#     optiune = input("Alege optiune : ")
-#     if optiune == '0' :
-#         print("Ai iesit din sistem")
-#         break
-#     if optiune == "1" :
-#         adauga_elev()
-#     if optiune == "2" :
-#         # afiseaza_elevi()
-#         afiseaza_elevi(elevi)
-#     if optiune == "3" :
-#         modificare()
-#     if optiune == "4":
-#         sterge_elevi()
-#     if optiune == "5":
-#         cauta_elevi()
-#     if optiune == "6":
-#         # afiseaza_media_crescator()
-#         afiseaza_elevi( elevi, sort = True, field = ia_media )
-#     if optiune == "7":
-#         medie_5()
-#     if optiune == "8":
-#         # afiseaza_alfabetic()
-#         afiseaza_elevi( elevi, sort = True, field = ia_nume )
-
 '''Exercitii Functii recursive:'''
 '''# 123. Scrie o funcție recursivă care calculează factorialul unui număr.
 Ex: pentru n = 5, 5 x 4 x 3 x 2 x 1 = 120 '''
@@ -1668,34 +1477,11 @@ Ex: pentru [1, 2, [3, 4, [5, 6]], 7] returneaza 28 '''
 #    print(operatiuni.inmultire(nr1,nr2))
 #    print(operatiuni.impartire(nr1,nr2))
 
-'''# 129. Sa se creeze un pachet numit "geometry" care sa contina doua module: "area" si "perimeter". 
-Modulul "area" sa contina functii pentru calcularea ariei unui cerc, patrat si dreptunghi.
-Modulul "perimeter" sa contina functii pentru calcularea perimetrului acelorasi forme geometrice.
-Din fisierul principal, sa se importe pachetul si sa se execute fiecare functie cu valori generate aleatoriu.'''
-
-# import random
-# nr1 = random.randint(1,20)
-# print('prmul numar : ',nr1)
-# nr2 = random.randint(21,30)
-# print('al doilea numar : ',nr2)
-
-# # import geometry.aria
-# # import geometry.perimetru
-# # sau
-# from geometry import aria,perimetru
-# print("Arie cerc : ",aria.aria_cerc(nr1))
-# print("Arie patrat : ",aria.aria_patrat(nr2))
-# print("Arie dreptunghi : ",aria.aria_dreptunghi(nr1,nr2))
-# print()
-# print("Perimetru cerc : ",perimetru.perimetru_cerc(nr1))
-# print("Perimetru patrat : ",perimetru.perimetru_patrat(nr2))
-# print("Perimetru dreptunghi : ",perimetru.perimetru_dreptunghi(nr1,nr2))
-
 '''# 130. Sa se creeze un script care sa accepte argumente din linia de comanda pentru nume, prenume, varsta, folosind modulul argparse. 
 Scriptul sa afiseze numele complet al persoanei si varsta in urmatorul format:
 Nume: [nume]
 Prenume: [prenume]
-Varsta: [varsta] ani          '''
+Varsta: [varsta] ani     '''
 
 # import argparse
 # def parse_args ():
@@ -1722,97 +1508,6 @@ si le salveaza intr-un fisier text numit "persoana.txt" in formatul: "Nume Prenu
 # detalii = f'{nume} {prenume}, {varsta}, {oras}'
 # with open('persoane.txt','w') as my_file :
 #     my_file.write(detalii)
-
-'''# 133. Sa se scrie un program care citeste un fisier text numit "date.txt" si afiseaza numarul de linii, cuvinte si caractere din fisier. '''
-
-# spatii = 1 # numarul de spatii este mai mic cu 1 decat numarul de cuvinte dintr-o propozitie
-# count_spatii = 0
-# caracter = 0
-# count_caracter = 0
-# with open("date.txt", 'r') as my_file :
-#    linii_fisier = my_file.readlines()
-
-# print(f'Fisierul are : {len(linii_fisier)} linii') # numarul de linii
-# for index in linii_fisier : # parcurgi index-urile din lista
-#    for litera in index : # parcurgi propozitia din index din lista
-#       if litera == " ":
-#          spatii += 1
-#       elif litera != "\n":
-#          caracter += 1
-#    count_spatii += spatii
-#    count_caracter += caracter
-#    spatii = 1 # resetez numarul de spatii memorate inainte sa treaca la urmatoarea linie
-#    caracter = 0 # resetez numarul de caractere memorate inainte sa treaca la urmatoarea linie
-# print("Numarul de cuvinte este : ",count_spatii)
-# print("Numarul de caractere este : ",count_caracter)
-
-# sau
-
-# with open("date.txt", 'r', encoding='utf-8') as fisier:
-#     continut = fisier.read()
-# nr_linii = len(continut.splitlines())
-# nr_cuvinte = len(continut.split())
-# caractere = 0
-# for i in continut:
-#     if i != " " and i != "\n":
-#         caractere = caractere +1
-# print(f"Rezultate\n Numar linii: {nr_linii} \n Numar cuvinte: {nr_cuvinte} \n Numar caractere: {caractere}")
-
-'''# 134. Se da urmatorul fisier "produse.txt" care contine informatii despre produse.
-   Sa se scrie un program care citeste informatiile despre produse din fisierul "produse.txt"
-   si calculeaza pretul total al stocului pentru fiecare produs.'''
-
-# import json
-
-# def nume_produs(text):
-#    return text.split("-", 1)[0].rstrip()
-
-# with open("produse.txt", 'r') as my_file :
-#    linii_fisier = my_file.readlines()
-
-# produs = {}
-
-# for linii in linii_fisier:
-#    date = linii.split()
-#    nume = nume_produs(linii)
-#    pret_total = int( date[-5] ) * int( date[-2] )
-#    produs.update({nume : pret_total})
-
-# print(json.dumps(produs, indent=4))
-
-# sau
-
-# produse = []
-# lista_p = []
-# cantitate = []
-# with open("produse.txt", "r") as my_file:
-#    linii_fisier = my_file.readlines()
-
-# for linie in linii_fisier:
-#    produs = linie.strip().split("-")
-#    produse.append(produs)
-#    lista_p.append(int(produs[1].split()[0]))
-#    cantitate.append(int(produs[2].split()[0]))
-
-# for i in range(len(produse)):
-#    nume_produs = produse[i][0]
-#    total = lista_p[i] * cantitate[i]
-#    print(f"{nume_produs} - {total} lei")
-# SAU
-# for i, produs_info in enumerate(produse):
-#    nume_produs = produs_info[0]
-#    total = lista_p[i] * cantitate[i]
-#    print(f"{nume_produs} - {total} lei")
-
-
-'''# 135. Se da un fisier de logging "log.txt" care contine date referitor la evenimentele dintr-un sistem:
-   Sa se scrie un program care citeste fisierul "log.txt" si afiseaza numarul de evenimente de fiecare tip (INFO, WARNING, ERROR)
-   si afiseaza ora si evenimentul de tip ERROR care a avut loc cel mai recent. '''
-
-'''# 136. Se da un fisier de logging "login.txt" care contine date referitor la incercarile de autentificare ale utilizatorilor:
-   Sa se scrie un program care citeste fisierul "login.txt" si salveaza in fisierul "user_attempts.txt" numarul de incercari de autentificare
-   pentru fiecare utilizator si ora si data ultimei incercari de autentificare reusite in formatul:
-   # <user> | <numar_incercari> | <ultima_data_ora_reusita> '''
 
 '''# 137. Sa se actualizeze programul de la mini proiectul referitor la gestionarea elevilor dintr-o scoala astfel incat informatiile despre elevi
    sa persiste intr-un fisier text numit "elevi.txt" astfel incat datele sa fie disponibile la repornirea programului. '''
@@ -1884,7 +1579,6 @@ pana la introducerea cuvantului "exit" si le salveaza intr-un fisier JSON numit 
 # import json
 # with open('persoana.json', 'w') as my_file :
 #    json.dump(catalog, my_file, indent = 4)
-    
 
 '''# 144. Sa se scrie un program care citeste date despre produse (nume, pret, cantitate) de la tastatura pana la introducerea cuvantului "exit" 
 si le salveaza intr-un fisier CSV numit "produse.csv". '''
@@ -1958,114 +1652,14 @@ si salveaza datele intr-un fisier "produse.json". '''
 '''# 146. Sa se scrie un program care citeste datele despre produse din fisierul "produse.json", 
 adauga un camp nou "tara_origine" care reprezinta tara de origine a produsului si salveaza datele intr-un fisier "produse.csv". '''
 
-'''# 147. Se da urmatoarea structura de directoare care contine informatii despre elevii dintr-o scoala:
-
-school_files/high_school/classA - contine fisiere CSV cu informatii despre elevii de la filologie
-school_files/high_school/classB - contine fisiere JSON cu informatii despre elevii de la mate-info 
-
-Sa se scrie un program care parcurge recursiv structura de directoare "school_files" si:
-Afiseaza toti elevii din clasele de Filologie (ClassA) care au nota peste 90 la Istorie
-Afiseaza toti elevii din clasele de Mate-Info (ClassB) care au media mai mica deca 80,
-Calculeaza media generala a tuturor claselor de Filologie,
-Afiseaza clasele de Mate-info in ordine crescatoare a mediei generale pe clasa,
-Afiseaza elevii cu cea mai mare medie din fiecare clasa,
-Convertește fisierele csv in care sunt salvate informatiile despre elevii de la Filologie in fisiere json.
-Convertește fisierele json in care sunt salvate informatiile despre elevii de la Mate-Info in fisiere csv. '''
-
-# import csv, json, os
-
-# class_A = '/Users/paul/Documents/GitHub/curs-python/folder-testing/school_files/high_school/classA'
-# for file_name in os.listdir(class_A):
-#    cale_fisier = os.path.join (class_A, file_name)
-#    #print()
-#    print(cale_fisier)
-#    #print()
-#    with open(cale_fisier, 'r', newline='') as my_file :
-#       reader = csv.DictReader(my_file)
-#       for row in reader:
-#          #print(row)
-#          if(int(row['History']) >= 90):
-#             print('Elevii din classA care au nota la istorie peste 90 sunt : ', row['Name'])
-
-# class_B = '/Users/paul/Documents/GitHub/curs-python/folder-testing/school_files/high_school/classB'
-# for file_name in os.listdir(class_B):
-#    cale_fisier = os.path.join (class_B, file_name)
-#    with open(cale_fisier, 'r') as my_file :
-#       date = json.load(my_file)
-#       for elem in date : 
-#          nota = elem['grades']
-#          media = (nota['math']+nota['english']+nota['science'])/3
-#          if media < 80 :
-#             print('Elevii din classB care au media mai mica decat 80 sunt : ',elem['name'])
-         
-# for file_name in os.listdir(class_A):
-#    cale_fisier = os.path.join (class_A, file_name)
-#    print(cale_fisier)
-#    lista_medii=[]
-#    with open(cale_fisier, 'r', newline='') as my_file :   
-#       reader = csv.DictReader(my_file)
-#       for row in reader :
-#          medie_elev = ( int(row['Geography']) + int(row['English']) + int(row['History'] )  ) / 3
-#          lista_medii.append(medie_elev)
-#       media_clasei = sum(lista_medii) / len(lista_medii)
-#       print(f'Media {file_name} din classA este : {media_clasei}')
-
 '''Exercitii OOP in Python:'''
-'''# 148. Creeaza o clasa numita "Animal" care are atributele "nume", "varsta" si "specie". Adauga o metoda numita "descriere" care returneaza o descriere a animalului.
+'''# 147. Creeaza o clasa numita "Animal" care are atributele "nume", "varsta" si "specie". Adauga o metoda numita "descriere" care returneaza o descriere a animalului.
 Instantiaza doua obiecte ale clasei "Animal" si apeleaza metoda "descriere" pentru fiecare obiect.'''
 
-'''# 149. Creeaza o clasa numita "Masina" care are atributele "marca", "model" si "an_fabricatie". Adauga o metoda numita "descriere" care returneaza o descriere a masinii.
+'''# 148. Creeaza o clasa numita "Masina" care are atributele "marca", "model" si "an_fabricatie". Adauga o metoda numita "descriere" care returneaza o descriere a masinii.
 Instantiaza trei obiecte ale clasei "Masina" si afiseaza informatiile despre fiecare masina.'''
 
-'''# 150.
-a) Creeaza o clasa numita "Persoana" care are atributele "nume", "varsta" si "gen".
-b) Creeaza o lista de 5 persoane si afiseaza numele si varsta fiecarei persoane din lista.
-c) Adauga o metoda numita "introducere" in clasa "Persoana" care returneaza o introducere a persoanei 
-   (ex: "Numele meu este X, am Y ani si sunt de gen Z"). Apeleaza aceasta metoda pentru fiecare persoana din lista.
-d) Creeaza o metoda numita "este_major" care returneaza True daca persoana are varsta de 18 ani sau mai mult, si False in caz contrar. 
-Apeleaza aceasta metoda pentru fiecare persoana din lista si afiseaza daca fiecare persoana este major sau nu.
-e) Creeaza o metoda numita "schimba_gen" care schimba genul persoanei (ex: daca genul este "masculin", il schimba in "feminin" si invers). 
-Apeleaza aceasta metoda pentru fiecare persoana din lista si afiseaza noul gen al fiecarei persoane.
-f) Creeaza o metoda numita "adauga_ani" care adauga un numar specificat de ani la varsta persoanei. 
-Apeleaza aceasta metoda pentru fiecare persoana din lista, adaugand un numar aleator de ani si afiseaza noua varsta a fiecarei persoane.
-g) Afiseaza o lista cu toate persoanele care sunt majore.
-h) Afiseaza o lista cu toate persoanele care au genul "masculin" si au peste 14 ani.
-''' 
-
-# class Persoana :
-#    def __init__ (self, nume, varsta, gen):
-#       self.nume = nume
-#       self.varsta = varsta
-#       self.gen = gen
-#    def introducere(self):
-#       print(f"Numele meu este {self.nume}, am {self.varsta} ani si sunt de gen {self.gen}")
-#    def este_major (self):
-#       if self.varsta >= 18 :
-#          return True
-#       else : return False
-#    def schimba_gen(self):
-#       if self.gen == 'm':
-#          self.gen = 'f'
-#       else : self.gen = 'm'
-
-# persoane = [Persoana('Andrei', 20, "M"), Persoana('Alexandra', 32, "F"), Persoana('Maria', 25, 'F'), Persoana('Daniel', 31, "M")]
-
-# while len(persoane) < 5 :
-#    nume = input("introdu nume : ")
-#    varsta = int(input("introdu varsta : "))
-#    gen = input("introdu gen : ")
-#    persoana = Persoana(nume,varsta,gen)
-#    persoane.append(persoane)
-
-# for persoana in persoane:
-   # print(f'Persoana {persoana.nume} are varsta {persoana.varsta}')
-   # sau
-   # persoana.introducere()
-   # print(f'{persoana.nume} --- {persoana.este_major()}')
-   # persoana.schimba_gen()
-
-
-'''# 151. Sa se citeasca de la tastatura elevi pana se introduce caracterul x
+'''# 150. Sa se citeasca de la tastatura elevi pana se introduce caracterul x
 Pt fiecare elev trb sa il punem sa se prezinte, sa isi zica notele si media lor'''
 
 # class Elev: 
@@ -2097,7 +1691,7 @@ Pt fiecare elev trb sa il punem sa se prezinte, sa isi zica notele si media lor'
 # elev1.spune_media()
 # print(elev1.media)
 
-'''# 152. Creati o clasa numita "Rectangle" care are atributele "length" si "width".
+'''# 151. Creati o clasa numita "Rectangle" care are atributele "length" si "width".
 # Adauga o metoda numita "area" care returneaza aria dreptunghiului, si o metoda numita
 # "perimeter" care returneaza perimetrul dreptunghiului.
 # Instantiaza un obiect al clasei Rectangle si afiseaza aria si perimetrul acestuia.'''
@@ -2114,3 +1708,102 @@ Pt fiecare elev trb sa il punem sa se prezinte, sa isi zica notele si media lor'
 # deptunghi = Rectangle(10,8)
 # print('Aria dreptunghi',deptunghi.area())
 # print("Perimetru dreptunghi",deptunghi.perimeter())
+
+'''--- Exercitii - Encapsulation si Abstraction '''
+'''# 152. Sa se creeze un porg care :
+a) Creeaza o clasa numita ContBancar care are: 
+atributele private: titular, sold
+constructor pentru initializare
+b) Adauga metodele:
+depunere(suma) - adauga bani in cont doar daca suma este pozitiva
+retragere(suma) - retrage bani doar daca exista fonduri suficiente
+get_sold() - returneaza soldul curent
+c) Creeaza doua obiecte de tip ContBancar si testeaza metodele.
+d) Incearca sa modifici direct atributul sold din exterior si observa ce se intampla.
+e) Explica de ce este util sa avem sold ca atribut privat.'''
+
+'''# 153. Sa se creeze un porg care :
+a) Creeaza o clasa Elev care are:
+atribute private pentru trei note
+atribut public pentru nume
+b) Creeaza o metoda get_medie() care calculeaza media pe baza notelor.
+d) Creeaza o metoda actualizeaza_note() care permite modificarea notelor.
+e) Creeaza 3 elevi si:
+afiseaza media fiecaruia
+modifica notele unui elev
+afiseaza noua medie
+f) Explica de ce media NU ar trebui sa fie un atribut normal. '''
+
+'''--- Exercitii - Inheritance si Polymorphism '''
+'''# 154. Sa se creeze un porg care :
+a) Creeaza o clasa Angajat cu:
+nume
+salariu
+metoda calcul_salariu_anual()
+b) Creeaza o clasa Manager care mosteneste Angajat si:
+are un bonus
+suprascrie metoda calcul_salariu_anual()
+c) Creeaza o clasa Programator care mosteneste Angajat si:
+are un bonus pe proiect
+suprascrie metoda calcul_salariu_anual()
+d) Creeaza o lista cu obiecte de tip Angajat, Manager, Programator
+e) Parcurge lista si afiseaza salariul anual pentru fiecare obiect '''
+
+'''# 155. Sa se creeze un porg care :
+a) Creeaza o clasa de baza Forma cu metoda arie() care returneaza 0.
+b) Creeaza clasele:
+Cerc
+Dreptunghi
+Triunghi
+c) Suprascrie metoda arie() pentru fiecare clasa.
+d) Creeaza o lista de forme si calculeaza aria totala fara sa verifici tipul obiectului.'''
+
+'''# 156. Sa se creeze un porg care :
+a) Creeaza o clasa de baza Plata cu metoda proceseaza_plata().
+b) Creeaza clasele:
+PlataCard
+PlataCash
+PlataTransferBancar
+c) Fiecare clasa trebuie sa suprascrie metoda proceseaza_plata().
+d) Creeaza o lista de plati si proceseaza-le folosind un singur for.
+e) Explica ce este polimorfismul in acest exemplu. '''
+
+'''--- Exercitii - Composition '''
+'''# 157. Sa se creeze un porg care : 
+a) Creeaza o clasa Procesor cu:
+model
+frecventa
+metoda descriere()
+b) Creeaza o clasa Laptop care:
+are marca
+contine un obiect de tip Procesor
+c) Creeaza mai multe laptopuri cu procesoare diferite si afiseaza descrierea fiecaruia.
+d) Explica de ce aici folosim composition si nu inheritance.'''
+
+'''# 158. Sa se creeze un porg care :
+a) Creeaza o clasa Produs cu:
+nume
+pret
+b) Creeaza o clasa Comanda care:
+contine o lista de produse
+are metoda adauga_produs()
+are metoda total()
+c) Creeaza mai multe produse si adauga-le intr-o comanda.
+d) Creeaza o metoda care permite stergerea unor produse din comanda.
+e) Creeaza o metoda care permite modificarea cantitatii unui produs din comanda.
+d) Creeaza o metoda care genereaza un bon fiscal pe baza comenzii.
+e) Adauga o metoda care returneaza produsul cel mai scump. '''
+
+'''# 159. Sa se creeze un prog care : 
+a) Creeaza o clasa Jucator cu:
+nume
+pozitie
+varsta
+b) Creeaza o clasa Echipa care:
+are un nume
+contine o lista de jucatori
+are metoda adauga_jucator()
+are metoda afiseaza_jucatori()
+c) Creeaza o echipa cu minim 4 jucatori.
+d) Creeaza o metoda care returneaza jucatorii peste 25 de ani.
+e) Explica de ce „Echipa” NU mosteneste „Jucator”. '''
