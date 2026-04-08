@@ -1,14 +1,12 @@
 '''# --------------------- Interfata Grafica (GUI) --------------------- '''
 
-import tkinter
-
 # Definire obiect pentru interfata si detaliile acesteia ----------------------------
 
-window = tkinter.Tk()
-window.title("First interface !")
-window.geometry ("400x300") # wide x width pentru fereastra
-window.resizable (False,False) # dam sau nu posibilitatea de a schimba dimensiunea ferestrei
-
+# import tkinter
+# window = tkinter.Tk()
+# window.title("First interface !")
+# window.geometry ("400x300") # wide x width pentru fereastra
+# window.resizable (False,False) # dam sau nu posibilitatea de a schimba dimensiunea ferestrei
 
 # Adaugare widgets (text, user input, button) ----------------------------
 
@@ -55,26 +53,24 @@ window.resizable (False,False) # dam sau nu posibilitatea de a schimba dimensiun
 
 # Afisare info label, text, label + stringvar, listbox ----------------------------
 
-text_output = tkinter.Text(window, height=5, width=30)
-text_output.pack()
+# text_output = tkinter.Text(window, height=5, width=30)
+# text_output.pack()
 
-person = tkinter.Entry(window)
-person.pack()
+# person = tkinter.Entry(window)
+# person.pack()
 
-def display_message():
-    my_list=['Ionel','Dorel','Cosmin']
-    text_output.delete('1.0',tkinter.END) # sterge de la inceput pana la END
-    text_output.insert(tkinter.END, 'This is the list of people. Click : ')
-    for elem in my_list :
-        text_output.insert(tkinter.END, f'{elem}\n')
+# def display_message():
+#     my_list=['Ionel','Dorel','Cosmin']
+#     text_output.delete('1.0',tkinter.END) # sterge de la inceput pana la END
+#     text_output.insert(tkinter.END, 'This is the list of people. Click : ')
+#     for elem in my_list :
+#         text_output.insert(tkinter.END, f'{elem}\n')
 
-def add_person():
-    person_name = person.get()
-    text_output.insert(tkinter.END, f'{person_name}\n')
+# def add_person():
+#     person_name = person.get()
+#     text_output.insert(tkinter.END, f'{person_name}\n')
 
-tkinter.Button(window, text = 'Display', command = display_message).pack()
-tkinter.Button(window, text = 'Add', command = add_person).pack()
+# tkinter.Button(window, text = 'Display', command = display_message).pack()
+# tkinter.Button(window, text = 'Add', command = add_person).pack()
 
-
-
-window.mainloop() # tine interfata activa pana cand o inchid eu manual
+# window.mainloop() # tine interfata activa pana cand o inchid eu manual
