@@ -1838,7 +1838,8 @@ in acea comanda si sa calculam costul total al comenzii'''
 
 # import tkinter
 # window = tkinter.Tk()
-# window.title("First interface !")
+# window.configure(bg="grey")
+# window.title("First interface !") # nu e obligatoriu, s-ar numii tk fereastra ca default name
 # window.geometry ("400x300") # wide x width pentru fereastra
 # window.resizable (False,False) # dam sau nu posibilitatea de a schimba dimensiunea ferestrei
 
@@ -1892,9 +1893,9 @@ in acea comanda si sa calculam costul total al comenzii'''
 
 # person = tkinter.Entry(window)
 # person.pack()
+# my_list=['Ionel','Dorel','Cosmin']
 
 # def display_message():
-#     my_list=['Ionel','Dorel','Cosmin']
 #     text_output.delete('1.0',tkinter.END) # sterge de la inceput pana la END
 #     text_output.insert(tkinter.END, 'This is the list of people. Click : ')
 #     for elem in my_list :
@@ -1902,9 +1903,152 @@ in acea comanda si sa calculam costul total al comenzii'''
 
 # def add_person():
 #     person_name = person.get()
+#     my_list.append(person_name)
 #     text_output.insert(tkinter.END, f'{person_name}\n')
 
 # tkinter.Button(window, text = 'Display', command = display_message).pack()
 # tkinter.Button(window, text = 'Add', command = add_person).pack()
+
+# Completare dinamica in label cu entry
+
+# output_var = tkinter.StringVar()
+# tkinter.Label(window, textvariable = output_var).pack()
+# tkinter.Entry(window, textvariable = output_var).pack()
+
+# output_var = tkinter.IntVar()
+# tkinter.Label(window, textvariable = output_var).pack()
+
+# text_output = tkinter.Text(window, height=5, width=30)
+# text_output.pack()
+
+# person = tkinter.Entry(window)
+# person.pack()
+# my_list=['Ionel','Dorel','Cosmin']
+
+# def display_message():
+#     text_output.delete('1.0',tkinter.END) # sterge de la inceput pana la END
+#     text_output.insert(tkinter.END, 'This is the list of people. Click : ') # de la END spre final
+#     for elem in my_list :
+#         text_output.insert(tkinter.END, f'{elem}\n')
+
+# def add_person():
+#     person_name = person.get()
+#     my_list.append(person_name)
+#     output_var.set(len(my_list))
+#     text_output.insert(tkinter.END, f'{person_name}\n')
+
+# tkinter.Button(window, text = 'Display', command = display_message).pack()
+# tkinter.Button(window, text = 'Add', command = add_person).pack()
+
+# Completare cu listbox ----------------------------
+
+# entry = tkinter.Entry(window)
+# entry.pack()
+
+# listbox = tkinter.Listbox(window)
+# listbox.pack()
+
+# ppl = []
+
+# def add_person():
+#     name = entry.get()
+#     if name :
+#         listbox.insert(tkinter.END, name) # sa puna la finalul widget-ului
+#         entry.delete(0, tkinter.END)
+#         ppl.append(name)
+
+# def show_selected():
+#     selection = listbox.curselection()
+#     if selection :
+#         selected_value = listbox.get(selection[0])
+#         print(selected_value)
+
+# def delete_selected():
+#     selection = listbox.curselection()
+#     if selection:
+#         selected_value = listbox.get(selection[0])
+#         listbox.delete(selection[0])
+#         print('Before',ppl)
+#         ppl.remove(selected_value)
+#         print('After',ppl)
+
+# tkinter.Button(window, text = 'Add ppl', command = add_person).pack()
+# tkinter.Button(window, text = "Show selected", command = show_selected).pack()
+# tkinter.Button(window, text = 'Delete', command = delete_selected).pack()
+
+
+# Message box : showinfo, showwarning, showerror ------------------------
+
+# entry = tkinter.Entry(window)
+# entry.pack()
+
+# listbox = tkinter.Listbox(window)
+# listbox.pack()
+
+# ppl = []
+
+# import tkinter.messagebox
+
+# def add_person():
+#     name = entry.get()
+#     if name :
+#         listbox.insert(tkinter.END, name) # sa puna la finalul widget-ului
+#         entry.delete(0, tkinter.END)
+#         ppl.append(name)
+#         tkinter.messagebox.showinfo('Success',f'Success, name : {name} has been added')
+#     else :
+#         tkinter.messagebox.showwarning('Warning',f'!!! Please complete name filed !!!')
+
+# def show_selected():
+#     selection = listbox.curselection()
+#     if selection :
+#         selected_value = listbox.get(selection[0])
+#         print(selected_value)
+
+# def delete_selected():
+#     selection = listbox.curselection()
+#     if selection:
+#         selected_value = listbox.get(selection[0])
+#         listbox.delete(selection[0])
+#         print('Before',ppl)
+#         ppl.remove(selected_value)
+#         print('After',ppl)
+#         tkinter.messagebox.showinfo('Success',f'Success, name : {selected_value} -> deleted')
+#     else :
+#         tkinter.messagebox.showerror('Error',f'!!! No name selected !!!')
+
+# tkinter.Button(window, text = 'Add ppl', command = add_person).pack()
+# tkinter.Button(window, text = "Show selected", command = show_selected).pack()
+# tkinter.Button(window, text = 'Delete', command = delete_selected).pack()
+
+# Pentru afisare combo box si tree view --------------------------------
+
+# import tkinter.ttk
+
+# opt = ['Python','C++','C#']
+# dropdown = tkinter.ttk.OptionMenu(window, values = opt)
+# dropdown.pack()
+
+# def show_selected ():
+#     selected = dropdown.get()
+#     print('selected language : ',selected)
+
+# tkinter.Button(window, text = 'Show',command=show_selected).pack()
+
+# cap_tabel = ('Name','Math','Engl')
+# tree = tkinter.ttk.Treeview(window,columns=cap_tabel, show='headings')
+# tree.pack()
+
+# for elem in cap_tabel:
+#     tree.heading(elem,text=elem)
+
+# sau 
+
+# tree.heading("Name", text='Nume')
+# tree.heading("Math", text='Mate')
+# tree.heading("Engl", text='Engleza')
+
+# tree.insert('',tkinter.END, values=('Maria',10,9))
+# tree.insert('',tkinter.END, values=('Ionela',8,7))
 
 # window.mainloop() # tine interfata activa pana cand o inchid eu manual
