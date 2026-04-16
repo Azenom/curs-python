@@ -2041,7 +2041,6 @@ in acea comanda si sa calculam costul total al comenzii'''
 
 # for elem in cap_tabel:
 #     tree.heading(elem,text=elem)
-
 # sau 
 
 # tree.heading("Name", text='Nume')
@@ -2050,5 +2049,44 @@ in acea comanda si sa calculam costul total al comenzii'''
 
 # tree.insert('',tkinter.END, values=('Maria',10,9))
 # tree.insert('',tkinter.END, values=('Ionela',8,7))
+
+# window.mainloop() # tine interfata activa pana cand o inchid eu manual
+
+# Exemplu : 
+# import tkinter.ttk
+# import tkinter
+# window = tkinter.Tk()
+# window.configure(bg="grey")
+# window.title("First interface !") # nu e obligatoriu, s-ar numii tk fereastra ca default name
+# window.geometry ("400x300") # wide x width pentru fereastra
+# window.resizable (True,True) # dam sau nu posibilitatea de a schimba dimensiunea ferestrei
+
+# cap_tabel = ('Name','Math','Engl')
+# tree = tkinter.ttk.Treeview(window,columns=cap_tabel, show='tree headings')
+# tree.pack()
+
+# tree.heading('#0', text = 'Clasa')
+# tree.heading("Name", text='Nume')
+# tree.heading("Math", text='Mate')
+# tree.heading("Engl", text='Engleza')
+
+# class_a = tree.insert('',tkinter.END, text='class A',open=True) # open = True pentru a putea da expand
+# class_b = tree.insert('',tkinter.END, text='class B',open=True)
+
+# tree.insert(class_a, tkinter.END, text='',values=('Maria',6,7,8))
+# tree.insert(class_a, tkinter.END, text='',values=('Mihai',4,5,6))
+# tree.insert(class_b, tkinter.END, text='',values=('Andrei',1,2,3))
+# tree.insert(class_b, tkinter.END, text='',values=('Mihai',9,9,9))
+
+
+# def load_student_data(event):
+#     selected = tree.focus()
+#     print(selected)
+#     print(event)
+#     values = tree.item(selected, 'values')
+#     print('Row : ', values)
+
+# tree.bind('<ButtonRelease-1>', load_student_data)
+
 
 # window.mainloop() # tine interfata activa pana cand o inchid eu manual
