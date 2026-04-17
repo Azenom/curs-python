@@ -2078,7 +2078,6 @@ in acea comanda si sa calculam costul total al comenzii'''
 # tree.insert(class_b, tkinter.END, text='',values=('Andrei',1,2,3))
 # tree.insert(class_b, tkinter.END, text='',values=('Mihai',9,9,9))
 
-
 # def load_student_data(event):
 #     selected = tree.focus()
 #     print(selected)
@@ -2087,6 +2086,5 @@ in acea comanda si sa calculam costul total al comenzii'''
 #     print('Row : ', values)
 
 # tree.bind('<ButtonRelease-1>', load_student_data)
-
 
 # window.mainloop() # tine interfata activa pana cand o inchid eu manual
