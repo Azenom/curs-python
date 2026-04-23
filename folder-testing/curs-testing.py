@@ -1,67 +1,38 @@
-''' #  --------------------------------------- API - REST API ----------------------------------------'''
-''' Application Programming Interface ----------------------'''
-''' Representational State Transfer Application Programming Interface ''' # pentru WEB cu protocol HTTP
+'''# Web app Flask, Jinja2, SQLAlchemy --------------------------------'''
 
-# import requests
-# url = 'https://restcountries.com/v3.1/name/romania'
-# response = requests.get(url)
+from flask import Flask, render_template, redirect, url_for, request
+app = Flask(__name__) # intitializeaza aplicatia
 
-# print(response) # <Response [200]> -> a mers conexiunea cu raspuns 200
-# json_response = response.json()
-# print(json_response)
+@app.route('/') # cand cineva acceseaza rout-ul se va executa functia
+def home2():
+    return '''<h1>Hello, Flask!</h1>
+    <h2>Aici h2</h2>
+    '''
 
-# print(json_response[0]['capital'][0])
-# print(json_response[0]['region'])
-# print(json_response[0]['population'])
-# print(json_response[0]['currencies'])
+@app.route('/hello') # http://127.0.0.1:5000/hello
+def hello():
+    return render_template("index.html")
 
-''' # Flask API basic ---------------------'''
-
-import sqlite3
-from flask import Flask, jsonify, request
-
-DB_NAME = 'students.db'
-app = Flask(__name__)
-
-def row_to_dict(row):
-    return {
-        'cnp' : row[0],
-        'firstname' : row[1],
-        'lastname' : row[2],
-        'rom' : row[3],
-        'math' : row[4],
-        'engl' : row[5]
-    }
-
-@app.get('/') # porneste pagina de start
+@app.route('/home')
 def home():
-    return jsonify({'message': 'students API is running !'})
+    return render_template('index_header_body.html')
 
-@app.get('/students') # mapeaza functia de mai jos in endpoint
-def get_students():
-    with sqlite3.connect(DB_NAME) as connection:
-        cursor = connection.cursor()
-        cursor.execute('SELECT * FROM students')
-        rows = cursor.fetchall()
-
-    students_list = []
-    for row in rows:
-        students_list.append(row_to_dict(row))
-
-    return jsonify(students_list)
-
-@app.get('/students/<int:student_cnp>')
-def get_student(student_cnp):
-    with sqlite3.connect(DB_NAME) as connection:
-        cursor = connection.cursor()
-        cursor.execute('SELECT * FROM students WHERE cnp = ?', (student_cnp,))
-        row = cursor.fetchone()
-
-    if row is None :
-        return jsonify({'error':f'Students with cnp : {student_cnp} Does not exit !'}), 404
-    
-    return jsonify(row_to_dict(row))
+@app.route('/form', methods = ['GET', 'POST'])
+def form():
+    if request.method == 'POST':
+        prenume = request.form.get('prenume','')
+        nume = request.form.get('nume','')
+        varsta = request.form.get('varsta','')
+        print(f'Prenume : {prenume}, Nume : {nume} si  varsta : {varsta}')
+        return(redirect(url_for('home')))
+    return (render_template("index_form.html"))
 
 if __name__ == '__main__':
-    app.run(debug=True) # tine aplicatia in viata pana cand o inchid
+    app.run(debug=True) # ruleaza aplictia in modulul debug si salveaza automat modificarile de cod si le afiseaza
+
+
+
+
+
+
 
