@@ -6,7 +6,7 @@
         </title>
     </head>
     <body>
-        <form method = 'POST' action = '/form'>
+        <form method = 'POST' action = '/jinja_form'>
             <label for="prenume">
                 Prenume : 
             </label>
@@ -26,5 +26,6 @@
         <p>Prenume trimis : {{ submitted_data.prenume }}</p>
         <p>Nume trimis : {{ submitted_data.nume }}</p>
         <p>Varsta trimisa : {{ submitted_data.varsta }}</p>
+        {% endif %}
     </body>
 </html>

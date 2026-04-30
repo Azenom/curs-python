@@ -1,75 +1,60 @@
-'''# ----------------------- Web app Flask, Jinja2, SQLAlchemy --------------------------------'''
+'''# SQLAlchemy --------------------------------- '''
 
-from flask import Flask, render_template, redirect, url_for, request
-app = Flask(__name__) # intitializeaza aplicatia
+from flask import Flask, request, render_template, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
 
-@app.route('/') # cand cineva acceseaza rout-ul se va executa functia
-def home2():
-    return '''<h1>Hello, Flask!</h1>
-    <h2>Aici h2</h2>
-    '''
+app = Flask(__name__) # initializeaza aplicatia de Flask
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///students.db" # path catre baza de date
+db = SQLAlchemy(app) # leaga baza de date cu aplicatie de Flask
 
-@app.route('/hello') # http://127.0.0.1:5000/hello
-def hello():
-    return render_template("index.html")
+class Student(db.Model):
+    cnp = db.Column(db.String(13), primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    grade = db.Column(db.Float, nullable=False)
 
-@app.route('/home')
+@app.route('/')
 def home():
-    return render_template('index_header_body.html')
+    students = db.session.query(Student).all()
+    return render_template('home_sql_alchemy.html', students=students)
 
-@app.route('/form', methods = ['GET', 'POST'])
-def form():
-    if request.method == 'POST':
-        prenume = request.form.get('prenume','')
-        nume = request.form.get('nume','')
-        varsta = request.form.get('varsta','')
-        print(f'Prenume : {prenume}, Nume : {nume} si  varsta : {varsta}')
-        return(redirect(url_for('form')))
-    return (render_template("index_form.html"))
-
-@app.route('/form/return_home', methods = ['GET', 'POST'])
-def form_return_home():
-    if request.method == 'POST':
-        prenume = request.form.get('prenume','')
-        nume = request.form.get('nume','')
-        varsta = request.form.get('varsta','')
-        print(f'Prenume : {prenume}, Nume : {nume} si  varsta : {varsta}')
-        return(redirect(url_for('welcome')))
-    return (render_template("index_form_return_home.html"))
-
-@app.route('/welcome')
-def welcome():
-    return render_template('welcome.html')
-
-'''# Jinja --------------------------------- '''
-
-@app.route('/hello/<name>')
-def hello_name (name):
-    return render_template('index_name.html', name = 'Paul' )
-
-@app.route('/hello/<name>/<age>') # /hello/Paul-Abesei/32
-def hello_name_age(name,age):
-    firstname = name.split('-')[0]
-    lastname = name.split('-')[1]
-    return render_template('index_name_age.html', firstname = firstname, lastname = lastname, age = age )
-
-from flask import session
-app.config['SECRET_KEY'] = 'dev-secret-key'
-
-@app.route('/jinja_form', methods = ['GET', 'POST'])
-def jinja_form():
-    if request.method == 'POST':
-        session['last_form_data'] = {
-            'prenume' : request.form.get('prenume',''),
-            'nume' : request.form.get('nume',''),
-            'varsta' : request.form.get('varsta','')
-                                        }
-        return redirect(url_for('jinja_form'))
+@app.route('/add', methods = ['GET','POST'])
+def add():
+    if request.method == "POST":
+        cnp = request.form.get('cnp')
+        name = request.form.get('name')
+        grade = request.form.get('grade')
+        new_student = Student(cnp = cnp, name = name, grade = grade)
+        db.session.add(new_student)
+        db.session.commit()
+        return redirect(url_for('home'))
     
-    submitted_data = session.pop('last_form_data', None)
-    return render_template('jinja_form.html', submitted_data = submitted_data)
+    return render_template('add_sql_alchemy.html')
 
+@app.route('/update', methods = ['GET','POST'])
+def update():
+    if request.method == "POST":
+        cnp = request.form.get('cnp')
+        grade = request.form.get('grade')
+        student = db.session.query(Student).get(cnp)
+        student.grade = grade
+        db.session.commit()
+        return redirect(url_for('home'))
+    
+    return render_template('update_sql_alchemy.html')
+
+@app.route('/delete', methods = ['GET','POST'])
+def delete():
+    if request.method == "POST":
+        cnp = request.form.get('cnp')
+        student = db.session.query(Student).get(cnp)
+        db.session.delete(student)
+        db.session.commit()
+        return redirect(url_for('home'))
+    
+    return render_template('delete_sql_alchemy.html')
 
 if __name__ == '__main__':
-    app.run(debug=True) # ruleaza aplictia in modulul debug si salveaza automat modificarile de cod si le afiseaza
-
+    with app.app_context():
+        db.create_all()
+# ruleaza aplictia in modulul debug si salveaza automat modificarile de cod si le afiseaza
+    app.run(debug=True)
