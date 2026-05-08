@@ -739,6 +739,10 @@
 # nume = "abracadabra"
 # print(nume.index('c')) # -------> 4 (indexul la care se gaseste litera c)
 
+# lista = ['asd','456465','sd312']
+# for index, valoare in enumerate(lista):
+#     print(index,"-",valoare)
+
 # text = "Abesei Paul"
 # print(text.startswith('A')) # -------> True
 
